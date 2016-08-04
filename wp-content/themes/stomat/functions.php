@@ -111,6 +111,8 @@ function stomat_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	wp_enqueue_script( 'abv_common_stomat', get_template_directory_uri() . '/js/common.js', array(), '20151215', true );
+
 }
 add_action( 'wp_enqueue_scripts', 'stomat_scripts' );
 
