@@ -1,0 +1,25 @@
+.wrap_img_box {
+
+}
+.img_box {
+    border: 1px solid gainsboro;
+    float: left;
+    width: 200px;
+    height: 120px;
+    margin: 10px;
+    padding: 5px;
+    position: relative;
+}
+.img_box img {
+    width: 100%;
+    max-height: 90px;
+}
+.img_box a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    color: red;
+    font-size: 16px;
+    padding: 5px;
+}
