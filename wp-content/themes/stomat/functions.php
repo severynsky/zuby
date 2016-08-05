@@ -7,6 +7,9 @@
  * @package Stomat
  */
 
+include 'abv_autoload.php';
+new AbvPostType('Test','test',false, 5);
+
 if ( ! function_exists( 'stomat_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.

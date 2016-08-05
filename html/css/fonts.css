@@ -1,0 +1,14 @@
+/* font-family: "Cormorant"; */
+@font-face {
+	font-family: "Cormorant";
+	src: url("../fonts/Cormorant/Cormorant-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "OpenSans"; */
+@font-face {
+	font-family: "OpenSans";
+	src: url("../fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
