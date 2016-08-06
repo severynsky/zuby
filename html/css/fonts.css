@@ -5,6 +5,13 @@
 	font-style: normal;
 	font-weight: normal;
 }
+/* font-family: "CormorantBold"; */
+@font-face {
+	font-family: "CormorantBold";
+	src: url("../fonts/Cormorant/Cormorant-Bold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
 /* font-family: "OpenSans"; */
 @font-face {
 	font-family: "OpenSans";

@@ -1,0 +1,164 @@
+/* line 22, ../sass/style.scss */
+html a:active, html a:focus {
+  outline: none;
+}
+/* line 24, ../sass/style.scss */
+html input, html textarea {
+  outline: none;
+}
+/* line 25, ../sass/style.scss */
+html input:active, html textarea:active {
+  outline: none;
+}
+/* line 26, ../sass/style.scss */
+html :focus {
+  outline: none;
+}
+/* line 27, ../sass/style.scss */
+html textarea {
+  resize: none;
+}
+/* line 28, ../sass/style.scss */
+html textarea {
+  resize: vertical;
+}
+/* line 29, ../sass/style.scss */
+html textarea {
+  resize: horizontal;
+}
+/* line 30, ../sass/style.scss */
+html button:active, html button:focus {
+  outline: none !important;
+}
+/* line 33, ../sass/style.scss */
+html button::-moz-focus-inner {
+  border: 0 !important;
+}
+
+/* line 39, ../sass/style.scss */
+.header .white_line {
+  height: 68px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px 0 rgba(155, 154, 155, 0.28);
+}
+/* line 44, ../sass/style.scss */
+.header .site-branding {
+  float: left;
+  margin-top: 17px;
+}
+/* line 48, ../sass/style.scss */
+.header .menu-toggle {
+  display: none;
+  float: right;
+  margin-top: 12px;
+  border: 0;
+  background-color: #fff;
+}
+/* line 57, ../sass/style.scss */
+.header header nav {
+  float: right;
+  /* Change the link color on hover */
+}
+/* line 59, ../sass/style.scss */
+.header header nav ul {
+  list-style-type: none;
+  margin-top: 23px;
+  padding: 0;
+}
+/* line 64, ../sass/style.scss */
+.header header nav li {
+  float: left;
+}
+/* line 67, ../sass/style.scss */
+.header header nav li a {
+  display: block;
+  font-family: CormorantBold;
+  font-size: 19px;
+  font-weight: 700;
+  color: #932724;
+  margin-left: 50px;
+  text-decoration: none;
+}
+/* line 78, ../sass/style.scss */
+.header header nav li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+/* line 88, ../sass/style.scss */
+.site-content .top_content {
+  background: url(../images/city_house.jpg) no-repeat center;
+  background-size: cover;
+}
+/* line 92, ../sass/style.scss */
+.site-content .top_content .logo {
+  margin-top: 277px;
+  text-align: center;
+}
+/* line 96, ../sass/style.scss */
+.site-content .top_content .site-description {
+  font-family: OpenSans;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.38;
+  color: #932724;
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 227px;
+}
+/* line 108, ../sass/style.scss */
+.site-content .slider_top {
+  position: relative;
+  max-width: 945px;
+  max-height: 379px;
+  margin: -199px auto 0;
+  box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.5);
+  border-radius: 5px;
+}
+/* line 115, ../sass/style.scss */
+.site-content .slider_top img {
+  border-radius: 5px;
+}
+/* line 118, ../sass/style.scss */
+.site-content .slider_top .owl-prev {
+  position: absolute;
+  right: 31px;
+  bottom: -1px;
+}
+/* line 123, ../sass/style.scss */
+.site-content .slider_top .owl-next {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+}
+
+@media only screen and (max-width: 1170px) {
+  /* line 135, ../sass/style.scss */
+  .header .white_line {
+    height: 46px !important;
+  }
+  /* line 138, ../sass/style.scss */
+  .header .site-branding {
+    margin-top: 5px;
+  }
+  /* line 141, ../sass/style.scss */
+  .header .menu-toggle {
+    display: block !important;
+  }
+  /* line 144, ../sass/style.scss */
+  .header nav ul {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 335px) {
+  /* line 156, ../sass/style.scss */
+  .site-branding img {
+    max-width: 215px;
+  }
+
+  /* line 159, ../sass/style.scss */
+  .menu-toggle {
+    margin-top: 10px !important;
+  }
+}
