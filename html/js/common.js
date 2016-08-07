@@ -24,5 +24,22 @@ jQuery(document).ready(function($) {
         // itemsMobile : false
 
     });
+    $(".slider_bottom").owlCarousel({
+
+        navigation : true, // Show next and prev buttons
+        loop: true,
+        nav: true,
+        margin: 30,
+        navText:['<img src="./images/arrow_left.svg" alt="">','<img src="./images/arrow_right.svg" alt="">'],
+        //singleItem:true
+
+        // "singleItem:true" is a shortcut for:
+        items : 4,
+        // itemsDesktop : false,
+        // itemsDesktopSmall : false,
+        // itemsTablet: false,
+        // itemsMobile : false
+
+    });
 });
 
