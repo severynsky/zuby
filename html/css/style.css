@@ -425,47 +425,119 @@ html .button a span {
   position: relative;
 }
 /* line 390, ../sass/style.scss */
+.photo_gallery .slider_bottom .item {
+  opacity: 0.46;
+  background-color: #eed2be;
+}
+/* line 393, ../sass/style.scss */
+.photo_gallery .slider_bottom .item:hover {
+  opacity: 1;
+  cursor: url("../images/cursor_arrow.png"), auto;
+}
+/* line 398, ../sass/style.scss */
 .photo_gallery .slider_bottom img {
   border-radius: 2px;
 }
-/* line 393, ../sass/style.scss */
+/* line 401, ../sass/style.scss */
 .photo_gallery .slider_bottom .owl-prev {
   position: absolute;
   right: 31px;
   bottom: 0;
 }
-/* line 398, ../sass/style.scss */
+/* line 406, ../sass/style.scss */
 .photo_gallery .slider_bottom .owl-next {
   position: absolute;
   right: 0;
   bottom: 0;
 }
 
+/* line 413, ../sass/style.scss */
+.register_form {
+  position: relative;
+  max-width: 750px;
+  margin: 70px auto 0;
+  border-radius: 2px;
+  background-color: #fffffd;
+  box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.1);
+  border: solid 1px #932724;
+  overflow: hidden;
+}
+/* line 422, ../sass/style.scss */
+.register_form .left {
+  width: 341px;
+  float: left;
+  margin-right: 48px;
+}
+/* line 426, ../sass/style.scss */
+.register_form .left .title {
+  font-family: CormorantBold;
+  font-size: 30px;
+  font-weight: 700;
+  color: #932724;
+  margin-left: 27px;
+  margin-top: 35px;
+  z-index: 2;
+}
+/* line 435, ../sass/style.scss */
+.register_form .left img {
+  float: left;
+  width: 286px;
+  z-index: 1;
+  margin-top: -70px;
+}
+/* line 442, ../sass/style.scss */
+.register_form p {
+  margin-top: 37px;
+}
+/* line 445, ../sass/style.scss */
+.register_form p label {
+  display: block;
+  font-family: OpenSans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.21;
+  color: #9d9d9d;
+}
+/* line 453, ../sass/style.scss */
+.register_form p label span {
+  font-size: 10px;
+  line-height: 1.7;
+  color: #932724;
+}
+/* line 459, ../sass/style.scss */
+.register_form p input {
+  border: 0;
+  border-bottom: 1px solid #f2f2f2;
+  width: 327px;
+  background-color: transparent;
+  font-size: 14px;
+}
+
 @media only screen and (max-width: 1170px) {
-  /* line 410, ../sass/style.scss */
+  /* line 476, ../sass/style.scss */
   .header .white_line {
     height: 46px !important;
   }
-  /* line 413, ../sass/style.scss */
+  /* line 479, ../sass/style.scss */
   .header .site-branding {
     margin-top: 5px;
   }
-  /* line 416, ../sass/style.scss */
+  /* line 482, ../sass/style.scss */
   .header .menu-toggle {
     display: block !important;
   }
-  /* line 419, ../sass/style.scss */
+  /* line 485, ../sass/style.scss */
   .header nav ul {
     display: none !important;
   }
 }
 @media only screen and (max-width: 335px) {
-  /* line 431, ../sass/style.scss */
+  /* line 497, ../sass/style.scss */
   .site-branding img {
     max-width: 215px;
   }
 
-  /* line 434, ../sass/style.scss */
+  /* line 500, ../sass/style.scss */
   .menu-toggle {
     margin-top: 10px !important;
   }
