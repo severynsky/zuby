@@ -8,7 +8,7 @@
 // после загрузки страници
 jQuery(document).ready(function($) {
     // Внутри этой функции $() будет работать как синоним jQuery()
-    $(".slider_top").owlCarousel({
+/*    $(".slider_top").owlCarousel({
         navigation : true, // Show next and prev buttons
         loop: true,
         nav: true,
@@ -22,19 +22,46 @@ jQuery(document).ready(function($) {
         nav: true,
         margin: 30,
         navText:['<img src="./images/arrow_left.svg" alt="">','<img src="./images/arrow_right.svg" alt="">'],
-        items : 4,
+        //items : 4,
+        itemsTablet: [600,2],
+        itemsMobile : false,
+        addClassActive : true,
+
+    });*/
+
+    $(".slider_top").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        prevArrow:'<div class="slick-prev"><img src="./images/arrow_left.svg" alt=""></div>',
+        nextArrow: '<div class="slick-next"><img src="./images/arrow_right.svg" alt=""></div>',
+    });
+
+    $(".slider_bottom").slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        prevArrow:'<div class="slick-prev"><img src="./images/arrow_left.svg" alt=""></div>',
+        nextArrow: '<div class="slick-next"><img src="./images/arrow_right.svg" alt=""></div>',
+        //centerMode: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '100px',
+                    slidesToShow: 1
+                }
+            },
+        ]
     });
 
     $( ".register_form input[type='text']" ).focus(function() {
         $( this ).prev( "label" ).css( {
             "font-size": "10px",
-           //"margin-top": "-10px",
-           //"margin-bottom": "10px",
-
         } );
         $(this).css({
-            //"padding-bottom":"10px",
-            //"margin-bottom":"15px",
             "border-bottom":"1px solid #9d9d9d",
         })
     });
@@ -42,12 +69,9 @@ jQuery(document).ready(function($) {
        if(!$(this).val().length){
            $( this ).prev( "label" ).css( {
                "font-size": "14px",
-               //"margin-top": "10px",
-               //"margin-bottom": "-10px",
            } );
            $(this).css({
-               //"padding-bottom":"-10px",
-               //"margin-bottom":"-15px",
+
                "border-bottom":"1px solid #f2f2f2",
            });
        }
