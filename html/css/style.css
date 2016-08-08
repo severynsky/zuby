@@ -89,19 +89,43 @@ html .button a span {
   position: absolute;
   margin-top: 2px;
 }
+/* line 89, ../sass/style.scss */
+html #map {
+  height: 420px;
+  width: 555px;
+}
+/* line 93, ../sass/style.scss */
+html .gm-style-iw * {
+  display: block;
+  width: 100%;
+}
+/* line 97, ../sass/style.scss */
+html .gm-style-iw h4, html .gm-style-iw p {
+  margin: 0;
+  padding: 0;
+}
+/* line 101, ../sass/style.scss */
+html .gm-style-iw a {
+  color: #4272db;
+}
 
-/* line 91, ../sass/style.scss */
+/* line 106, ../sass/style.scss */
+body {
+  font-family: OpenSans;
+}
+
+/* line 111, ../sass/style.scss */
 .header .white_line {
   height: 68px;
   background-color: #fff;
   box-shadow: 0 2px 10px 0 rgba(155, 154, 155, 0.28);
 }
-/* line 96, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 .header .site-branding {
   float: left;
   margin-top: 17px;
 }
-/* line 100, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .header .menu-toggle {
   display: none;
   float: right;
@@ -109,22 +133,22 @@ html .button a span {
   border: 0;
   background-color: #fff;
 }
-/* line 109, ../sass/style.scss */
+/* line 129, ../sass/style.scss */
 .header header nav {
   float: right;
   /* Change the link color on hover */
 }
-/* line 111, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 .header header nav ul {
   list-style-type: none;
   margin-top: 23px;
   padding: 0;
 }
-/* line 116, ../sass/style.scss */
+/* line 136, ../sass/style.scss */
 .header header nav li {
   float: left;
 }
-/* line 119, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
 .header header nav li a {
   display: block;
   font-family: CormorantBold;
@@ -134,23 +158,23 @@ html .button a span {
   margin-left: 50px;
   text-decoration: none;
 }
-/* line 130, ../sass/style.scss */
+/* line 150, ../sass/style.scss */
 .header header nav li a:hover {
   background-color: #555;
   color: white;
 }
 
-/* line 139, ../sass/style.scss */
+/* line 160, ../sass/style.scss */
 .top_content {
   background: url(../images/city_house.jpg) no-repeat center;
   background-size: cover;
 }
-/* line 143, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 .top_content .logo {
   margin-top: 277px;
   text-align: center;
 }
-/* line 147, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 .top_content .site-description {
   font-family: OpenSans;
   font-size: 40px;
@@ -163,7 +187,7 @@ html .button a span {
   padding-bottom: 227px;
 }
 
-/* line 159, ../sass/style.scss */
+/* line 181, ../sass/style.scss */
 .slider_top {
   position: relative;
   max-width: 945px;
@@ -172,28 +196,28 @@ html .button a span {
   box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.5);
   border-radius: 5px;
 }
-/* line 166, ../sass/style.scss */
+/* line 188, ../sass/style.scss */
 .slider_top img {
   border-radius: 5px;
 }
-/* line 169, ../sass/style.scss */
+/* line 191, ../sass/style.scss */
 .slider_top .owl-prev {
   position: absolute;
   right: 31px;
   bottom: -1px;
 }
-/* line 174, ../sass/style.scss */
+/* line 196, ../sass/style.scss */
 .slider_top .owl-next {
   position: absolute;
   right: 0;
   bottom: -1px;
 }
 
-/* line 180, ../sass/style.scss */
+/* line 203, ../sass/style.scss */
 .about_advantages {
   margin-top: 130px;
 }
-/* line 182, ../sass/style.scss */
+/* line 205, ../sass/style.scss */
 .about_advantages .title {
   font-family: CormorantSemiBold;
   font-size: 36px;
@@ -201,14 +225,18 @@ html .button a span {
   letter-spacing: 0.5px;
   color: #3e3e3e;
 }
-/* line 189, ../sass/style.scss */
+/* line 212, ../sass/style.scss */
 .about_advantages .line {
   width: 66px;
   height: 2px;
   border-bottom: solid 2px #932724;
   margin-top: 16px;
 }
-/* line 196, ../sass/style.scss */
+/* line 218, ../sass/style.scss */
+.about_advantages .about {
+  overflow: hidden;
+}
+/* line 220, ../sass/style.scss */
 .about_advantages .about .text {
   font-family: OpenSans;
   font-size: 16px;
@@ -218,19 +246,19 @@ html .button a span {
   margin-left: 94px;
   margin-top: -9px;
 }
-/* line 205, ../sass/style.scss */
+/* line 229, ../sass/style.scss */
 .about_advantages .about .register_button {
   margin-top: 42px;
   float: right;
 }
-/* line 211, ../sass/style.scss */
+/* line 235, ../sass/style.scss */
 .about_advantages .advantages img {
   width: 65px;
   height: 65px;
   margin-left: 94px;
   margin-bottom: 65px;
 }
-/* line 217, ../sass/style.scss */
+/* line 241, ../sass/style.scss */
 .about_advantages .advantages p {
   font-family: OpenSansSemibold;
   font-size: 18px;
@@ -241,12 +269,12 @@ html .button a span {
   margin-top: -110px;
   margin-bottom: 71px;
 }
-/* line 226, ../sass/style.scss */
+/* line 250, ../sass/style.scss */
 .about_advantages .advantages p:last-child {
   margin-top: -130px;
 }
 
-/* line 234, ../sass/style.scss */
+/* line 258, ../sass/style.scss */
 .treatment .title {
   font-family: CormorantSemiBold;
   font-size: 36px;
@@ -256,7 +284,7 @@ html .button a span {
   text-align: center;
   margin-top: 36px;
 }
-/* line 243, ../sass/style.scss */
+/* line 267, ../sass/style.scss */
 .treatment .line {
   width: 66px;
   height: 2px;
@@ -264,7 +292,7 @@ html .button a span {
   margin: 0 auto;
   margin-top: 14px;
 }
-/* line 250, ../sass/style.scss */
+/* line 274, ../sass/style.scss */
 .treatment .disc {
   font-family: OpenSans;
   font-size: 16px;
@@ -274,19 +302,19 @@ html .button a span {
   color: #9d9d9d;
   margin-top: 25px;
 }
-/* line 259, ../sass/style.scss */
+/* line 283, ../sass/style.scss */
 .treatment .items {
   margin-top: 38px;
 }
-/* line 261, ../sass/style.scss */
+/* line 285, ../sass/style.scss */
 .treatment .items .item {
   margin-bottom: 76px;
 }
-/* line 263, ../sass/style.scss */
+/* line 287, ../sass/style.scss */
 .treatment .items .item img {
   float: left;
 }
-/* line 266, ../sass/style.scss */
+/* line 290, ../sass/style.scss */
 .treatment .items .item .title {
   font-family: OpenSansSemibold;
   font-size: 18px;
@@ -297,7 +325,7 @@ html .button a span {
   margin-left: 93px;
   margin-bottom: 15px;
 }
-/* line 276, ../sass/style.scss */
+/* line 300, ../sass/style.scss */
 .treatment .items .item .text {
   font-family: OpenSans;
   font-size: 16px;
@@ -307,16 +335,16 @@ html .button a span {
   margin-left: 93px;
   margin-bottom: 18px;
 }
-/* line 287, ../sass/style.scss */
+/* line 311, ../sass/style.scss */
 .treatment .register_button {
   margin: 31px auto 0;
 }
 
-/* line 292, ../sass/style.scss */
+/* line 316, ../sass/style.scss */
 .price_list {
   margin-top: 130px;
 }
-/* line 294, ../sass/style.scss */
+/* line 318, ../sass/style.scss */
 .price_list .title {
   font-family: CormorantSemiBold;
   font-size: 36px;
@@ -324,14 +352,18 @@ html .button a span {
   letter-spacing: 0.5px;
   color: #3e3e3e;
 }
-/* line 301, ../sass/style.scss */
+/* line 325, ../sass/style.scss */
 .price_list .line {
   width: 66px;
   height: 2px;
   border-bottom: solid 2px #932724;
   margin-top: 16px;
 }
-/* line 308, ../sass/style.scss */
+/* line 331, ../sass/style.scss */
+.price_list .priceList {
+  overflow: hidden;
+}
+/* line 333, ../sass/style.scss */
 .price_list .priceList .text {
   font-family: OpenSans;
   font-size: 16px;
@@ -341,12 +373,12 @@ html .button a span {
   margin-left: 94px;
   margin-top: -9px;
 }
-/* line 317, ../sass/style.scss */
+/* line 342, ../sass/style.scss */
 .price_list .priceList .register_button {
   margin-top: 42px;
   float: right;
 }
-/* line 322, ../sass/style.scss */
+/* line 347, ../sass/style.scss */
 .price_list .price {
   font-family: OpenSans;
   font-size: 16px;
@@ -360,16 +392,16 @@ html .button a span {
   padding-top: 16px;
   padding-bottom: 16px;
 }
-/* line 334, ../sass/style.scss */
+/* line 359, ../sass/style.scss */
 .price_list .price .col_name {
   margin-bottom: 29px;
   margin-left: 19px;
 }
-/* line 337, ../sass/style.scss */
+/* line 362, ../sass/style.scss */
 .price_list .price .col_name span {
   color: #3e3e3e;
 }
-/* line 341, ../sass/style.scss */
+/* line 366, ../sass/style.scss */
 .price_list .price .col_price {
   margin-left: 312px;
   margin-top: -52px;
@@ -377,21 +409,21 @@ html .button a span {
   margin-bottom: 16px;
   border-bottom: 1px solid #f2f2f2;
 }
-/* line 347, ../sass/style.scss */
+/* line 372, ../sass/style.scss */
 .price_list .price .col_price span {
   color: #3e3e3e;
 }
-/* line 350, ../sass/style.scss */
+/* line 375, ../sass/style.scss */
 .price_list .price .col_price span span.stick {
   margin-left: -27px;
   padding-right: 10px;
 }
-/* line 356, ../sass/style.scss */
+/* line 381, ../sass/style.scss */
 .price_list .price .button {
   margin-left: 314px;
 }
 
-/* line 362, ../sass/style.scss */
+/* line 388, ../sass/style.scss */
 .photo_gallery .title {
   font-family: CormorantSemiBold;
   font-size: 36px;
@@ -400,7 +432,7 @@ html .button a span {
   color: #3e3e3e;
   text-align: center;
 }
-/* line 370, ../sass/style.scss */
+/* line 396, ../sass/style.scss */
 .photo_gallery .line {
   width: 66px;
   height: 2px;
@@ -408,7 +440,7 @@ html .button a span {
   margin: 0 auto;
   margin-top: 14px;
 }
-/* line 377, ../sass/style.scss */
+/* line 403, ../sass/style.scss */
 .photo_gallery .description {
   font-family: OpenSans;
   font-size: 16px;
@@ -418,40 +450,40 @@ html .button a span {
   color: #9d9d9d;
   margin-top: 24px;
 }
-/* line 386, ../sass/style.scss */
+/* line 412, ../sass/style.scss */
 .photo_gallery .slider_bottom {
   margin-top: 66px;
   border-radius: 2px;
   position: relative;
 }
-/* line 390, ../sass/style.scss */
+/* line 416, ../sass/style.scss */
 .photo_gallery .slider_bottom .item {
   opacity: 0.46;
   background-color: #eed2be;
 }
-/* line 393, ../sass/style.scss */
+/* line 419, ../sass/style.scss */
 .photo_gallery .slider_bottom .item:hover {
   opacity: 1;
   cursor: url("../images/cursor_arrow.png"), auto;
 }
-/* line 398, ../sass/style.scss */
+/* line 424, ../sass/style.scss */
 .photo_gallery .slider_bottom img {
   border-radius: 2px;
 }
-/* line 401, ../sass/style.scss */
+/* line 427, ../sass/style.scss */
 .photo_gallery .slider_bottom .owl-prev {
   position: absolute;
   right: 31px;
   bottom: 0;
 }
-/* line 406, ../sass/style.scss */
+/* line 432, ../sass/style.scss */
 .photo_gallery .slider_bottom .owl-next {
   position: absolute;
   right: 0;
   bottom: 0;
 }
 
-/* line 413, ../sass/style.scss */
+/* line 440, ../sass/style.scss */
 .register_form {
   position: relative;
   max-width: 750px;
@@ -462,13 +494,13 @@ html .button a span {
   border: solid 1px #932724;
   overflow: hidden;
 }
-/* line 422, ../sass/style.scss */
+/* line 449, ../sass/style.scss */
 .register_form .left {
   width: 341px;
   float: left;
   margin-right: 48px;
 }
-/* line 426, ../sass/style.scss */
+/* line 453, ../sass/style.scss */
 .register_form .left .title {
   font-family: CormorantBold;
   font-size: 30px;
@@ -478,19 +510,22 @@ html .button a span {
   margin-top: 35px;
   z-index: 2;
 }
-/* line 435, ../sass/style.scss */
+/* line 462, ../sass/style.scss */
 .register_form .left img {
   float: left;
   width: 286px;
   z-index: 1;
   margin-top: -70px;
 }
-/* line 442, ../sass/style.scss */
-.register_form p {
-  margin-top: 37px;
+/* line 469, ../sass/style.scss */
+.register_form .wrap {
+  margin-top: 32px;
+  height: 37px;
+  display: block;
+  margin-bottom: 5px;
 }
-/* line 445, ../sass/style.scss */
-.register_form p label {
+/* line 474, ../sass/style.scss */
+.register_form .wrap label {
   display: block;
   font-family: OpenSans;
   font-size: 14px;
@@ -498,46 +533,167 @@ html .button a span {
   line-height: 1.21;
   color: #9d9d9d;
 }
-/* line 453, ../sass/style.scss */
-.register_form p label span {
+/* line 482, ../sass/style.scss */
+.register_form .wrap label span {
   font-size: 10px;
   line-height: 1.7;
   color: #932724;
 }
-/* line 459, ../sass/style.scss */
-.register_form p input {
+/* line 488, ../sass/style.scss */
+.register_form .wrap input[type="text"] {
   border: 0;
   border-bottom: 1px solid #f2f2f2;
   width: 327px;
   background-color: transparent;
   font-size: 14px;
+  padding-bottom: 10px;
+}
+/* line 496, ../sass/style.scss */
+.register_form .wrap input[type="submit"] {
+  width: 127px;
+  height: 45px;
+  border: 0;
+  border-radius: 2px;
+  background-color: #932724;
+  font-family: OpenSans;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: #fafafa;
+  float: right;
+  margin-right: 28px;
+}
+/* line 510, ../sass/style.scss */
+.register_form .wrap select {
+  width: 327px;
+  background-color: #fff;
+  font-family: OpenSans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.21;
+  color: #9d9d9d;
+  border: 0;
+  border-bottom: 1px solid #f2f2f2;
+  padding-bottom: 10px;
+}
+
+/* line 525, ../sass/style.scss */
+.address {
+  margin-top: 130px;
+}
+/* line 526, ../sass/style.scss */
+.address #map {
+  height: 420px;
+  width: 555px;
+}
+/* line 530, ../sass/style.scss */
+.address .gm-style-iw * {
+  display: block;
+  width: 100%;
+}
+/* line 534, ../sass/style.scss */
+.address .gm-style-iw h4, .address .gm-style-iw p {
+  margin: 0;
+  padding: 0;
+}
+/* line 538, ../sass/style.scss */
+.address .gm-style-iw a {
+  color: #4272db;
+}
+/* line 541, ../sass/style.scss */
+.address .title {
+  font-family: CormorantSemiBold;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #3e3e3e;
+}
+/* line 548, ../sass/style.scss */
+.address .line {
+  width: 66px;
+  height: 2px;
+  border-bottom: solid 2px #932724;
+  margin-top: 16px;
+}
+/* line 555, ../sass/style.scss */
+.address .addressList .text {
+  font-family: OpenSans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.38;
+  color: #9d9d9d;
+  margin-left: 94px;
+  margin-top: -9px;
+}
+/* line 564, ../sass/style.scss */
+.address .addressList .register_button {
+  margin-top: 42px;
+  float: right;
+}
+/* line 569, ../sass/style.scss */
+.address .addressList .text p {
+  margin-bottom: 35px;
+}
+/* line 571, ../sass/style.scss */
+.address .addressList .text p:last-child {
+  margin-bottom: 15px;
+}
+/* line 576, ../sass/style.scss */
+.address .addressList img {
+  margin-right: 18px;
+}
+
+/* line 584, ../sass/style.scss */
+footer {
+  height: 75px;
+  background-color: #3e3e3e;
+}
+/* line 588, ../sass/style.scss */
+footer .name_site {
+  font-family: OpenSans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.57;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 12px;
+}
+/* line 597, ../sass/style.scss */
+footer .copy {
+  font-family: OpenSans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.57;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 8px;
 }
 
 @media only screen and (max-width: 1170px) {
-  /* line 476, ../sass/style.scss */
+  /* line 612, ../sass/style.scss */
   .header .white_line {
     height: 46px !important;
   }
-  /* line 479, ../sass/style.scss */
+  /* line 615, ../sass/style.scss */
   .header .site-branding {
     margin-top: 5px;
   }
-  /* line 482, ../sass/style.scss */
+  /* line 618, ../sass/style.scss */
   .header .menu-toggle {
     display: block !important;
   }
-  /* line 485, ../sass/style.scss */
+  /* line 621, ../sass/style.scss */
   .header nav ul {
     display: none !important;
   }
 }
 @media only screen and (max-width: 335px) {
-  /* line 497, ../sass/style.scss */
+  /* line 634, ../sass/style.scss */
   .site-branding img {
     max-width: 215px;
   }
 
-  /* line 500, ../sass/style.scss */
+  /* line 637, ../sass/style.scss */
   .menu-toggle {
     margin-top: 10px !important;
   }

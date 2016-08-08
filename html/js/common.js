@@ -28,13 +28,13 @@ jQuery(document).ready(function($) {
     $( ".register_form input[type='text']" ).focus(function() {
         $( this ).prev( "label" ).css( {
             "font-size": "10px",
-           "margin-top": "-10px",
-           "margin-bottom": "10px",
+           //"margin-top": "-10px",
+           //"margin-bottom": "10px",
 
         } );
         $(this).css({
-            "padding-bottom":"10px",
-            "margin-bottom":"15px",
+            //"padding-bottom":"10px",
+            //"margin-bottom":"15px",
             "border-bottom":"1px solid #9d9d9d",
         })
     });
@@ -42,16 +42,30 @@ jQuery(document).ready(function($) {
        if(!$(this).val().length){
            $( this ).prev( "label" ).css( {
                "font-size": "14px",
-               "margin-top": "10px",
-               "margin-bottom": "-10px",
+               //"margin-top": "10px",
+               //"margin-bottom": "-10px",
            } );
            $(this).css({
-               "padding-bottom":"-10px",
-               "margin-bottom":"-15px",
+               //"padding-bottom":"-10px",
+               //"margin-bottom":"-15px",
                "border-bottom":"1px solid #f2f2f2",
            });
        }
 
     });
+    $( "#reason" ).change(function() {
+        if($("#reason :selected").val()){
+            $(this).css({
+                "color":"#3e3e3e",
+                "border-bottom":"1px solid #9d9d9d",
+            });
+        } else {
+            $(this).css({
+                "color":"#9d9d9d",
+                "border-bottom":"1px solid #f2f2f2",
+            });
+        }
+    });
+    ;
 });
 
