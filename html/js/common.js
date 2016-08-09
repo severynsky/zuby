@@ -1,33 +1,28 @@
-// загрузка сразу
-(function($) {
-    // Внутри этой функции $() будет работать как синоним jQuery()
-    
-
-})(jQuery);
-
-// после загрузки страници
 jQuery(document).ready(function($) {
-    // Внутри этой функции $() будет работать как синоним jQuery()
-/*    $(".slider_top").owlCarousel({
-        navigation : true, // Show next and prev buttons
-        loop: true,
-        nav: true,
-        navText:['<img src="./images/arrow_left.svg" alt="">','<img src="./images/arrow_right.svg" alt="">'],
+    var countItems;
+    var w = $(window).width();
+    if (w <= 539) {
+        $('.register_button a').text('Записатися на прийом');
+        $('.head_name').text('Ціни на послуги');
 
-        items : 1,
+        $('.treatment .item').clone().appendTo(".items");
+        $('.treatment .col-md-4').remove();
+
+        $(".items").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            arrows: false,
+            centerMode: true,
+            variableWidth: true,
+        });
+        countItems = $('.treatment div[aria-describedby]').length;
+        $('#slickCounter').text('(1/'+countItems+')')
+    }
+
+    $('.items').on('afterChange', function(event, slick, currentSlide){
+        $('#slickCounter').text('('+(currentSlide+1)+'/'+countItems+')');
     });
-    $(".slider_bottom").owlCarousel({
-        navigation : true, // Show next and prev buttons
-        loop: true,
-        nav: true,
-        margin: 30,
-        navText:['<img src="./images/arrow_left.svg" alt="">','<img src="./images/arrow_right.svg" alt="">'],
-        //items : 4,
-        itemsTablet: [600,2],
-        itemsMobile : false,
-        addClassActive : true,
-
-    });*/
 
     $(".slider_top").slick({
         slidesToShow: 1,
@@ -90,6 +85,6 @@ jQuery(document).ready(function($) {
             });
         }
     });
-    ;
+
 });
 

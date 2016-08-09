@@ -40,3 +40,10 @@
 	font-style: normal;
 	font-weight: normal;
 }
+/* font-family: "OpenSansBold"; */
+@font-face {
+	font-family: "OpenSansBold";
+	src: url("../fonts/Open_Sans/OpenSans-Bold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}

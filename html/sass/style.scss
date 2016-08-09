@@ -16,7 +16,7 @@
     }
   }
   @if $media == mobile {
-    @media only screen and (max-width: 335px) {
+    @media only screen and (max-width: 539px) {
       @content;
     }
   }
@@ -296,8 +296,11 @@ body {
   .items {
     margin-top: 38px;
     .item {
-      margin: 0 auto 76px;
+      margin: 0 auto;
       max-width: 360px;
+      overflow: hidden;
+      padding-top: 48px;
+      height: 235px;
       img {
         float: left;
       }
@@ -308,6 +311,7 @@ body {
         line-height: 1.78;
         color: #3e3e3e;
         text-align: left;
+        margin: 0;
         margin-left: 93px;
         margin-bottom: 15px;
       }
@@ -362,6 +366,9 @@ body {
       display: block;
     }
   }
+  .tablet-res {
+         display: none;
+       }
   .price {
     font-family: OpenSans;
     font-size: 16px;
@@ -375,9 +382,7 @@ body {
     padding-top: 16px;
     padding-bottom: 16px;
     margin: 0 auto;
-    .tablet-res {
-      display: none;
-    }
+
     .col_name {
       margin-bottom: 29px;
       padding-left: 19px;
@@ -539,7 +544,7 @@ body {
       margin-right: 28px;
     }
     select {
-      width: 327px;
+      width: 320px;
       background-color: #fff;
       font-family: OpenSans;
       font-size: 14px;
@@ -554,21 +559,26 @@ body {
 }
 
 .address {
-  margin-top: 130px;    #map {
-        height:420px;
-        width:555px;
+  margin-top: 130px;
+  .map  {
+    max-height:420px;
+    max-width:555px;
+    #map {
+      width: 100%;
     }
     .gm-style-iw * {
-        display: block;
-        width: 100%;
+      display: block;
+      width: 100%;
     }
     .gm-style-iw h4, .gm-style-iw p {
-        margin: 0;
-        padding: 0;
+      margin: 0;
+      padding: 0;
     }
     .gm-style-iw a {
-        color: #4272db;
+      color: #4272db;
     }
+  }
+
   .title {
     font-family: CormorantSemiBold;
     font-size: 36px;
@@ -687,7 +697,8 @@ footer {
       font-size: 36px;
       line-height: 1.53;
     }
-  }
+  }    max-width: 555px;
+    margin: 0 auto;
   .slider_top {
     margin: -135px auto 0;
   }
@@ -726,14 +737,218 @@ footer {
   .register_form {
     margin-top: 85px;
   }
+  .address {
+    margin-top: 152px;
+    .map  {
+      margin-top: 49px;
+    }
+  }
 
 }
 
 @include respond-to(mobile) {
+  html {
+    .register_button {
+      max-width: 266px;
+      height: 45px;
+      margin: 0 auto;
+      float: none !important;
+    }
+  }
   .site-branding img{
       max-width: 215px;
   }
   .menu-toggle {
     margin-top: 10px !important;
+  }
+  .top_content {
+    .logo {
+      margin-top: 124px;
+    }
+    .site-description {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.33;
+    }
+  }
+  .about_advantages {
+    .about {
+      .title {
+        text-align: center;
+      }
+      .line {
+        margin: 16px auto 0;
+      }
+      .text {
+        margin-left: 0;
+        margin-top: 37px;
+      }
+    }
+    .advantages {
+      .title {
+        text-align: center;
+      }
+      .line {
+        margin: 16px auto 0;
+      }
+      .content {
+        margin-left: 0;
+        margin-top: 37px;
+        img {
+          margin-left: 0;
+        }
+        p {
+          margin-left: 90px;
+        }
+      }
+    }
+  }
+  .treatment {
+    margin-top: 44px;
+    .items {
+      .item {
+        width: 250px;
+        height: 176px;
+        background-color: #fffffd;
+        box-shadow: 0 0 8px 2px rgba(155, 155, 155, 0.2);
+        padding: 0;
+        margin: 6px;
+        padding-top: 10px;
+        img {
+          max-width: 54px;
+          margin-left: 14px;
+        }
+        .title {
+          font-family: OpenSansSemibold;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 1.5;
+          color: #3e3e3e;
+          text-align: left;
+          margin-left: 80px;
+          margin-bottom: 15px;
+        }
+        .text {
+          font-family: OpenSans;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.38;
+          color: #9d9d9d;
+          margin-left: 80px;
+          margin-bottom: 18px;
+        }
+        .button {
+          width: 138px;
+          height: 30px;
+          border-radius: 2px;
+          border: solid 1px #c6afa1;
+          padding-left: 12px;
+          margin-left: 80px;
+        }
+      }
+    }
+    #slickCounter {
+      font-family: OpenSansItalic;
+      font-size: 15px;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 0.2px;
+      text-align: center;
+      color: #9d9d9d;
+      margin-top: 27px;
+      margin-bottom: 25px;
+    }
+  }
+  .price_list {
+    .priceList {
+      .title {
+        text-align: center;
+      }
+      .line {
+        margin: 16px auto 0;
+      }
+      .text {
+        margin-left: 0;
+        margin-top: 41px;
+      }
+    }
+    .price {
+      overflow: hidden;
+      .head_price {
+        display: none;
+      }
+      .head_name {
+        font-family: OpenSansBold;
+        font-size: 16px;
+        font-weight: 700;
+        color: #3e3e3e !important;
+        margin-bottom: 29px !important;
+      }
+      .col_name {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-family: OpenSansBold;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.38;
+        color: #9d9d9d;
+        margin-bottom: 14px;
+      }
+      .col_price {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 25px;
+      }
+      .button {
+        float: right;
+        margin: 0;
+        margin-right: 30px;
+      }
+    }
+  }
+  .photo_gallery {
+    display: none;
+  }
+  .register_form {
+    margin-top: -8px;
+    padding-bottom: 20px;
+    padding-top: 28px;
+    .left {
+      width: auto;
+      float: none;
+      margin: 0;
+      .title {
+        font-family: CormorantBold;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        color: #932724;
+        margin: 0;
+      }
+      img {
+        display: none;
+      }
+    }
+    .wrap {
+      padding-left: 18px;
+      padding-right: 18px;
+      input[type="text"] {
+        width: 100%;
+        //max-width: 327px;
+      }
+      select {
+        width: 100%;
+      }
+      input[type="submit"]{
+        float: none !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        display: block;
+      }
+    }
+  }
+  .address {
+
   }
 }
