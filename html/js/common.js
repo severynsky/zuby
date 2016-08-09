@@ -32,6 +32,12 @@ jQuery(document).ready(function($) {
         $('.hamburger_menu').fadeOut('slow');
     });
 
+    $( ".min_call_wrap a" ).click(function() {
+        $('.min_call_wrap').fadeOut('fast');
+        $('.max_call_wrap').fadeIn('slow');
+        return false
+    });
+
     $(".slider_top").slick({
         slidesToShow: 1,
         slidesToScroll: 1,

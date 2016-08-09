@@ -118,6 +118,71 @@ body {
     font-family: OpenSans
 }
 //////////////////////
+.site {
+  position: relative;
+  .min_call_wrap {
+    display: block;
+    position: fixed;
+    top: 77px;
+    right: 0;
+    width: 64px;
+    height: 45px;
+    border-radius: 2px;
+    background-color: #932724;
+    z-index: 40;
+    img {
+      margin-top: 12px;
+      margin-left: 10px;
+    }
+  }
+  .max_call_wrap {
+    display: none;
+    position: fixed;
+    top: 217px;
+    right: 0;
+    width: 402px;
+    height: 160px;
+    border-radius: 2px;
+    background-color: #932724;
+    z-index: 1000000;
+    .phone {
+      margin-top: 30px;
+      margin-left: 25px;
+      a {
+        text-decoration: none;
+        img {
+          float: left;
+          margin-top: 5px;
+        }
+        p {
+          font-family: OpenSans;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 1.67;
+          color: #ffffff;
+          padding-left: 34px;
+        }
+      }
+    }
+    .time {
+      margin-top: 19px;
+      margin-left: 25px;
+      img {
+        float: left;
+        margin-top: 5px;
+        padding-bottom: 30px;
+      }
+      p {
+        font-family: OpenSans;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.67;
+        color: #ffffff;
+        padding-left: 34px;
+      }
+    }
+  }
+}
 
 .hamburger_menu {
   display: none;
