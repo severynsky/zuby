@@ -30,6 +30,17 @@ jQuery(document).ready(function($) {
         infinite: true,
         prevArrow:'<div class="slick-prev"><img src="./images/arrow_left.svg" alt=""></div>',
         nextArrow: '<div class="slick-next"><img src="./images/arrow_right.svg" alt=""></div>',
+        responsive: [
+            {
+                breakpoint: 540,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '22px',
+                    slidesToShow: 1
+                }
+            },
+        ]
     });
 
     $(".slider_bottom").slick({
