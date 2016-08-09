@@ -24,6 +24,14 @@ jQuery(document).ready(function($) {
         $('#slickCounter').text('('+(currentSlide+1)+'/'+countItems+')');
     });
 
+    $( ".menu-toggle" ).click(function() {
+        $('.hamburger_menu').fadeIn('slow');
+    });
+
+    $( ".close_button" ).click(function() {
+        $('.hamburger_menu').fadeOut('slow');
+    });
+
     $(".slider_top").slick({
         slidesToShow: 1,
         slidesToScroll: 1,

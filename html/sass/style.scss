@@ -120,11 +120,64 @@ body {
 //////////////////////
 
 .hamburger_menu {
-  position: relative;
-  width: 100%;
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: -15;
+  width: 105%;
+  height: 640px;
+  opacity: 0.9;
+  background-color: #ffffff;
+  //margin-left: -10px;
+  //margin-right: -10px;
+  z-index: 20;
+  .close_button {
+    position: absolute;
+    top: 11px;
+    left: 30px;
+    z-index: 30;
+  }
+  ul {
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    list-style-type: none;
+    margin-top: 23px;
+    padding: 0;
+    overflow: hidden;
+    z-index: 30;
+  }
+  li {
+    margin-bottom: 52px;
+    a {
+      font-family: CormorantBold;
+      font-size: 24px;
+      font-weight: 700;
+      color: #932724;
+      z-index: 30;
+    }
+  }
+  .line-top {
+    position: absolute;
+    top: 135px;
+    left: 25px;
+    width: 92.5%;
+    z-index: 30;
+    border-bottom: 3px solid #932724;
+  }
+  .line-bottom {
+    position: absolute;
+    top: 579px;
+    left: 25px;
+    width: 92.5%;
+    z-index: 30;
+    border-bottom: 3px solid #932724;
+  }
 }
 
 .header {
+  position: relative;
   .white_line {
     height: 68px;
     background-color: #fff;
