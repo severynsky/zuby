@@ -14,6 +14,9 @@ class ABVGallery
     function __construct(){
         $this->plugin_dir = dirname( __FILE__ );
         $this->plugin_url = plugin_dir_url( __FILE__ );
+        // опции
+        //$this->settings();
+        add_action('admin_init', [$this, 'settings']);
         // add language
         add_action('after_setup_theme', array($this, 'addLanguage'));
         // подключаем стили
@@ -31,6 +34,7 @@ class ABVGallery
         // изменяем список постов
         add_filter('manage_posts_columns', [$this, 'posts_columns_id'], 5);
         add_action('manage_posts_custom_column', [$this, 'posts_custom_id_columns'], 5, 2);
+
     }
 
     /**
@@ -57,14 +61,24 @@ class ABVGallery
 // подключаем стили
     function abv_load_style_script(){
         wp_register_script('abv_gallery_jquery', $this->plugin_url . "js/jquery-1.11.1.min.js",false,false);
-        wp_register_script('gallery_owl-carousel-min', $this->plugin_url . "js/owl.carousel.min.js",false,false,true);
-        wp_register_script('abv_gallery_common', $this->plugin_url . "js/common.js",false,false,true);
-
         wp_enqueue_script('abv_gallery_jquery');
-        wp_enqueue_script('gallery_owl-carousel-min');
+
+        if (get_option('abv_gallery_owl_stetting')){
+            wp_register_script('gallery_owl-carousel-min', $this->plugin_url . "js/owl.carousel.min.js",false,false,true);
+            wp_enqueue_script('gallery_owl-carousel-min');
+            wp_enqueue_style('gallery_owl.carousel', $this->plugin_url.'css/owl.carousel.min.css');
+        }
+
+        if (get_option('abv_gallery_slick_stetting')){
+            wp_register_script('gallery_slick-carousel-min', $this->plugin_url . "js/slick.min.js",false,false,true);
+            wp_enqueue_script('gallery_slick-carousel-min');
+            wp_enqueue_style('gallery_slick.carousel', $this->plugin_url.'css/slick.css');
+        }
+
+        wp_register_script('abv_gallery_common', $this->plugin_url . "js/common.js",false,false,true);
         wp_enqueue_script('abv_gallery_common');
 
-        wp_enqueue_style('gallery_owl.carousel', $this->plugin_url.'css/owl.carousel.min.css');
+
         wp_enqueue_style('abv_gallery_styles', $this->plugin_url . 'css/styles.css');
     }
 
@@ -167,4 +181,22 @@ class ABVGallery
         return $str;
     }
 
+    function settings(){
+        register_setting('general', 'abv_gallery_owl_stetting');
+        register_setting('general', 'abv_gallery_slick_stetting');
+        add_settings_field('abv_gallery_owl_stetting', __('Connect owl slider','abv-gallery'), array($this,'save_option_owl_cb'), 'general');
+        add_settings_field('abv_gallery_slick_stetting', __('Connect slick slider','abv-gallery'), array($this,'save_option_slick_cb'), 'general');
+    }
+    function save_option_owl_cb(){
+        ?>
+        <input type="checkbox" name="abv_gallery_owl_stetting" id="abv_gallery_owl_stetting"
+               value="1" <?php checked( '1', get_option( 'abv_gallery_owl_stetting' ) ); ?>>
+        <?php
+    }
+    function save_option_slick_cb(){
+        ?>
+        <input type="checkbox" name="abv_gallery_slick_stetting" id="abv_gallery_slick_stetting"
+               value="1" <?php checked( '1', get_option( 'abv_gallery_slick_stetting' ) ); ?>>
+        <?php
+    }
 }

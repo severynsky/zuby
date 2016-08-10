@@ -29,4 +29,7 @@ class AbvStomat
         $this->themeUrl = get_stylesheet_directory_uri() ;
     }
 
+    function run(){
+
+    }
 }

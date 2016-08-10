@@ -42,8 +42,8 @@ jQuery(document).ready(function($) {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        prevArrow:'<div class="slick-prev"><img src="./images/arrow_left.svg" alt=""></div>',
-        nextArrow: '<div class="slick-next"><img src="./images/arrow_right.svg" alt=""></div>',
+        prevArrow:'<div class="slick-prev"><img src="'+window.location.href+'wp-content/themes/stomat/images/arrow_left.svg" alt=""></div>',
+        nextArrow: '<div class="slick-next"><img src="'+window.location.href+'wp-content/themes/stomat/images/arrow_right.svg" alt=""></div>',
         responsive: [
             {
                 breakpoint: 540,
@@ -61,9 +61,8 @@ jQuery(document).ready(function($) {
         slidesToShow: 4,
         slidesToScroll: 1,
         infinite: true,
-        prevArrow:'<div class="slick-prev"><img src="./images/arrow_left.svg" alt=""></div>',
-        nextArrow: '<div class="slick-next"><img src="./images/arrow_right.svg" alt=""></div>',
-        //centerMode: true,
+        prevArrow:'<div class="slick-prev"><img src="'+window.location.href+'wp-content/themes/stomat/images/arrow_left.svg" alt=""></div>',
+        nextArrow: '<div class="slick-next"><img src="'+window.location.href+'wp-content/themes/stomat/images/arrow_right.svg" alt=""></div>',
         responsive: [
             {
                 breakpoint: 768,

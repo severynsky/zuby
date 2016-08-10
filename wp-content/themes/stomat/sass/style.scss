@@ -130,6 +130,10 @@ body {
     border-radius: 2px;
     background-color: #932724;
     z-index: 40;
+    a {
+      display: block;
+      padding-bottom: 10px;
+    }
     img {
       margin-top: 12px;
       margin-left: 10px;
@@ -189,7 +193,7 @@ body {
   overflow: hidden;
   position: absolute;
   top: 0;
-  left: -15;
+  left: -15px;
   width: 105%;
   height: 640px;
   opacity: 0.9;
@@ -826,8 +830,7 @@ footer {
       font-size: 36px;
       line-height: 1.53;
     }
-  }    max-width: 555px;
-    margin: 0 auto;
+  }
   .slider_top {
     margin: -135px auto 0;
   }
