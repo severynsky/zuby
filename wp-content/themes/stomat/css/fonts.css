@@ -1,0 +1,49 @@
+/* font-family: "Cormorant"; */
+@font-face {
+	font-family: "Cormorant";
+	src: url("../fonts/Cormorant/Cormorant-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "CormorantBold"; */
+@font-face {
+	font-family: "CormorantBold";
+	src: url("../fonts/Cormorant/Cormorant-Bold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "CormorantSemiBold"; */
+@font-face {
+	font-family: "CormorantSemiBold";
+	src: url("../fonts/Cormorant/Cormorant-SemiBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "OpenSans"; */
+@font-face {
+	font-family: "OpenSans";
+	src: url("../fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "OpenSansSemibold"; */
+@font-face {
+	font-family: "OpenSansSemibold";
+	src: url("../fonts/Open_Sans/OpenSans-Semibold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "OpenSansItalic"; */
+@font-face {
+	font-family: "OpenSansItalic";
+	src: url("../fonts/Open_Sans/OpenSans-Italic.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+/* font-family: "OpenSansBold"; */
+@font-face {
+	font-family: "OpenSansBold";
+	src: url("../fonts/Open_Sans/OpenSans-Bold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
