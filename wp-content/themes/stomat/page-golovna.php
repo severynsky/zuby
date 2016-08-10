@@ -10,29 +10,14 @@
 				</div>
 			</div>
 
-			<div class="slider_top">
-				<div class="item"><img src="<?php echo bloginfo('template_directory') ?>/images/slider_girls.jpg" alt="The Last of us"></div>
-				<div class="item"><img src="<?php echo bloginfo('template_directory') ?>/images/slider_girls.jpg" alt="The Last of us"></div>
-				<div class="item"><img src="<?php echo bloginfo('template_directory') ?>/images/slider_girls.jpg" alt="The Last of us"></div>
-			</div>
-
+			<?php echo do_shortcode('[abv_gallery id="22" class="slider_top"]') ?>
 			<div class="about_advantages">
 				<div class="row">
 					<div class="col-md-6">
 						<div class="about">
-							<div class="title">
-								Про клініку
-							</div>
-							<div class="line"></div>
-							<div class="text">
-								М.Р.С. Стоматологія» - це результат, підтверджений досвідом. 15 років дотримання
-								світових
-								стандартів та контролю якості стоматологічних послуг. Команда фахівців, які забезпечують
-								повний комплекс вирішення стоматологічних проблем. Найвищі стандарти та вимоги до
-								стерилізації та дезінфекції. Німецьке обладнання KAVO та матеріали світових виробників.
-							</div>
+							<?php AbvStomat::get_post_title_content_by_slug('pro-kliniku') ?>
 							<div class="register_button">
-								<a href="<?php echo bloginfo('template_directory') ?>/#">Записатись на безкоштовну діагностику</a>
+								<a href="#">Записатись на безкоштовну діагностику</a>
 							</div>
 						</div>
 					</div>
@@ -81,7 +66,7 @@
 								Прості -1правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="<?php echo bloginfo('template_directory') ?>/#">Детальніше <span>></span></a>
+								<a href="#">Детальніше <span>></span></a>
 							</div>
 						</div>
 					</div>
@@ -96,7 +81,7 @@
 								Прості 0правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="<?php echo bloginfo('template_directory') ?>/#">Детальніше <span>></span></a>
+								<a href="#">Детальніше <span>></span></a>
 							</div>
 						</div>
 					</div>
@@ -111,7 +96,7 @@
 								Прості 1правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="<?php echo bloginfo('template_directory') ?>/#">Детальніше <span>></span></a>
+								<a href="#">Детальніше <span>></span></a>
 							</div>
 						</div>
 					</div>
@@ -126,7 +111,7 @@
 								Прості 2правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="<?php echo bloginfo('template_directory') ?>/#">Детальніше <span>></span></a>
+								<a href="#">Детальніше <span>></span></a>
 							</div>
 						</div>
 					</div>
@@ -141,7 +126,7 @@
 								Прості 3правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="<?php echo bloginfo('template_directory') ?>/#">Детальніше <span>></span></a>
+								<a href="#">Детальніше <span>></span></a>
 							</div>
 						</div>
 					</div>
@@ -156,7 +141,7 @@
 								Прості 4правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="<?php echo bloginfo('template_directory') ?>/#">Детальніше <span>></span></a>
+								<a href="#">Детальніше <span>></span></a>
 							</div>
 						</div>
 					</div>
@@ -171,7 +156,7 @@
 								Прості 5правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="<?php echo bloginfo('template_directory') ?>/#">Детальніше <span>></span></a>
+								<a href="#">Детальніше <span>></span></a>
 							</div>
 						</div>
 					</div>
@@ -186,7 +171,7 @@
 								Прості 6правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="<?php echo bloginfo('template_directory') ?>/#">Детальніше <span>></span></a>
+								<a href="#">Детальніше <span>></span></a>
 							</div>
 						</div>
 					</div>
@@ -201,14 +186,14 @@
 								Прості 7правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="<?php echo bloginfo('template_directory') ?>/#">Детальніше <span>></span></a>
+								<a href="#">Детальніше <span>></span></a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div id="slickCounter"></div>
 				<div class="register_button">
-					<a href="<?php echo bloginfo('template_directory') ?>/#">Записатись на безкоштовну діагностику</a>
+					<a href="#">Записатись на безкоштовну діагностику</a>
 				</div>
 			</div>
 
@@ -216,17 +201,9 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="priceList">
-							<div class="title">
-								Прейскурант
-							</div>
-							<div class="line"></div>
-							<div class="text">
-								Ціни на стоматологічні послуги у клініці «М.Р.С.» є абсолютно прозорими. Перелік
-								необхідних процедур обговорюється заздалегіть, що виключає приховані або неочікувані
-								платежі. У нас Ви можете здійснити оплату карткою.
-							</div>
+							<?php AbvStomat::get_post_title_content_by_slug('prejskurant') ?>
 							<div class="register_button desc-res">
-								<a href="<?php echo bloginfo('template_directory') ?>/#">Записатись на безкоштовну діагностику</a>
+								<a href="#">Записатись на безкоштовну діагностику</a>
 							</div>
 						</div>
 					</div>
@@ -243,25 +220,18 @@
 							<div class="col_name">Пломба</div>
 							<div class="col_price">300.00</div>
 							<div class="button">
-								<a href="<?php echo bloginfo('template_directory') ?>/#">Детальніше <span>></span></a>
+								<a href="#">Детальніше <span>></span></a>
 							</div>
 						</div>
 						<div class="register_button tablet-res">
-							<a href="<?php echo bloginfo('template_directory') ?>/#">Записатись на безкоштовну діагностику</a>
+							<a href="#">Записатись на безкоштовну діагностику</a>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="photo_gallery">
-				<div class="title">
-					Фотогалерея
-				</div>
-				<div class="line"></div>
-				<div class="description">
-					Найвища цінність - довіра пацієнта. Щодня ми вдосконалюємось,щоб виправдати цю довіру. Майже 85 %
-					наших пацієнтів звертаються до нас за рекомендацією знайомих чи друзів.
-				</div>
+				<?php AbvStomat::get_post_title_content_by_slug('fotogalereya') ?>
 				<div class="slider_bottom">
 					<div class="item a1"><img src="<?php echo bloginfo('template_directory') ?>/images/slider_bottom1.png" alt=""></div>
 					<div class="item a2"><img src="<?php echo bloginfo('template_directory') ?>/images/slider_bottom1.png" alt=""></div>
@@ -307,40 +277,7 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="addressList">
-							<div class="title">
-								Контакти
-							</div>
-							<div class="line"></div>
-							<div class="text">
-								<p>
-									79017 м.Львів <br>
-									вул. Зелена 46/2
-								</p>
-
-								<p>
-									032 275 43 92 <br>
-									067 766 50 41
-								</p>
-
-								<p>
-									Пн – Сб 9:00 – 20:00 <br>
-									без перерви
-								</p>
-
-								<p>
-									Маршрутні автобуси: 15, 27, 37, 39, 43, 44, 46, 54, 160  <br>
-									Тролейбус:11, 24
-								</p>
-
-								<p>
-									Є парковочні місця
-								</p>
-
-								<p>
-									<a href="#"><img src="<?php echo bloginfo('template_directory') ?>/images/fb.svg" alt=""></a>
-									<a href="#"><img src="<?php echo bloginfo('template_directory') ?>/images/vk.svg" alt=""></a>
-								</p>
-							</div>
+							<?php AbvStomat::get_post_title_content_by_slug('kontakty') ?>
 						</div>
 					</div>
 					<div class="col-md-6">

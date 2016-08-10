@@ -6,11 +6,11 @@ if($title ==='1'){
 if($disc ==='1'){
     $html .= "<p class='description'> $gallery_description_field </p>";
 }
-$html .="<div class='owl-carousel'>";
+$html .="<div class='abv-carousel ".$class."'>";
 
 foreach($arr_images as $item){
         $scr = wp_get_attachment_image_src($item,'full');
-        $html .="<div class='owl-item'>";
+        $html .="<div class='abv-item'>";
         $html .="<img src=' $scr[0] ' alt=''>";
         $html .="</div>";
 }

@@ -42,12 +42,7 @@
 					<div class="close_button">
 						<a href="#"><img src="<?php echo bloginfo('template_directory') ?>/images/cross.svg" alt=""></a>
 					</div>
-					<ul>
-						<li><a href="<?php echo bloginfo('template_directory') ?>/#">Про клініку</a></li>
-						<li><a href="<?php echo bloginfo('template_directory') ?>/#">Лікування</a></li>
-						<li><a href="<?php echo bloginfo('template_directory') ?>/#">Прейскурант</a></li>
-						<li><a href="<?php echo bloginfo('template_directory') ?>/#">Контакти</a></li>
-					</ul>
+					<?php wp_nav_menu( array('menu' => 'Гамбургер' )); ?>
 					<div class="line-bottom"></div>
 				</div>
 				<div class="container">
@@ -62,18 +57,7 @@
 									<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><img
 											src="<?php echo bloginfo('template_directory') ?>/images/menu.svg" alt=""></button>
 									<div class="menu-verhne-menyu-container">
-										<ul id="primary-menu" class="menu nav-menu" aria-expanded="false">
-											<li id="menu-item-11" class="menu-item"><a href="<?php echo bloginfo('template_directory') ?>/#about">Про клініку</a>
-											</li>
-											<li id="menu-item-12" class="menu-item"><a href="<?php echo bloginfo('template_directory') ?>/#medcine">Лікування</a>
-											</li>
-											<li id="menu-item-13" class="menu-item"><a href="<?php echo bloginfo('template_directory') ?>/#prices">Прейскурант</a>
-											</li>
-											<li id="menu-item-14" class="menu-item"><a href="<?php echo bloginfo('template_directory') ?>/#gallery">Фотогалерея</a>
-											</li>
-											<li id="menu-item-15" class="menu-item"><a href="<?php echo bloginfo('template_directory') ?>/#contacts">Контакти</a>
-											</li>
-										</ul>
+										<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 									</div>
 								</nav>
 								<!-- #site-navigation -->

@@ -28,6 +28,7 @@ class ABVGalleryWidgets {
             'id' => 0,
             'title' => 0,
             'disc' => 0,
+            'class' => '',
         ), $atts));
 
         $gallery = get_post($id);
