@@ -225,3 +225,9 @@ msgstr ""
 
 msgid "all rights reserved"
 msgstr ""
+
+msgid "Register for a free diagnosis"
+msgstr ""
+
+msgid "More"
+msgstr ""

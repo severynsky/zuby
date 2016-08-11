@@ -378,20 +378,22 @@ body {
     }
   }
   .advantages {
-    img {
-      width: 65px;
-      height: 65px;
-      margin-left: 94px;
-      margin-bottom: 65px;
+    .img {
+      img {
+        width: 67px;
+        height: 67px;
+        margin-left: 94px;
+        margin-bottom: 65px;
+      }
     }
-    p {
+    .words {
       font-family: OpenSansSemibold;
       font-size: 18px;
       font-weight: 600;
       line-height: 1.78;
       color: #3e3e3e;
       margin-left: 187px;
-      margin-top: -110px;
+      margin-top: -116px;
       margin-bottom: 71px;
       &:last-child {
         margin-top: -130px;
@@ -417,7 +419,7 @@ body {
     margin: 0 auto;
     margin-top: 14px;
   }
-  .disc {
+  .text {
     font-family: OpenSans;
     font-size: 16px;
     font-weight: 400;
@@ -615,6 +617,9 @@ body {
   box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.1);
   border: solid 1px #932724;
   overflow: hidden;
+  .wpcf7-form-control-wrap {
+    position: static;
+  }
   .left {
     width: 341px;
     float: left;
@@ -648,7 +653,7 @@ body {
       line-height: 1.21;
       color: #9d9d9d;
       //margin-bottom: -8px;
-      span {
+      span.star {
         font-size: 10px;
         line-height: 1.7;
         color: #932724;
@@ -936,13 +941,17 @@ footer {
       .line {
         margin: 16px auto 0;
       }
-      .content {
+      .text {
         margin-left: 0;
         margin-top: 37px;
-        img {
-          margin-left: 0;
+        .img {
+          img {
+            margin-left: 0;
+            width: 67px;
+            height: 67px;
+          }
         }
-        p {
+        .words {
           margin-left: 90px;
         }
       }

@@ -10,7 +10,7 @@ $html .="<div class='abv-carousel ".$class."'>";
 
 foreach($arr_images as $item){
         $scr = wp_get_attachment_image_src($item,'full');
-        $html .="<div class='abv-item'>";
+        $html .="<div class='item'>";
         $html .="<img src=' $scr[0] ' alt=''>";
         $html .="</div>";
 }

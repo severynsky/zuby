@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2016-08-10 20:36+0300\n"
-"PO-Revision-Date: 2016-08-10 21:53+0300\n"
+"POT-Creation-Date: 2016-08-11 05:06+0300\n"
+"PO-Revision-Date: 2016-08-11 05:09+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -112,7 +112,7 @@ msgstr "Основне меню"
 #, php-format
 msgctxt "post date"
 msgid "Posted on %s"
-msgstr "Опубліковано %s"
+msgstr ""
 
 # @ _s
 #: inc/template-tags.php:33
@@ -131,7 +131,7 @@ msgstr ""
 #: inc/template-tags.php:52
 #, php-format
 msgid "Posted in %1$s"
-msgstr ""
+msgstr "Опубліковано %s"
 
 # @ _s
 #: inc/template-tags.php:58
@@ -239,3 +239,9 @@ msgstr ""
 
 msgid "all rights reserved"
 msgstr "всі права захищено"
+
+msgid "Register for a free diagnosis"
+msgstr "Записатись на безкоштовну діагностику"
+
+msgid "More"
+msgstr "Детальніше"

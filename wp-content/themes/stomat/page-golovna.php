@@ -5,7 +5,8 @@
 					<div class="logo">
 						<img src="<?php echo bloginfo('template_directory') ?>/images/logo-big.svg" alt="">
 					</div>
-					<div class="site-description">Швидке, ефективне та доступне вирішення будь-яких проблем з зубами
+					<div class="site-description">
+						<?php echo bloginfo('description') ?>
 					</div>
 				</div>
 			</div>
@@ -17,43 +18,19 @@
 						<div class="about">
 							<?php AbvStomat::get_post_title_content_by_slug('pro-kliniku') ?>
 							<div class="register_button">
-								<a href="#">Записатись на безкоштовну діагностику</a>
+								<a href="#"><?php echo __('Register for a free diagnosis','stomat') ?></a>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="advantages">
-							<div class="title">
-								Наші переваги
-							</div>
-							<div class="line"></div>
-							<div class="content">
-								<img src="<?php echo bloginfo('template_directory') ?>/images/perevaga1.png" alt="">
-
-								<p>Безкоштовна діагностика</p>
-								<img src="<?php echo bloginfo('template_directory') ?>/images/perevaga1.png" alt="">
-
-								<p>Комплексне лікування усієї родини</p>
-								<img src="<?php echo bloginfo('template_directory') ?>/images/perevaga1.png" alt="">
-
-								<p>Робота зі страховими компаніями</p>
-								<img src="<?php echo bloginfo('template_directory') ?>/images/perevaga1.png" alt="">
-
-								<p>Надання екстреної допомоги у день звернення</p>
-							</div>
+							<?php AbvStomat::get_post_title_content_by_slug('nashi-perevagy') ?>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="treatment">
-				<div class="title">
-					Лікування
-				</div>
-				<div class="line"></div>
-				<div class="disc">
-					Усі види стоматологічних послуг. Детальна діагностика. План лікування з переліком необхідних
-					процедур, їх вартістю та термінами.
-				</div>
+				<?php AbvStomat::get_post_title_content_by_slug('likuvannya') ?>
 				<div class="row items">
 					<div class="col-md-4 col-sm-6">
 						<div class="item">
@@ -66,7 +43,7 @@
 								Прості -1правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="#">Детальніше <span>></span></a>
+								<a href="#"><?php echo __('More','stomat') ?> <span>></span></a>
 							</div>
 						</div>
 					</div>
@@ -81,7 +58,7 @@
 								Прості 0правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="#">Детальніше <span>></span></a>
+								<a href="#"><?php echo __('More','stomat') ?> <span>></span></a>
 							</div>
 						</div>
 					</div>
@@ -96,7 +73,7 @@
 								Прості 1правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="#">Детальніше <span>></span></a>
+								<a href="#"><?php echo __('More','stomat') ?> <span>></span></a>
 							</div>
 						</div>
 					</div>
@@ -111,7 +88,7 @@
 								Прості 2правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="#">Детальніше <span>></span></a>
+								<a href="#"><?php echo __('More','stomat') ?> <span>></span></a>
 							</div>
 						</div>
 					</div>
@@ -126,7 +103,7 @@
 								Прості 3правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="#">Детальніше <span>></span></a>
+								<a href="#"><?php echo __('More','stomat') ?> <span>></span></a>
 							</div>
 						</div>
 					</div>
@@ -141,7 +118,7 @@
 								Прості 4правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="#">Детальніше <span>></span></a>
+								<a href="#"><?php echo __('More','stomat') ?> <span>></span></a>
 							</div>
 						</div>
 					</div>
@@ -156,7 +133,7 @@
 								Прості 5правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="#">Детальніше <span>></span></a>
+								<a href="#"><?php echo __('More','stomat') ?> <span>></span></a>
 							</div>
 						</div>
 					</div>
@@ -171,7 +148,7 @@
 								Прості 6правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="#">Детальніше <span>></span></a>
+								<a href="#"><?php echo __('More','stomat') ?> <span>></span></a>
 							</div>
 						</div>
 					</div>
@@ -186,14 +163,14 @@
 								Прості 7правила попередження захворювання зубів.
 							</div>
 							<div class="button">
-								<a href="#">Детальніше <span>></span></a>
+								<a href="#"><?php echo __('More','stomat') ?> <span>></span></a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div id="slickCounter"></div>
 				<div class="register_button">
-					<a href="#">Записатись на безкоштовну діагностику</a>
+					<a href="#"><?php echo __('Register for a free diagnosis','stomat') ?></a>
 				</div>
 			</div>
 
@@ -203,28 +180,20 @@
 						<div class="priceList">
 							<?php AbvStomat::get_post_title_content_by_slug('prejskurant') ?>
 							<div class="register_button desc-res">
-								<a href="#">Записатись на безкоштовну діагностику</a>
+								<a href="#"><?php echo __('Register for a free diagnosis','stomat') ?></a>
+								
 							</div>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="price">
-							<div class="col_name head_name"><span>Послуга</span></div>
-							<div class="col_price head_price"><span><span class="stick">|</span> Ціна, грн</span></div>
-							<div class="col_name">Професійна гігієна</div>
-							<div class="col_price">350.00</div>
-							<div class="col_name">Відбілювання</div>
-							<div class="col_price">від 2000.00</div>
-							<div class="col_name">Брекети металеві</div>
-							<div class="col_price">7000.00</div>
-							<div class="col_name">Пломба</div>
-							<div class="col_price">300.00</div>
+							<?php echo AbvStomat::show_name_price_on_main('tsiny') ?>
 							<div class="button">
-								<a href="#">Детальніше <span>></span></a>
+								<a href="#"><?php echo __('More','stomat') ?> <span>></span></a>
 							</div>
 						</div>
 						<div class="register_button tablet-res">
-							<a href="#">Записатись на безкоштовну діагностику</a>
+							<a href="#"><?php echo __('Register for a free diagnosis','stomat') ?></a>
 						</div>
 					</div>
 				</div>
@@ -232,22 +201,16 @@
 
 			<div class="photo_gallery">
 				<?php AbvStomat::get_post_title_content_by_slug('fotogalereya') ?>
-				<div class="slider_bottom">
-					<div class="item a1"><img src="<?php echo bloginfo('template_directory') ?>/images/slider_bottom1.png" alt=""></div>
-					<div class="item a2"><img src="<?php echo bloginfo('template_directory') ?>/images/slider_bottom1.png" alt=""></div>
-					<div class="item a3"><img src="<?php echo bloginfo('template_directory') ?>/images/slider_bottom1.png" alt=""></div>
-					<div class="item a4"><img src="<?php echo bloginfo('template_directory') ?>/images/slider_bottom1.png" alt=""></div>
-					<div class="item a5"><img src="<?php echo bloginfo('template_directory') ?>/images/slider_bottom1.png" alt=""></div>
-				</div>
+				<?php echo do_shortcode('[abv_gallery id="24" class="slider_bottom"]') ?>
 			</div>
 			<div class="register_form">
 				<div class="left">
 					<div class="title">
-						Записатись на безкоштовну діагностику
+						<?php echo __('Register for a free diagnosis','stomat') ?>
 					</div>
 					<img src="<?php echo bloginfo('template_directory') ?>/images/form_bg.png" alt="">
 				</div>
-				<form action="post">
+<!--				<form action="post">
 					<div class="wrap"><label for="your-name">Ім’я та прізвище <span>*</span></label>
 						<input type="text" id="your-name" required>
 					</div>
@@ -271,7 +234,9 @@
 						<input type="submit" value="Надіслати">
 					</div>
 
-				</form>
+				</form>-->
+				<?php echo do_shortcode('[contact-form-7 id="33" title="Записатись на безкоштовну діагностику"]') ?>
+
 			</div>
 			<div class="address">
 				<div class="row">
