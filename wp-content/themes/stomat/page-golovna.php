@@ -181,7 +181,6 @@
 							<?php AbvStomat::get_post_title_content_by_slug('prejskurant') ?>
 							<div class="register_button desc-res">
 								<a href="#"><?php echo __('Register for a free diagnosis','stomat') ?></a>
-								
 							</div>
 						</div>
 					</div>
@@ -210,33 +209,7 @@
 					</div>
 					<img src="<?php echo bloginfo('template_directory') ?>/images/form_bg.png" alt="">
 				</div>
-<!--				<form action="post">
-					<div class="wrap"><label for="your-name">Ім’я та прізвище <span>*</span></label>
-						<input type="text" id="your-name" required>
-					</div>
-					<div class="wrap">
-						<label for="tel-813">Контактний телефон <span>*</span></label>
-						<input type="text" id="tel-813" required>
-					</div>
-					<div class="wrap">
-						<select id="reason" name="menu-312" class="wpcf7-form-control" aria-required="true"
-								aria-invalid="false">
-							<option value="">Причина звернення</option>
-							<option value="Лікуватись">Лікуватись</option>
-							<option value="Просто так">Просто так</option>
-						</select>
-					</div>
-					<div class="wrap">
-						<label for="your-message">Додаткове питання, інформація</label>
-						<input type="text" id="your-message">
-					</div>
-					<div class="wrap">
-						<input type="submit" value="Надіслати">
-					</div>
-
-				</form>-->
 				<?php echo do_shortcode('[contact-form-7 id="33" title="Записатись на безкоштовну діагностику"]') ?>
-
 			</div>
 			<div class="address">
 				<div class="row">
@@ -253,5 +226,4 @@
 				</div>
 			</div>
 		</div>
-
 <?php get_footer(); ?>

@@ -42,8 +42,10 @@ jQuery(document).ready(function($) {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        prevArrow:'<div class="slick-prev"><img src="' + window.location.href + 'wp-content/themes/stomat/images/arrow_left.svg" alt=""></div>',
-        nextArrow: '<div class="slick-next"><img src="' + window.location.href + 'wp-content/themes/stomat/images/arrow_right.svg" alt=""></div>',
+        prevArrow:'<div class="slick-prev"><img src="' + window.location.protocol +
+        '//' + location.hostname + '/wp-content/themes/stomat/images/arrow_left.svg" alt=""></div>',
+        nextArrow: '<div class="slick-next"><img src="' + window.location.protocol +
+        '//' + location.hostname + '/wp-content/themes/stomat/images/arrow_right.svg" alt=""></div>',
         responsive: [
             {
                 breakpoint: 540,
@@ -61,8 +63,10 @@ jQuery(document).ready(function($) {
         slidesToShow: 4,
         slidesToScroll: 1,
         infinite: true,
-        prevArrow:'<div class="slick-prev"><img src="' + window.location.href + 'wp-content/themes/stomat/images/arrow_left.svg" alt=""></div>',
-        nextArrow: '<div class="slick-next"><img src="' + window.location.href + 'wp-content/themes/stomat/images/arrow_right.svg" alt=""></div>',
+        prevArrow:'<div class="slick-prev"><img src="' + window.location.protocol +
+        '//' + location.hostname + '/wp-content/themes/stomat/images/arrow_left.svg" alt=""></div>',
+        nextArrow: '<div class="slick-next"><img src="' + window.location.protocol +
+        '//' + location.hostname + '/wp-content/themes/stomat/images/arrow_right.svg" alt=""></div>',
         responsive: [
             {
                 breakpoint: 768,
@@ -75,6 +79,7 @@ jQuery(document).ready(function($) {
             },
         ]
     });
+
     $(".register_form br").remove();
 
     $( ".register_form input[type='text']" ).focus(function() {
@@ -85,6 +90,7 @@ jQuery(document).ready(function($) {
             "border-bottom":"1px solid #9d9d9d",
         })
     });
+
     $( ".register_form input[type='text']" ).focusout(function() {
        if(!$(this).val().length){
            $( this).parents().prev( "label" ).css( {
@@ -97,6 +103,7 @@ jQuery(document).ready(function($) {
        }
 
     });
+
     $( "#reason" ).change(function() {
         if($("#reason :selected").val() != 'Причина звернення'){
             $(this).css({

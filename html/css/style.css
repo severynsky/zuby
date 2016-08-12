@@ -1254,3 +1254,120 @@ footer .copy {
     margin-top: 10px;
   }
 }
+/* line 1125, ../sass/style.scss */
+.white_line {
+  height: 68px;
+  background-color: #fffffd;
+  box-shadow: 0 2px 10px 0 rgba(155, 154, 155, 0.28);
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-top: 4px;
+}
+
+/* line 1134, ../sass/style.scss */
+header.service .go-main a {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 2.78;
+  color: #3e3e3e;
+  text-decoration: none;
+}
+/* line 1141, ../sass/style.scss */
+header.service .call_wrap {
+  float: right;
+}
+/* line 1143, ../sass/style.scss */
+header.service .call_wrap .phone {
+  line-height: 14px;
+}
+/* line 1145, ../sass/style.scss */
+header.service .call_wrap .phone img {
+  float: left;
+  margin-top: 5px;
+}
+/* line 1149, ../sass/style.scss */
+header.service .call_wrap .phone p {
+  margin: 0;
+  margin-left: 34px;
+  width: 231px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.67;
+  color: #932724;
+}
+/* line 1159, ../sass/style.scss */
+header.service .call_wrap .time {
+  float: left;
+  padding-bottom: 20px;
+}
+/* line 1160, ../sass/style.scss */
+header.service .call_wrap .time img {
+  float: left;
+  margin-top: 5px;
+}
+/* line 1166, ../sass/style.scss */
+header.service .call_wrap .time p {
+  margin: 0;
+  margin-left: 34px;
+  width: 306px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.67;
+  color: #932724;
+}
+
+/* line 1181, ../sass/style.scss */
+.service .price_list {
+  margin-top: 22px;
+}
+/* line 1183, ../sass/style.scss */
+.service .price_list .register_button {
+  float: right;
+  margin-top: -66px;
+}
+/* line 1187, ../sass/style.scss */
+.service .price_list .price {
+  min-width: 748px;
+}
+/* line 1189, ../sass/style.scss */
+.service .price_list .price .col_price {
+  margin-left: 472px;
+}
+/* line 1195, ../sass/style.scss */
+.service .price_list .price div:last-child {
+  margin-bottom: 0;
+}
+/* line 1201, ../sass/style.scss */
+.service .register_form {
+  border: 0;
+  margin-bottom: 95px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* line 1209, ../sass/style.scss */
+  .service .price_list {
+    margin-top: 22px;
+  }
+  /* line 1211, ../sass/style.scss */
+  .service .price_list .register_button {
+    float: right;
+    margin-top: -66px;
+  }
+  /* line 1215, ../sass/style.scss */
+  .service .price_list .price {
+    min-width: 640px;
+  }
+  /* line 1217, ../sass/style.scss */
+  .service .price_list .price .col_price {
+    margin-left: 438px;
+  }
+  /* line 1223, ../sass/style.scss */
+  .service .price_list .price div:last-child {
+    margin-bottom: 0;
+  }
+  /* line 1229, ../sass/style.scss */
+  .service .register_form {
+    border: 0;
+    margin-bottom: 95px;
+  }
+}

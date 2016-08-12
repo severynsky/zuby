@@ -19,20 +19,29 @@ class AbvPostType
     function __construct($name, $slug,$img = true,$id_post = 0){
         $this->name = $name;
         $this->slug = $slug;
+        /**
+         * if true the images post type
+         */
         $this->img = $img;
+        /**
+         *  ID posts to show the post type
+         */
         $this->id_post = $id_post;
-        $this->url = plugin_dir_url( __FILE__ );
+        $this->url = get_stylesheet_directory_uri().'/';
         $this->dir = dirname( __FILE__ );
-        // инит темы
-        add_action('init', [$this, 'create_post_type']);
+
         //подключение стилей в админке
         add_action( 'admin_enqueue_scripts', [$this, 'include_css_js'] );
         if($this->img){
+            // инит темы
+            add_action('init', [$this, 'img_create_post_type']);
             // создаем метабокс
             add_action('add_meta_boxes', [$this, 'img_add_meta_boxes']);
             // сохранение поста
             add_action( 'save_post', [$this, 'img_save_post_data'] );
         } else {
+            // инит темы
+            add_action('init', [$this, 'create_post_type']);
             // создаем метабокс
             add_action('add_meta_boxes', [$this, 'add_meta_boxes']);
             // сохранение поста
@@ -40,16 +49,10 @@ class AbvPostType
         }
     }
 
-    // создаем метабокс админки
-    function add_meta_boxes(){
-        if ($_GET['post']==$this->id_post) {
-            add_meta_box( 'abv_'.$this->slug.'_id', $this->name, [$this, 'img_meta_callback'], 'page' );
-        }
 
-    }
 
     // сохрянем галерею
-    function save_post_data($post_id) {
+    function img_save_post_data($post_id) {
         if (get_post_type($post_id) == $this->slug){
             if (!isset($_POST['abv_nonceName']))
                 return $post_id;
@@ -82,7 +85,7 @@ class AbvPostType
     /////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // создаем пост тайп
-    function create_post_type() {
+    function img_create_post_type() {
         register_post_type($this->slug,
             array(
                 'labels' => array(
@@ -170,8 +173,81 @@ class AbvPostType
         }
     }
 
-    // сохрянем галерею
-    function img_save_post_data($post_id) {
+    //подключение стилей в админке
+    function include_css_js() {
+
+        if ( ! did_action( 'wp_enqueue_media' ) ) {
+            wp_enqueue_media();
+        }
+
+        wp_enqueue_script( 'post_type_jquery-ui', $this->url . 'js/jquery-ui.min.js', array('jquery'), null, false );
+        wp_enqueue_script( 'abv_post_type_image_admin', $this->url . 'js/abv_post_type_admin.js', array('jquery'), null, false );
+        wp_enqueue_style('post_type_jquery-ui.min', $this->url . 'css/jquery-ui.min.css');
+        wp_enqueue_style('abv_post_type_admin', $this->url . 'css/admin.css');
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // создаем пост тайп
+    function create_post_type() {
+        register_post_type($this->slug,
+            array(
+                'labels' => array(
+                    'name' => $this->name,
+                    'singular_name' => $this->name,
+                    'add_new' => 'Додати ',
+                    'add_new_item' => 'Додати нову',
+                    'edit' => 'Редагувати',
+                    'edit_item' => 'Редагувати',
+                    'new_item' => 'Нова',
+                    'view' => 'Дивитись',
+                    'view_item' => 'Дивитись',
+                    'search_items' => 'Шукати',
+                    'not_found' => 'Не знайдено',
+                    'not_found_in_trash' => 'У кошику не знайдено',
+                    'parent' => 'Предок'
+                ),
+                'public' => true,
+                'publicly_queryable' => false,
+                'exclude_from_search' => true,
+                'menu_position' => 15,
+                'supports' => array('title', 'thumbnail', 'editor'),
+                'taxonomies' => array(''),
+                'menu_icon' => 'dashicons-images-alt2',
+                'has_archive' => true
+            )
+        );
+    }
+
+    // создаем метабокс админки
+    function add_meta_boxes(){
+        if ($_GET['post']==$this->id_post) {
+            add_meta_box( 'abv_'.$this->slug.'_id', $this->name, [$this, 'meta_callback'], 'page' );
+        }
+        add_meta_box( 'abv_'.$this->slug.'_meta_post_id', $this->name, [$this, 'meta_post_type'], $this->slug );
+
+    }
+
+    function meta_post_type ($form){
+        wp_nonce_field( $this->dir, 'abv_nonceName' );
+
+        $short_field = esc_html(
+            get_post_meta($form->ID, 'abv_short_meta_value_key', true));
+        ?>
+        <table>
+            <tr>
+                <td><label for="short_field"><?php echo __('Short','stomat') ?></td>
+                <td style="width: 100%;"><input type="text" id="short_field" name="short_field"
+                                                value="<?php echo $short_field; ?>" size="20" style="width: 100%;" >
+                </td>
+            </tr>
+        </table>
+
+        <?php
+    }
+
+    // сохрянем post type
+    function save_post_data($post_id) {
         if (get_post_type($post_id) == $this->slug){
             if (!isset($_POST['abv_nonceName']))
                 return $post_id;
@@ -190,27 +266,47 @@ class AbvPostType
                 return $post_id;
             }
 
-            $images= '';
-            foreach($_POST['abv_gallery_img'] as $item){
-                $images .= $item.',';
-            }
-            $images = substr($images, 0, -1);
+            $short = sanitize_text_field( $_POST['short_field'] );
 
-            update_post_meta($post_id, 'abv_'.$this->slug.'_images_meta_value_key', $images);
+            update_post_meta($post_id, 'abv_short_meta_value_key', $short);
         }
 
     }
 
-    //подключение стилей в админке
-    function include_css_js() {
+    // рисуем вид админки галереи
+    function meta_callback($galleryForm) {
 
-        if ( ! did_action( 'wp_enqueue_media' ) ) {
-            wp_enqueue_media();
-        }
+        wp_nonce_field($this->dir, 'abv_nonceName');
 
-        wp_enqueue_script( 'post_type_jquery-ui', $this->url . 'js/jquery-ui.min.js', array('jquery'), null, false );
-        wp_enqueue_script( 'abv_post_type_image_admin', $this->url . 'js/abv_post_type_admin.js', array('jquery'), null, false );
-        wp_enqueue_style('post_type_jquery-ui.min', $this->url . 'css/jquery-ui.min.css');
-        wp_enqueue_style('abv_post_type_admin', $this->url . 'css/admin.css');
+        $field = esc_html(
+            get_post_meta($galleryForm->ID, 'abv_'.$this->slug.'_meta_value_key', true));
+
+        ?>
+        <table>
+            <tr>
+                <td colspan="2">
+                    <?php echo $this->name.' '.__("(can be assorted)","stomat") ?>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="wrap_post_type_box" style="width: 100%;">
+                        <?php $this->show_post_type($field); ?>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select multiple name="abv_post_type[]" size="10">
+
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <?php
+    }
+
+    function show_post_type($field){
+
     }
 }
