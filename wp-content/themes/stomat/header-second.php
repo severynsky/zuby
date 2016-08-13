@@ -8,19 +8,102 @@
     <?php wp_head(); ?>
 </head>
 <body>
-<div class="container-fluid clearfix">
+<div class="container-fluid second">
     <div class="row">
         <div class="col-xs-12">
+            <div class="row tablet-menu-wrap">
+                <div class="cross">
+                    <a id="tablet-menu-button-close" href="#"><img src="/wp-content/uploads/2016/08/cross.svg" alt=""></a>
+                </div>
+                <div class="tablet-menu">
+                    <div class="col-sm-4 col-xs-4">
+                        <a href="#">
+                            <div class="item">
+                                <img src="http://stomat/wp-content/uploads/2016/08/ortodontia.svg" alt="">
+                                <div class="title">Дитяча стоматологія</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-xs-4">
+                        <a href="#">
+                            <div class="item">
+                                <img src="http://stomat/wp-content/uploads/2016/08/ortodontia.svg" alt="">
+                                <div class="title">Дитяча стоматологія</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-xs-4">
+                        <a href="#">
+                            <div class="item">
+                                <img src="http://stomat/wp-content/uploads/2016/08/ortodontia.svg" alt="">
+                                <div class="title">Дитяча стоматологія</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-xs-4">
+                        <a href="#">
+                            <div class="item">
+                                <img src="http://stomat/wp-content/uploads/2016/08/ortodontia.svg" alt="">
+                                <div class="title">Дитяча стоматологія</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-xs-4">
+                        <a href="#">
+                            <div class="item">
+                                <img src="http://stomat/wp-content/uploads/2016/08/ortodontia.svg" alt="">
+                                <div class="title">Дитяча стоматологія</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-xs-4">
+                        <a href="#">
+                            <div class="item">
+                                <img src="http://stomat/wp-content/uploads/2016/08/ortodontia.svg" alt="">
+                                <div class="title">Дитяча стоматологія</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-xs-4">
+                        <a href="#">
+                            <div class="item">
+                                <img src="http://stomat/wp-content/uploads/2016/08/ortodontia.svg" alt="">
+                                <div class="title">Дитяча стоматологія</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-xs-4">
+                        <a href="#">
+                            <div class="item">
+                                <img src="http://stomat/wp-content/uploads/2016/08/ortodontia.svg" alt="">
+                                <div class="title">Дитяча стоматологія</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 col-xs-4">
+                        <a href="#">
+                            <div class="item">
+                                <img src="http://stomat/wp-content/uploads/2016/08/ortodontia.svg" alt="">
+                                <div class="title">Дитяча стоматологія</div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="mobil-menu">
+                <?php wp_nav_menu( array('menu' => 'Меню послуги' )); ?>
+            </div>
             <div class="white_line">
                 <div class="container">
                     <div class="row">
                         <header class="service">
-                            <div class="col-md-2 col-sm-3 col-xs-4">
+                            <div class="col-md-2 col-sm-3 col-xs-10">
                                 <div class="go-main">
-                                    <a href="/"><span><</span> На головну</a>
+                                    <a href="/"><img src="/wp-content/uploads/2016/08/arrow.png" alt=""> На головну</a>
                                 </div>
                             </div>
-                            <div class="col-md-10 col-sm-9 col-xs-8">
+                            <div class="col-md-10 col-sm-9 col-xs-2">
                                 <div class="call_wrap">
                                     <div class="phone">
                                         <a href="#"><img src="<?php echo bloginfo('template_directory') ?>/images/phone_red_03.png" alt=""><p>067 766 50 41</p></a>

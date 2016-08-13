@@ -19,9 +19,20 @@ jQuery(document).ready(function($) {
         countItems = $('.treatment div[aria-describedby]').length;
         $('#slickCounter').text('(1/'+countItems+')')
     }
-    if (w <= 768) {
-        $(".service .menu a").empty();
-    }
+
+    $("#tablet-menu-button-open").click(function() {
+        if($(window).width()>=320) {
+            $(".second .tablet-menu-wrap").fadeIn('fast');
+        } else {
+            $(".second .mobil-menu").fadeIn('fast');
+        }
+
+    });
+
+    $("#tablet-menu-button-close").click(function() {
+        $(".second .tablet-menu-wrap").fadeOut('fast');
+        $(".second .mobil-menu").fadeOut('fast');
+    });
 
     $('.items').on('afterChange', function(event, slick, currentSlide){
         $('#slickCounter').text('('+(currentSlide+1)+'/'+countItems+')');
