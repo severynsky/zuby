@@ -15,12 +15,12 @@
                 <div class="container">
                     <div class="row">
                         <header class="service">
-                            <div class="col-md-2 col-sm-3">
+                            <div class="col-md-2 col-sm-3 col-xs-4">
                                 <div class="go-main">
-                                    <a href="/">< На головну</a>
+                                    <a href="/"><span><</span> На головну</a>
                                 </div>
                             </div>
-                            <div class="col-md-10 col-sm-9">
+                            <div class="col-md-10 col-sm-9 col-xs-8">
                                 <div class="call_wrap">
                                     <div class="phone">
                                         <a href="#"><img src="<?php echo bloginfo('template_directory') ?>/images/phone_red_03.png" alt=""><p>067 766 50 41</p></a>
@@ -28,6 +28,9 @@
                                     <div class="time">
                                         <img src="<?php echo bloginfo('template_directory') ?>/images/time_red_03.png" alt=""><p>Пн – Сб 9:00 – 20:00 без перерви</p>
                                     </div>
+                                </div>
+                                <div class="m_call_wrap">
+                                    <a href="#"><img src="<?php echo bloginfo('template_directory') ?>/images/time_phone.svg" alt=""></a>
                                 </div>
                             </div>
                         </header>

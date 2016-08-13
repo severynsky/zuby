@@ -39,6 +39,19 @@ class AbvFunctions
     }
 
     /**
+     * get content of post by id
+     *
+     * @param $id
+     * @return bool|mixed
+     */
+    static function get_content_by_id($id){
+        $post_rnd = get_post($id);
+        if (!$post_rnd) return false;
+        $the_content_filtered = apply_filters('the_content', $post_rnd->post_content);
+        return str_replace(']]>', ']]&gt;', $the_content_filtered);
+    }
+
+    /**
      * get text from post by slug
      *
      * @param $page_slug

@@ -96,6 +96,11 @@ html {
       }
     }
   }
+
+  .m_call_wrap {
+    display: none;
+  }
+
   //////////map/////////
   #map {
     height:420px;
@@ -427,6 +432,7 @@ body {
     text-align: center;
     color: #9d9d9d;
     margin-top: 25px;
+    text-align: left;
   }
   .items {
     margin-top: 38px;
@@ -1189,7 +1195,7 @@ header.service {
 
 
 }
-.service {
+.prices {
   .price_list {
     margin-top: 22px;
     .register_button {
@@ -1217,7 +1223,7 @@ header.service {
 }
 
 @include respond-to(tablet){
-  .service {
+  .prices {
     .price_list {
       margin-top: 22px;
       .register_button {
@@ -1242,5 +1248,143 @@ header.service {
       border: 0;
       margin-bottom: 95px;
     }
+  }
+}
+
+///////////////////////////////////////////////////// services /////////////////////////////////////////
+
+.service {
+  .menu {
+    margin-top: 34px;
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      li {
+        border-bottom: 1px solid #f2f2f2;
+        width: 191.3px;
+        &:last-child {
+          border: 0;
+        }
+        a {
+          font-family: OpenSansSemibold;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 3.13;
+          color: #3e3e3e;
+          text-decoration: none;
+          &.active {
+            color: #932724;
+          }
+        }
+      }
+    }
+  }
+  .head {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .pic {
+    img {
+      width: 125px;
+    }
+  }
+  .title {
+    font-family: OpenSansSemibold;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #3e3e3e;
+  }
+  .register_button {
+    float: right;
+    margin-right: -53px;
+  }
+  .text {
+    padding: 15px;
+    strong {
+      font-family: OpenSansSemibold;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.78;
+      color: #3e3e3e;
+      margin-top: 40px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.38;
+      color: #9d9d9d;
+    }
+  }
+  .register_form {
+    border: 0;
+    margin-bottom: 95px;
+  }
+}
+@include respond-to(tablet){
+  .white_line {
+    height: 46px;
+  }
+  header.service {
+    .go-main {
+      a {
+        line-height: 2;
+      }
+    }
+    .call_wrap {
+      display: none;
+    }
+    .m_call_wrap {
+      display: block;
+      width: 64px;
+      height: 45px;
+      border-radius: 2px;
+      background-color: #932724;
+      z-index: 40;
+      float: right;
+      margin-top: -4px;
+      margin-right: -15px;
+      a {
+        display: block;
+        padding-bottom: 10px;
+      }
+      img {
+        margin-top: 12px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .service {
+    .pic, .title {
+      display: none;
+    }
+    .register_button {
+      float: none;
+      margin-right: 0;
+    }
+
+    .menu {
+      ul{
+        display: block;
+        width: 48px;
+        li{
+          width: 12px;
+          height: 12px;
+          border-radius: 2px;
+          border: solid 1px #932724;
+          float: left;
+          display: block;
+          margin: 2px;
+          a{
+            display: block;
+            height: 10px;
+            &.active {
+              background-color: #932724;
+            }
+          }
+        }
+      }
+    }
+
   }
 }

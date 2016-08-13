@@ -33,6 +33,8 @@ class AbvStomat
 
     }
 
+
+
     /**
      * show title and content of post
      *
@@ -86,5 +88,15 @@ class AbvStomat
     static function show_name_price_on_main($slug){
         $arr = self::arr_name_price($slug);
         include('template-parts/price_main.php');
+    }
+
+    static function show_services(){
+        $str = '114,116,118,120,122,123,124,125,126'; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        $arr = explode(',', $str);
+        foreach ($arr as $item){
+            $post = get_post($item);
+            $short = get_post_meta($item,'abv_short_meta_value_key', true);
+            include('template-parts/service.php');
+        }
     }
 }

@@ -30,6 +30,8 @@ class AbvPostType
         $this->url = get_stylesheet_directory_uri().'/';
         $this->dir = dirname( __FILE__ );
 
+        //add_filter( 'template_include', [$this, 'template_chooser']);
+
         //подключение стилей в админке
         add_action( 'admin_enqueue_scripts', [$this, 'include_css_js'] );
         if($this->img){
@@ -47,6 +49,8 @@ class AbvPostType
             // сохранение поста
             add_action( 'save_post', [$this, 'save_post_data'] );
         }
+
+
     }
 
 
@@ -208,7 +212,7 @@ class AbvPostType
                     'parent' => 'Предок'
                 ),
                 'public' => true,
-                'publicly_queryable' => false,
+                'publicly_queryable' => true,
                 'exclude_from_search' => true,
                 'menu_position' => 15,
                 'supports' => array('title', 'thumbnail', 'editor'),

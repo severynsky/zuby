@@ -19,6 +19,9 @@ jQuery(document).ready(function($) {
         countItems = $('.treatment div[aria-describedby]').length;
         $('#slickCounter').text('(1/'+countItems+')')
     }
+    if (w <= 768) {
+        $(".service .menu a").empty();
+    }
 
     $('.items').on('afterChange', function(event, slick, currentSlide){
         $('#slickCounter').text('('+(currentSlide+1)+'/'+countItems+')');
