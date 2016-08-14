@@ -8,8 +8,10 @@
  */
 
 include 'abv_autoload.php';
+new AbvOptions();
 new AbvPostType('Послуги','services',false, 5);
 //new AbvPostType('Test_image','test_image',true);
+
 $stomat = new AbvStomat();
 $stomat->run();
 

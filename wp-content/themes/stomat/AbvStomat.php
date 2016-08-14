@@ -90,13 +90,31 @@ class AbvStomat
         include('template-parts/price_main.php');
     }
 
-    static function show_services(){
-        $str = '114,116,118,120,122,123,124,125,126'; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        $arr = explode(',', $str);
-        foreach ($arr as $item){
-            $post = get_post($item);
-            $short = get_post_meta($item,'abv_short_meta_value_key', true);
-            include('template-parts/service.php');
+    static function show_services($id = 5){
+
+        $arr = get_post_meta($id,'abv_stomat_post_type_checkboxes',true);
+        $last = AbvFunctions::last_true_in_array($arr);
+        foreach ($arr as $key => $val){
+            $post = get_post($key);
+            if ($post and $post->post_status == "publish"){
+                $short = get_post_meta($key,'abv_short_meta_value_key', true);
+                if ($key !== $last){
+                    $col = "col-md-4 col-sm-6";
+                } else {
+                    $col = "col-md-4 col-sm-6"; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                }
+                if ($val) include('template-parts/service.php');
+            }
         }
+    }
+
+    static function get_href_phone(){
+        $str = get_option("abv_options_theme_stomat")['phone'];
+        if (!$str) return false;
+        $restrict = array(" ", "(", ")", "-");
+        foreach ($restrict as $item){
+            $str = str_replace($item, '', $str);
+        }
+        return "tel:".$str;
     }
 }

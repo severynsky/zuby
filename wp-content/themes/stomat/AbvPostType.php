@@ -225,13 +225,17 @@ class AbvPostType
 
     // создаем метабокс админки
     function add_meta_boxes(){
-        if ($_GET['post']==$this->id_post) {
-            add_meta_box( 'abv_'.$this->slug.'_id', $this->name, [$this, 'meta_callback'], 'page' );
+        if (isset($_GET['post'])){
+            if ($_GET['post']==$this->id_post) {
+                add_meta_box( 'abv_'.$this->slug.'_id', $this->name, [$this, 'meta_callback'], 'page' );
+            }
         }
+
         add_meta_box( 'abv_'.$this->slug.'_meta_post_id', $this->name, [$this, 'meta_post_type'], $this->slug );
 
     }
 
+    // рисуем в каждом постайпе
     function meta_post_type ($form){
         wp_nonce_field( $this->dir, 'abv_nonceName' );
 
@@ -250,9 +254,10 @@ class AbvPostType
         <?php
     }
 
-    // сохрянем post type
+    // сохрянем каждій post type
     function save_post_data($post_id) {
-        if (get_post_type($post_id) == $this->slug){
+
+        if ((get_post_type($post_id) === "page" and $post_id = 5) or get_post_type($post_id) == $this->slug){
             if (!isset($_POST['abv_nonceName']))
                 return $post_id;
             // проверяем nonce нашей страницы, потому что save_post может быть вызван с другого места.
@@ -269,48 +274,40 @@ class AbvPostType
             } elseif (!current_user_can('edit_post', $post_id)) {
                 return $post_id;
             }
+        }
 
+        if (get_post_type($post_id) == $this->slug){
             $short = sanitize_text_field( $_POST['short_field'] );
 
             update_post_meta($post_id, 'abv_short_meta_value_key', $short);
         }
 
+        if (get_post_type($post_id) === "page" and $post_id = 5){
+            $arr =array();
+            foreach ($_POST as $key=>$val){
+                if (strpos($key, 'abv_stomat_post_type_checkbox') !== false){
+                    $id = explode('-', $key)[1];
+                    $arr[$id] = $val;
+                }
+            }
+            update_post_meta($post_id, 'abv_stomat_post_type_checkboxes', $arr);
+        }
+
     }
 
-    // рисуем вид админки галереи
+    // рисуем в странице где настройки
     function meta_callback($galleryForm) {
-
         wp_nonce_field($this->dir, 'abv_nonceName');
-
-        $field = esc_html(
-            get_post_meta($galleryForm->ID, 'abv_'.$this->slug.'_meta_value_key', true));
-
-        ?>
-        <table>
-            <tr>
-                <td colspan="2">
-                    <?php echo $this->name.' '.__("(can be assorted)","stomat") ?>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <div class="wrap_post_type_box" style="width: 100%;">
-                        <?php $this->show_post_type($field); ?>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <select multiple name="abv_post_type[]" size="10">
-
-                    </select>
-                </td>
-            </tr>
-        </table>
-        <?php
+        $field = get_post_meta($this->id_post,'abv_stomat_post_type_checkboxes',true);
+        include('template-parts/admin_show_meta.php');
     }
 
     function show_post_type($field){
-
+        $arr = AbvFunctions::compare_and_join_arr($field, $this->slug);
+        foreach($arr as $key=>$val){
+            $post = get_post($key);
+            include('template-parts/checkbox.php');
+        }
     }
+
 }

@@ -28,10 +28,11 @@
 	</div>
 	<div class="max_call_wrap">
 		<div class="phone">
-			<a href="#"><img src="<?php echo bloginfo('template_directory') ?>/images/phone.svg" alt=""><p>067 766 50 41</p></a>
+			<a href="<?php echo AbvStomat::get_href_phone() ?>"><img src="<?php echo bloginfo('template_directory') ?>/images/phone.svg" alt=""><p><?php echo get_option("abv_options_theme_stomat")['phone'] ?></p></a>
 		</div>
 		<div class="time">
-			<img src="<?php echo bloginfo('template_directory') ?>/images/time.svg" alt=""><p>Пн – Сб 9:00 – 20:00 <br>без перерви</p>
+			<img src="<?php echo bloginfo('template_directory') ?>/images/time.svg" alt=""><p>
+				<?php echo get_option("abv_options_theme_stomat")['time'] ?></p>
 		</div>
 	</div>
 	<div class="container-fluid">

@@ -28,5 +28,5 @@ jQuery(function($){
     });
 
     // включаем сортировку
-    $('.wrap_img_box').sortable();
+    $('.wrap_sortable_checkboxes').sortable();
 });

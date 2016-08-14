@@ -1,6 +1,6 @@
-<div class="col-md-4 col-sm-6">
+<div class="<?php echo $col ?>">
     <div class="item">
-        <?php $thumb = get_the_post_thumbnail($item, 'full');
+        <?php $thumb = get_the_post_thumbnail($key, 'full');
         if (!$thumb) {echo '<img src="'.$this->themeDir.'images/no_photo.png'.'" alt="">';}
         else {echo $thumb;} ?>
         <div class="title">
@@ -10,7 +10,7 @@
             <?php echo $short; ?>
         </div>
         <div class="button">
-            <a href="<?php echo get_permalink($item) ?>"><?php echo __('More','stomat') ?> <span>></span></a>
+            <a href="<?php echo get_permalink($key) ?>"><?php echo __('More','stomat') ?> <span>></span></a>
         </div>
     </div>
 </div>
