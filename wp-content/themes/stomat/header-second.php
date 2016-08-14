@@ -91,8 +91,13 @@
 
                 </div>
             </div>
+            <div class="row mobil-menu-wrap">
+                <div class="cross">
+                    <a id="mobil-menu-button-close" href="#"><img src="/wp-content/uploads/2016/08/cross.svg" alt=""></a>
+                </div>
             <div class="mobil-menu">
                 <?php wp_nav_menu( array('menu' => 'Меню послуги' )); ?>
+            </div>
             </div>
             <div class="white_line">
                 <div class="container">

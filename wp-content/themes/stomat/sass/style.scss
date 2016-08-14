@@ -230,6 +230,7 @@ body {
       font-weight: 700;
       color: #932724;
       z-index: 30;
+      text-decoration: none;
     }
   }
   .line-top {
@@ -289,15 +290,7 @@ body {
         margin-left: 50px;
         text-decoration: none;
       }
-
-      /* Change the link color on hover */
-      li a:hover {
-        background-color: #555;
-        color: white;
-      }
     }
-
-
   }
 }
 
@@ -480,12 +473,15 @@ body {
     font-weight: 600;
     letter-spacing: 0.5px;
     color: #3e3e3e;
+    text-align: left;
+    margin-top: 0;
   }
   .line {
     width: 66px;
     height: 2px;
     border-bottom: solid 2px #932724;
     margin-top: 16px;
+    margin-left: 0;
   }
   .priceList {
     overflow: hidden;
@@ -893,7 +889,6 @@ footer {
       margin-top: 49px;
     }
   }
-
   .register_form {      /////////////////////
     margin-top: -8px;
     padding-bottom: 20px;
@@ -932,7 +927,6 @@ footer {
       }
     }
   }
-
 }
 
 @include respond-to(mobile) {
@@ -1116,44 +1110,6 @@ footer {
   .photo_gallery {
     display: none;
   }
-  /*.register_form {      /////////////////////
-    margin-top: -8px;
-    padding-bottom: 20px;
-    padding-top: 28px;
-    .left {
-      width: auto;
-      float: none;
-      margin: 0;
-      .title {
-        font-family: CormorantBold;
-        font-size: 24px;
-        font-weight: 700;
-        text-align: center;
-        color: #932724;
-        margin: 0;
-      }
-      img {
-        display: none;
-      }
-    }
-    .wrap {
-      padding-left: 18px;
-      padding-right: 18px;
-      input[type="text"] {
-        width: 100%;
-        //max-width: 327px;
-      }
-      select {
-        width: 100%;
-      }
-      input[type="submit"]{
-        float: none !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
-        display: block;
-      }
-    }
-  }*/
   .address {
     .addressList {
       .title {
@@ -1280,7 +1236,7 @@ header.service {
       .price {
         min-width: 640px;
         .col_price {
-          margin-left: 438px;
+          margin-left: 389px;
         }
         .col_name {
 
@@ -1298,10 +1254,51 @@ header.service {
   }
 }
 
+@media screen and (max-width: 712px) {
+
+  .prices .price_list .title {
+    text-align: center;
+    margin-top: 103px;
+  }
+  .prices  .price_list .line {
+    padding-top: 24px;
+    margin: 0 auto 38px;
+  }
+  .prices .price_list .register_button  {
+    float: none;
+    margin: -187px auto 151px;
+  }
+}
+
+@include respond-to(mobile){
+  .prices .price_list {
+
+    .price {
+      box-shadow:none;
+      .col_price {
+        margin: 0;
+        margin-left: 28px;
+        padding-bottom: 20px;
+      }
+      .col_name {
+        margin-left: 28px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+
+
+
+}
+@include respond-to(mobile320){
+
+}
 ///////////////////////////////////////////////////// services /////////////////////////////////////////
 
 .second {
   position: relative;
+
   .cross {
     position: absolute;
     top: 0;
@@ -1340,8 +1337,41 @@ header.service {
     }
   }
 
+  .mobil-menu-wrap {
+    display: none;
+    .mobil-menu {
+      padding-top: 120px;
+      background-color: rgba(255, 255, 255, 0.9);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      ul {
+        list-style-type: none;
+        padding-left: 25px;
+        li {
+          &.current-menu-item a {
+            color: #932724;
+          }
+          &.current-menu-item {
+            border-bottom: 1px solid #932724;
+            width: 92%;
+          }
+          a {
+            text-decoration: none;
+            font-family: OpenSansSemibold;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 4;
+            color: #3e3e3e;
+          }
+        }
+      }
+    }
+  }
 }
-
 
 .service {
   .menu {
@@ -1516,17 +1546,5 @@ header.service {
     .register_button {
       width: 237px;
     }
-
-/*    .menu {
-      ul{
-        display: none;
-      }
-      .button-menu {
-        display: none;
-      }
-      .mobil-menu {
-        display: none;
-      }
-    }*/
   }
 }
