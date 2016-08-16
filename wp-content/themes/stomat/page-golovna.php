@@ -50,7 +50,7 @@
 						<div class="priceList">
 							<?php AbvStomat::get_post_title_content_by_slug('prejskurant') ?>
 							<div class="register_button desc-res">
-								<a href="#"><?php echo __('Register for a free diagnosis','stomat') ?></a>
+								<a href="#register"><?php echo __('Register for a free diagnosis','stomat') ?></a>
 							</div>
 						</div>
 					</div>
@@ -58,7 +58,7 @@
 						<div class="price">
 							<?php echo AbvStomat::show_name_price_on_main('tsiny') ?>
 							<div class="button">
-								<a href="#"><?php echo __('More','stomat') ?> <span>></span></a>
+								<a href="/price-list"><?php echo __('More','stomat') ?> <span>></span></a>
 							</div>
 						</div>
 						<div class="register_button tablet-res">
@@ -74,6 +74,7 @@
 				<?php echo do_shortcode('[abv_gallery id="24" class="slider_bottom"]') ?>
 			</div>
 			<div class="register_form">
+				<a name="register"></a>
 				<div class="left">
 					<div class="title">
 						<?php echo __('Register for a free diagnosis','stomat') ?>
