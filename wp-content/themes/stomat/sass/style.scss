@@ -257,15 +257,18 @@ body {
     height: 68px;
     background-color: #fff;
     box-shadow: 0 2px 10px 0 rgba(155, 154, 155, 0.28);
+    position: fixed;
+    z-index: 300;
+    width: 100%;
   }
   .site-branding {
     float: left;
-    margin-top: 17px;
+    margin-top: 13px;
   }
   .menu-toggle {
     display: none;
     float: right;
-    margin-top: 12px;
+    margin-top: 8px;
     border: 0;
     background-color: #fff;
   }
@@ -275,7 +278,7 @@ body {
       float: right;
       ul {
         list-style-type: none;
-        margin-top: 23px;
+        margin-top: 16px;
         padding: 0;
       }
       li {
@@ -289,15 +292,29 @@ body {
         color: #932724;
         margin-left: 50px;
         text-decoration: none;
+        &:hover {
+          border-bottom: 2px solid #932724;
+        }
       }
     }
   }
 }
 
 .top_content {
+  position:relative ;
   background: url(../images/city_house.jpg) no-repeat center;
   background-size: cover;
-  //background-origin: content-box;
+  .grad_left {
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), #fdfaf6);
+    //width: 642px;
+
+  }
+  .grad_right {
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #fdfaf6);
+    //width: 642px;
+  }
   .logo {
     margin-top: 277px;
     text-align: center;
@@ -802,7 +819,7 @@ footer {
       height: 46px !important;
     }
     .site-branding {
-      margin-top: 5px;
+      margin-top: 1px;
     }
     .menu-toggle {
       display: block !important;
