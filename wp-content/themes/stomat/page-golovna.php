@@ -1,23 +1,9 @@
 <?php get_header() ?>
 		<div class="container">
-			<div class="top_content">
-				<div class="grad_left">
-					<div class="grad_right">
-						<div class="row">
-							<div class="logo">
-								<img src="<?php echo bloginfo('template_directory') ?>/images/logo-big.svg" alt="">
-							</div>
-							<div class="site-description">
-								<?php echo bloginfo('description') ?>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
 			<?php echo do_shortcode('[abv_gallery id="22" class="slider_top"]') ?>
 			<div class="about_advantages">
-				<a name="about"></a>
+				<a name="about" id="about"></a>
 				<div class="row">
 					<div class="col-md-6">
 						<div class="about">
@@ -35,7 +21,7 @@
 				</div>
 			</div>
 			<div class="treatment">
-				<a name="medcine"></a>
+				<a name="medcine" id="medcine"></a>
 				<?php AbvStomat::get_post_title_content_by_slug('likuvannya') ?>
 				<div class="row items">
 					<?php AbvStomat::show_services() ?>
@@ -47,7 +33,7 @@
 			</div>
 
 			<div class="price_list">
-				<a name="prices"></a>
+				<a name="prices" id="prices"></a>
 				<div class="treatment">
 				<div class="row">
 					<div class="col-md-6">
@@ -73,12 +59,12 @@
 			</div>
 
 			<div class="photo_gallery">
-				<a name="gallery"></a>
+				<a name="gallery" id="gallery"></a>
 				<?php AbvStomat::get_post_title_content_by_slug('fotogalereya') ?>
 				<?php echo do_shortcode('[abv_gallery id="24" class="slider_bottom"]') ?>
 			</div>
 			<div class="register_form">
-				<a name="register"></a>
+				<a name="register" id="register"></a>
 				<div class="left">
 					<div class="title">
 						<?php echo __('Register for a free diagnosis','stomat') ?>
@@ -88,7 +74,7 @@
 				<?php echo do_shortcode('[contact-form-7 id="33" title="Записатись на безкоштовну діагностику"]') ?>
 			</div>
 			<div class="address">
-				<a name="contacts"></a>
+				<a name="contacts" id="contacts"></a>
 				<div class="row">
 					<div class="col-md-6">
 						<div class="addressList">

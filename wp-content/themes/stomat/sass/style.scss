@@ -128,7 +128,7 @@ body {
   .min_call_wrap {
     display: block;
     position: fixed;
-    top: 92px;
+    top: 100px;
     right: 0;
     width: 64px;
     height: 45px;
@@ -147,9 +147,10 @@ body {
   .max_call_wrap {
     display: none;
     position: fixed;
-    top: 217px;
+    top: 100px;
     right: 0;
-    width: 402px;
+    max-width: 402px;
+    min-width: 320px;
     height: 160px;
     border-radius: 2px;
     background-color: #932724;
@@ -283,17 +284,25 @@ body {
       }
       li {
         float: left;
-      }
-      li a {
-        display: block;
-        font-family: CormorantBold;
-        font-size: 19px;
-        font-weight: 700;
-        color: #932724;
-        margin-left: 50px;
-        text-decoration: none;
+        &.active {
+          border-bottom: 2px solid #932724;
+        }
         &:hover {
           border-bottom: 2px solid #932724;
+        }
+        a {
+          display: block;
+          font-family: CormorantBold;
+          font-size: 19px;
+          font-weight: 700;
+          color: #932724;
+          margin: 0 25px;
+          text-decoration: none;
+          padding-bottom: 19px;
+
+/*          &.active {
+            border-bottom: 2px solid #932724;
+          }*/
         }
       }
     }
@@ -304,6 +313,9 @@ body {
   position:relative ;
   background: url(../images/city_house.jpg) no-repeat center;
   background-size: cover;
+  width: 80vw;
+  margin: 0 auto;
+  background-attachment: fixed;
   .grad_left {
     height: 100%;
     background-image: linear-gradient(to left, rgba(255, 255, 255, 0), #fdfaf6);
@@ -418,6 +430,7 @@ body {
 }
 
 .treatment {
+  margin-top: 52px;
   .title  {
     font-family: CormorantSemiBold;
     font-size: 36px;
@@ -425,7 +438,7 @@ body {
     letter-spacing: 0.5px;
     color: #3e3e3e;
     text-align: center;
-    margin-top: 36px;
+    //margin-top: 36px;
   }
   .line {
     width: 66px;
@@ -568,7 +581,7 @@ body {
 }
 
 .photo_gallery {
-
+  margin-top: 117px;
   .title  {
     font-family: CormorantSemiBold;
     font-size: 36px;
@@ -632,7 +645,7 @@ body {
 .register_form {
   position: relative;
   max-width: 750px;
-  margin: 70px auto 0;
+  margin: 91px auto 0;
   border-radius: 2px;
   background-color: #fffffd;
   box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.1);

@@ -71,3 +71,17 @@
 
 			</div>
 		</div>
+		<div class="top_content">
+			<div class="grad_left">
+				<div class="grad_right">
+					<div class="row">
+						<div class="logo">
+							<img src="<?php echo bloginfo('template_directory') ?>/images/logo-big.svg" alt="">
+						</div>
+						<div class="site-description">
+							<?php echo bloginfo('description') ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
