@@ -27,12 +27,18 @@
 		<a href="#"><img src="<?php echo bloginfo('template_directory') ?>/images/time_phone.svg" alt=""></a>
 	</div>
 	<div class="max_call_wrap">
+		<a href="#" class="close-button-white">
+			<img  src="<?php echo bloginfo('template_directory') ?>/images/close-button-white.svg" alt="">
+		</a>
 		<div class="phone">
 			<a href="<?php echo AbvStomat::get_href_phone() ?>"><img src="<?php echo bloginfo('template_directory') ?>/images/phone.svg" alt=""><p><?php echo get_option("abv_options_theme_stomat")['phone'] ?></p></a>
 		</div>
 		<div class="time">
 			<img src="<?php echo bloginfo('template_directory') ?>/images/time.svg" alt=""><p>
 				<?php echo get_option("abv_options_theme_stomat")['time'] ?></p>
+		</div>
+		<div class="call">
+			<a href="<?php echo AbvStomat::get_href_phone() ?>">Подзвонити</a>
 		</div>
 	</div>
 	<div class="container-fluid all_content">

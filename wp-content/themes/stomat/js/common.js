@@ -50,6 +50,9 @@ jQuery(document).ready(function($) {
         $('.hamburger_menu').fadeOut('slow');
     });
 
+    $( ".close-button-white" ).click(function() {
+        $('.max_call_wrap').fadeOut('slow');
+    });
 
     $(".hamburger_menu li a").click(function(){
         $('.hamburger_menu').hide();
@@ -144,6 +147,10 @@ jQuery(document).ready(function($) {
             $("html,body").css("overflow","auto");
             return false;
         }
+        if ($(this).hasClass('close-button-white')){
+            $("html,body").css("overflow","auto");
+            return false;
+        }
         $('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top }, 1000 );
         $("html,body").css("overflow","auto");
         return false;
@@ -177,7 +184,7 @@ jQuery(document).ready(function($) {
         }
     });
     ////////////////////////menu///////////////////////////////
-
+6
 // Cache selectors
     var lastId,
         topMenu = $("#primary-menu"),
