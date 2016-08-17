@@ -120,7 +120,30 @@ html {
   //////////map/////////
 }
 body {
-    font-family: OpenSans
+    font-family: OpenSans;
+  .about_advantages_wrap {
+    background-color: #fdfaf6;
+    min-height: 903px;
+  }
+  .treatment_wrap {
+    background-color: #fffffd;
+    height: 1151px;
+  }
+  .price_list_wrap {
+    background-color: #fcf8f4;
+  }
+  .photo_gallery_wrap {
+    background-color: #fffffd;
+  }
+  .register_form_wrap {
+    //background-color: rosybrown;
+  }
+  .address_wrap {
+    background-color: #fafafa;
+    margin-top: -184px;
+    padding-top: 200px;
+    height: 843px;
+  }
 }
 @media screen and (max-width: 600px){
   #wpadminbar {
@@ -423,27 +446,34 @@ body {
     }
   }
   .advantages {
-    .img {
-      img {
-        width: 67px;
-        height: 67px;
-        margin-left: 94px;
-        margin-bottom: 65px;
+    ul {
+      margin-left: 60px;
+      list-style-type: none;
+      li {
+        margin-bottom: 42px;
+        .img {
+          float: left;
+          img {
+            width: 67px;
+            height: 67px;
+          }
+        }
+        .words {
+          font-family: OpenSansSemibold;
+          font-size: 18px;
+          font-weight: 600;
+          //line-height: 3.78;
+          color: #3e3e3e;
+          margin-left: 89px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+        &:last-child .words {
+          //line-height: 1.78;
+        }
       }
     }
-    .words {
-      font-family: OpenSansSemibold;
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 1.78;
-      color: #3e3e3e;
-      margin-left: 187px;
-      margin-top: -116px;
-      margin-bottom: 71px;
-      &:last-child {
-        margin-top: -130px;
-      }
-    }
+
   }
 }
 
@@ -514,7 +544,8 @@ body {
 }
 
 .price_list {
-  margin-top: 130px;
+  margin-top: 63px;
+  margin-bottom: 63px;
   .title {
     font-family: CormorantSemiBold;
     font-size: 36px;
@@ -599,7 +630,8 @@ body {
 }
 
 .photo_gallery {
-  margin-top: 117px;
+  margin-top: 61px;
+  padding-bottom: 481px;
   .title  {
     font-family: CormorantSemiBold;
     font-size: 36px;
@@ -663,7 +695,7 @@ body {
 .register_form {
   position: relative;
   max-width: 750px;
-  margin: 91px auto 0;
+  margin: -385px auto 0;
   border-radius: 2px;
   background-color: #fffffd;
   box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.1);
@@ -1035,19 +1067,30 @@ footer {
       .line {
         margin: 16px auto 0;
       }
+
       .text {
         margin-left: 0;
         margin-top: 37px;
-        .img {
-          img {
-            margin-left: 0;
-            width: 67px;
-            height: 67px;
+        ul{
+          margin-left: 0;
+          padding-left: 0;
+          li{
+            margin-bottom: 71px;
+            .img {
+              img {
+                margin-left: 0;
+                width: 67px;
+                height: 67px;
+              }
+            }
+            .words {
+              margin-left: 90px;
+              font-size: 16px;
+              padding-top: 0px
+            }
           }
         }
-        .words {
-          margin-left: 90px;
-        }
+
       }
     }
   }
@@ -1491,8 +1534,10 @@ header.service {
     }
   }
   .register_form {
-    border: 0;
+    min-width: 716px;
     margin-bottom: 95px;
+    margin-top: 30px;
+    float: right;
   }
 }
 
@@ -1590,10 +1635,24 @@ header.service {
 }
 
 @include respond-to(mobile320){
+  header.service {
+    .go-main {
+      a {
+        line-height: 2;
+        img {
+          height: 14px;
+          margin-top: -3px;
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+
   .service {
     .register_button {
       width: 237px;
     }
+
   }
   .site .max_call_wrap {
     position: fixed;

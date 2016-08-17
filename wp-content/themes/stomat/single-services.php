@@ -12,7 +12,7 @@
                         <div class="col-xs-9">
                             <div class="row head">
                                 <div class="col-xs-2 col-md-4">
-                                    <div class="title">Профілактика</div>
+                                    <div class="title"><?php echo $post->post_title; ?></div>
                                 </div>
                                 <div class="col-xs-10 col-md-8">
                                     <div class="register_button">
@@ -22,7 +22,11 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-2">
-                                    <div class="pic"><img src="/wp-content/uploads/2016/08/ortodontia.svg" alt=""></div>
+                                    <div class="pic">
+                                        <?php $thumb = get_the_post_thumbnail($post->ID, 'full');
+                                        if (!$thumb) {echo '<img src="/wp-content/uploads/2016/08/no_photo.png" alt="">';}
+                                        else {echo $thumb;} ?>
+                                    </div>
                                 </div>
                                 <div class="col-md-10">
                                     <div class="text">

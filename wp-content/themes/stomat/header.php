@@ -13,7 +13,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">--><meta name="viewport" content="width=device-width, user-scalable=no">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
@@ -41,7 +41,7 @@
 			<a href="<?php echo AbvStomat::get_href_phone() ?>">Подзвонити</a>
 		</div>
 	</div>
-	<div class="container-fluid all_content">
+	<div class="container-fluid">
 		<div class="header">
 			<div class="row white_line">
 				<div class="hamburger_menu">
@@ -91,3 +91,4 @@
 				</div>
 			</div>
 		</div>
+	</div>
