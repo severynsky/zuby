@@ -43,6 +43,7 @@ jQuery(document).ready(function($) {
 
     $( ".menu-toggle" ).click(function() {
         $('.hamburger_menu').fadeIn('slow');
+        $("html,body").css("overflow","hidden");
     });
 
     $( ".close_button" ).click(function() {
@@ -62,6 +63,8 @@ jQuery(document).ready(function($) {
         '//' + location.hostname + '/wp-content/themes/stomat/images/arrow_left.svg" alt=""></div>',
         nextArrow: '<div class="slick-next"><img src="' + window.location.protocol +
         '//' + location.hostname + '/wp-content/themes/stomat/images/arrow_right.svg" alt=""></div>',
+        //centerMode: false,
+        //centerPadding: '15px',
         responsive: [
             {
                 breakpoint: 540,
@@ -137,7 +140,12 @@ jQuery(document).ready(function($) {
     ///////////////////////////скрол///////////////////////////////////
 
     $(this).on('click', 'a[href^=#]', function () {
+        if ($(this).hasClass('close_button')){
+            $("html,body").css("overflow","auto");
+            return false;
+        }
         $('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top }, 1000 );
+        $("html,body").css("overflow","auto");
         return false;
     });
 

@@ -35,13 +35,13 @@
 				<?php echo get_option("abv_options_theme_stomat")['time'] ?></p>
 		</div>
 	</div>
-	<div class="container-fluid">
+	<div class="container-fluid all_content">
 		<div class="header">
 			<div class="row white_line">
 				<div class="hamburger_menu">
 					<div class="line-top"></div>
 					<div class="close_button">
-						<a href="#"><img src="<?php echo bloginfo('template_directory') ?>/images/cross.svg" alt=""></a>
+						<a href="#"  class="close_button"><img src="<?php echo bloginfo('template_directory') ?>/images/cross.svg" alt=""></a>
 					</div>
 					<?php wp_nav_menu( array('menu' => 'Гамбургер' )); ?>
 					<div class="line-bottom"></div>
