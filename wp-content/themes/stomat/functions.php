@@ -118,6 +118,7 @@ function stomat_scripts() {
 	wp_enqueue_style( 'stomat-bootstrap', get_template_directory_uri() .'/css/styles.css' );
 	wp_enqueue_style( 'stomat-fonts', get_template_directory_uri() .'/css/fonts.css' );
 	wp_enqueue_style( 'stomat-my-style', get_template_directory_uri() .'/css/style.css' );
+	wp_enqueue_style( 'animation', get_template_directory_uri() .'/css/animation.css' );
 
 	//wp_enqueue_script( 'stomat-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

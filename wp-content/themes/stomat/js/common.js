@@ -1,4 +1,13 @@
 jQuery(document).ready(function($) {
+    $('.item .button').mouseover(function(){
+        console.log('jimp');
+        $(this).siblings('img').addClass('jump-class');
+    });
+
+    $('#contacts').click(function(){
+        $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+        $('.primary-menu li').removeClass('.active');
+    });
     var countItems;
     var w = $(window).width();
     if (w <= 539) {
