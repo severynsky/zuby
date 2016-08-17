@@ -27,6 +27,9 @@
 		<a href="#"><img src="<?php echo bloginfo('template_directory') ?>/images/time_phone.svg" alt=""></a>
 	</div>
 	<div class="max_call_wrap">
+		<a href="#" class="close-button-white">
+			<img  src="<?php echo bloginfo('template_directory') ?>/images/close-button-white.svg" alt="">
+		</a>
 		<div class="phone">
 			<a href="<?php echo AbvStomat::get_href_phone() ?>"><img src="<?php echo bloginfo('template_directory') ?>/images/phone.svg" alt=""><p><?php echo get_option("abv_options_theme_stomat")['phone'] ?></p></a>
 		</div>
@@ -34,14 +37,17 @@
 			<img src="<?php echo bloginfo('template_directory') ?>/images/time.svg" alt=""><p>
 				<?php echo get_option("abv_options_theme_stomat")['time'] ?></p>
 		</div>
+		<div class="call">
+			<a href="<?php echo AbvStomat::get_href_phone() ?>">Подзвонити</a>
+		</div>
 	</div>
-	<div class="container-fluid">
+	<div class="container-fluid all_content">
 		<div class="header">
 			<div class="row white_line">
 				<div class="hamburger_menu">
 					<div class="line-top"></div>
 					<div class="close_button">
-						<a href="#"><img src="<?php echo bloginfo('template_directory') ?>/images/cross.svg" alt=""></a>
+						<a href="#"  class="close_button"><img src="<?php echo bloginfo('template_directory') ?>/images/cross.svg" alt=""></a>
 					</div>
 					<?php wp_nav_menu( array('menu' => 'Гамбургер' )); ?>
 					<div class="line-bottom"></div>
@@ -69,5 +75,19 @@
 					</div>
 				</div>
 
+			</div>
+		</div>
+		<div class="top_content">
+			<div class="grad_left">
+				<div class="grad_right">
+					<div class="row">
+						<div class="logo">
+							<img src="<?php echo bloginfo('template_directory') ?>/images/logo-big.svg" alt="">
+						</div>
+						<div class="site-description">
+							<?php echo bloginfo('description') ?>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>

@@ -43,12 +43,16 @@ jQuery(document).ready(function($) {
 
     $( ".menu-toggle" ).click(function() {
         $('.hamburger_menu').fadeIn('slow');
+        $("html,body").css("overflow","hidden");
     });
 
     $( ".close_button" ).click(function() {
         $('.hamburger_menu').fadeOut('slow');
     });
 
+    $( ".close-button-white" ).click(function() {
+        $('.max_call_wrap').fadeOut('slow');
+    });
 
     $(".hamburger_menu li a").click(function(){
         $('.hamburger_menu').hide();
@@ -62,6 +66,8 @@ jQuery(document).ready(function($) {
         '//' + location.hostname + '/wp-content/themes/stomat/images/arrow_left.svg" alt=""></div>',
         nextArrow: '<div class="slick-next"><img src="' + window.location.protocol +
         '//' + location.hostname + '/wp-content/themes/stomat/images/arrow_right.svg" alt=""></div>',
+        //centerMode: false,
+        //centerPadding: '15px',
         responsive: [
             {
                 breakpoint: 540,
@@ -137,7 +143,16 @@ jQuery(document).ready(function($) {
     ///////////////////////////скрол///////////////////////////////////
 
     $(this).on('click', 'a[href^=#]', function () {
+        if ($(this).hasClass('close_button')){
+            $("html,body").css("overflow","auto");
+            return false;
+        }
+        if ($(this).hasClass('close-button-white')){
+            $("html,body").css("overflow","auto");
+            return false;
+        }
         $('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top }, 1000 );
+        $("html,body").css("overflow","auto");
         return false;
     });
 
@@ -160,5 +175,63 @@ jQuery(document).ready(function($) {
             }
         }
     });
+    /////////close over ////////////////////
+    $(document).mouseup(function (e) {
+        var container = $(".max_call_wrap");
+        if (container.has(e.target).length === 0){
+            container.fadeOut('slow');
+            $('.min_call_wrap').fadeIn('slow');
+        }
+    });
+    ////////////////////////menu///////////////////////////////
+6
+// Cache selectors
+    var lastId,
+        topMenu = $("#primary-menu"),
+        topMenuHeight = topMenu.outerHeight()+15,
+    // All list items
+        menuItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+        scrollItems = menuItems.map(function(){
+            var item = $($(this).attr("href"));
+            if (item.length) { return item; }
+        });
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+    menuItems.click(function(e){
+        var href = $(this).attr("href"),
+            offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+        $('html, body').stop().animate({
+            scrollTop: offsetTop
+        }, 300);
+        e.preventDefault();
+    });
+
+// Bind to scroll
+    $(window).scroll(function(){
+        // Get container scroll position
+        var fromTop = $(this).scrollTop()+topMenuHeight;
+
+        // Get id of current scroll item
+        var cur = scrollItems.map(function(){
+            if ($(this).offset().top < fromTop)
+                return this;
+        });
+        // Get the id of the current element
+        cur = cur[cur.length-1];
+        var id = cur && cur.length ? cur[0].id : "";
+
+        if (lastId !== id) {
+            lastId = id;
+            // Set/remove active class
+            menuItems
+                .parent().removeClass("active")
+                .end().filter("[href='#"+id+"']").parent().addClass("active");
+        }
+    });
+
+    ///////////////////////////////////////////////////////////////
+
 });
 

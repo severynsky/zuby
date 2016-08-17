@@ -1,3 +1,4 @@
+</div>
 <div class="row">
 	<div class="col-md-12">
 		<footer id="colophon" class="site-footer" role="contentinfo">
@@ -6,9 +7,6 @@
 		</footer>
 	</div>
 </div>
-
-</div>
-
 </div>
 
 <?php echo '<script>'.AbvFunctions::get_text_by_slag('mapa').'</script>' ?>

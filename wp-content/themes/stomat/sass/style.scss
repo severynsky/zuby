@@ -122,13 +122,19 @@ html {
 body {
     font-family: OpenSans
 }
+@media screen and (max-width: 600px){
+  #wpadminbar {
+    position: fixed;
+  }
+}
+
 //////////////////////
 .site {
-  position: relative;
+  //position: relative;
   .min_call_wrap {
     display: block;
     position: fixed;
-    top: 92px;
+    top: 100px;
     right: 0;
     width: 64px;
     height: 45px;
@@ -147,13 +153,20 @@ body {
   .max_call_wrap {
     display: none;
     position: fixed;
-    top: 217px;
+    top: 100px;
     right: 0;
-    width: 402px;
+    max-width: 402px;
+    min-width: 320px;
     height: 160px;
     border-radius: 2px;
-    background-color: #932724;
+    background-color: rgba(147, 39, 36, .9);
     z-index: 1000000;
+    .close-button-white {
+      display: none;
+    }
+    .call {
+      display: none;
+    }
     .phone {
       margin-top: 30px;
       margin-left: 25px;
@@ -206,7 +219,7 @@ body {
   //margin-left: -10px;
   //margin-right: -10px;
   z-index: 20;
-  .close_button {
+  div.close_button {
     position: absolute;
     top: 11px;
     left: 30px;
@@ -251,21 +264,30 @@ body {
   }
 }
 
+.site {
+  //position: relative;
+  //overflow: hidden;
+}
 .header {
-  position: relative;
+
   .white_line {
     height: 68px;
     background-color: #fff;
     box-shadow: 0 2px 10px 0 rgba(155, 154, 155, 0.28);
+    position: fixed;
+    //top: 0;
+    //left: 0;
+    z-index: 300;
+    width: 100%;
   }
   .site-branding {
     float: left;
-    margin-top: 17px;
+    margin-top: 13px;
   }
   .menu-toggle {
     display: none;
     float: right;
-    margin-top: 12px;
+    margin-top: 8px;
     border: 0;
     background-color: #fff;
   }
@@ -275,29 +297,54 @@ body {
       float: right;
       ul {
         list-style-type: none;
-        margin-top: 23px;
+        margin-top: 16px;
         padding: 0;
       }
       li {
         float: left;
-      }
-      li a {
-        display: block;
-        font-family: CormorantBold;
-        font-size: 19px;
-        font-weight: 700;
-        color: #932724;
-        margin-left: 50px;
-        text-decoration: none;
+        &.active {
+          border-bottom: 2px solid #932724;
+        }
+        &:hover {
+          border-bottom: 2px solid #932724;
+        }
+        a {
+          display: block;
+          font-family: CormorantBold;
+          font-size: 19px;
+          font-weight: 700;
+          color: #932724;
+          margin: 0 25px;
+          text-decoration: none;
+          padding-bottom: 19px;
+
+/*          &.active {
+            border-bottom: 2px solid #932724;
+          }*/
+        }
       }
     }
   }
 }
 
 .top_content {
+  position:relative ;
   background: url(../images/city_house.jpg) no-repeat center;
   background-size: cover;
-  //background-origin: content-box;
+  width: 80vw;
+  margin: 0 auto;
+  background-attachment: fixed;
+  .grad_left {
+    height: 100%;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), #fdfaf6);
+    //width: 642px;
+
+  }
+  .grad_right {
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #fdfaf6);
+    //width: 642px;
+  }
   .logo {
     margin-top: 277px;
     text-align: center;
@@ -401,6 +448,7 @@ body {
 }
 
 .treatment {
+  margin-top: 52px;
   .title  {
     font-family: CormorantSemiBold;
     font-size: 36px;
@@ -408,7 +456,7 @@ body {
     letter-spacing: 0.5px;
     color: #3e3e3e;
     text-align: center;
-    margin-top: 36px;
+    //margin-top: 36px;
   }
   .line {
     width: 66px;
@@ -551,7 +599,7 @@ body {
 }
 
 .photo_gallery {
-
+  margin-top: 117px;
   .title  {
     font-family: CormorantSemiBold;
     font-size: 36px;
@@ -615,7 +663,7 @@ body {
 .register_form {
   position: relative;
   max-width: 750px;
-  margin: 70px auto 0;
+  margin: 91px auto 0;
   border-radius: 2px;
   background-color: #fffffd;
   box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.1);
@@ -802,7 +850,7 @@ footer {
       height: 46px !important;
     }
     .site-branding {
-      margin-top: 5px;
+      margin-top: 1px;
     }
     .menu-toggle {
       display: block !important;
@@ -1545,6 +1593,71 @@ header.service {
   .service {
     .register_button {
       width: 237px;
+    }
+  }
+  .site .max_call_wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 640px;
+    border-radius: 2px;
+    background-color: rgba(147, 39, 36, 0.9);
+    z-index: 1000000;
+    .close-button-white {
+      display: block;
+      position: relative;
+      top: 17px;
+      left: 36px;
+      img {
+        width: 21px;
+      }
+    }
+    .phone {
+      position: absolute;
+      top: 388px;
+      left: 30px;
+      margin-left: 19px;
+      a {
+        img {
+          width: 30px;
+        }
+        p {
+          font-size: 24px;
+        }
+      }
+    }
+    .time {
+      position: absolute;
+      top: 200px;
+      left: 30px;
+      width: 172px;
+      img {
+        width: 30px;
+      }
+      p {
+        font-size: 24px;
+      }
+    }
+    .call {
+      display: block;
+      position: absolute;
+      left: 38px;
+      bottom: 69px;
+      background-color: #fff;
+      height: 46px;
+      width: 267px;
+      //padding: 20px 40px;
+      a {
+        color: rgb(147, 39, 36);
+        text-decoration: none;
+        font-family: OpenSansSemibold;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        display: block;
+        line-height: 44px;
+      }
     }
   }
 }
