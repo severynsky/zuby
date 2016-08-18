@@ -60,8 +60,14 @@ html {
       display: block;
       line-height: 43px;
       text-decoration: none;
-      &:hover {
-        cursor: url("../images/cursor_arrow.png"), auto ;
+      transition: 0.1s;
+    }
+    &:hover {
+      // cursor: url("../images/cursor_arrow.png"), auto ;
+      background-color: white;
+      border: 1px solid #932724;
+      a{
+        color: #932724;
       }
     }
   }
@@ -73,6 +79,14 @@ html {
     //padding-top: 5px;
     padding-left: 16px;
     margin-left: 93px;
+    transition: 0.1s;
+    &:hover {
+      background-color: #c6afa1;
+      box-shadow: 0 0 10px 10px rgba(155, 155, 155, 0.0);
+    }
+    &:hover a{
+      color: white;
+    }
     a {
       font-family: OpenSansItalic;
       font-size: 14px;
@@ -142,7 +156,15 @@ body {
     background-color: #fafafa;
     margin-top: -184px;
     padding-top: 200px;
-    height: 843px;
+    // height: 843px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: -999;
+    padding-bottom: 80px;
+  }
+  .register_form_wrap{
+    margin-bottom: 500px;
   }
 }
 @media screen and (max-width: 600px){
@@ -294,7 +316,7 @@ body {
 .header {
 
   .white_line {
-    height: 68px;
+    height: 60px;
     background-color: #fff;
     box-shadow: 0 2px 10px 0 rgba(155, 154, 155, 0.28);
     position: fixed;
@@ -320,16 +342,23 @@ body {
       float: right;
       ul {
         list-style-type: none;
-        margin-top: 16px;
         padding: 0;
       }
       li {
         float: left;
+        margin-top: 6px;
+        margin: 0 20px;
+        transition: 0.15s;
+        border-bottom: 2px solid white;
         &.active {
           border-bottom: 2px solid #932724;
+          color: #771e1b;
         }
         &:hover {
           border-bottom: 2px solid #932724;
+        }
+        &:hover a, &.active a{
+          color: #6e1d1b;
         }
         a {
           display: block;
@@ -337,9 +366,9 @@ body {
           font-size: 19px;
           font-weight: 700;
           color: #932724;
-          margin: 0 25px;
+          margin: 0 0px;
           text-decoration: none;
-          padding-bottom: 19px;
+          padding: 7px 0 14px;
 
 /*          &.active {
             border-bottom: 2px solid #932724;
@@ -349,14 +378,17 @@ body {
     }
   }
 }
-
+.treatment-sidebar{
+  position: fixed;
+}
 .top_content {
   position:relative ;
   background: url(../images/city_house.jpg) no-repeat center;
-  background-size: cover;
-  width: 80vw;
-  margin: 0 auto;
   background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  margin: 0 auto;
   .grad_left {
     height: 100%;
     background-image: linear-gradient(to left, rgba(255, 255, 255, 0), #fdfaf6);
@@ -373,7 +405,7 @@ body {
     text-align: center;
   }
   .site-description {
-    font-family: OpenSans;
+    font-family: CormorantSemiBold;
     font-size: 40px;
     font-weight: 400;
     line-height: 1.38;
@@ -487,6 +519,9 @@ body {
     color: #3e3e3e;
     text-align: center;
     //margin-top: 36px;
+  }
+  p{
+    text-align: center;
   }
   .line {
     width: 66px;
@@ -631,7 +666,7 @@ body {
 
 .photo_gallery {
   margin-top: 61px;
-  padding-bottom: 481px;
+  padding-bottom: 290px;
   .title  {
     font-family: CormorantSemiBold;
     font-size: 36px;
@@ -689,16 +724,26 @@ body {
       right: 13px;
       bottom: 0;
     }
+    .slick-prev, .slick-next{
+      img{
+        opacity: 0.8;
+        transition: 0.1s;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 }
 
 .register_form {
   position: relative;
   max-width: 750px;
-  margin: -385px auto 0;
+  margin: -230px auto 0;
   border-radius: 2px;
   background-color: #fffffd;
-  box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.1);
+  // box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.1);
+  box-shadow: 0 0 58px 10px rgba(0, 0, 0, 0.1);
   border: solid 1px #932724;
   overflow: hidden;
   .wpcf7-form-control-wrap {
@@ -764,6 +809,12 @@ body {
       color: #fafafa;
       float: right;
       margin-right: 28px;
+      transition: 0.1s;
+    }
+    input[type="submit"]:hover{
+      border: 1px solid #932724;
+      color: #932724;
+      background-color: white;
     }
     select {
       width: 320px;
@@ -1234,21 +1285,37 @@ footer {
 
 ///////////////////////////////////////////////////// price /////////////////////////////////////////
 .white_line {
-  height: 68px;
+  height: 60px;
   background-color: #fffffd;
   box-shadow: 0 2px 10px 0 rgba(155, 154, 155, 0.28);
   margin-left: -15px;
   margin-right: -15px;
-  padding-top: 4px;
+  padding-top: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 }
 header.service {
-  .go-main a {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 2.78;
-    color: #3e3e3e;
-    text-decoration: none;
-    line-height: 3.5;
+  .go-main{
+    margin-left: 20px;
+    transition: 0.1s;
+    &:hover{
+      margin-left: 10px;
+    }
+    a {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 2.78;
+      color: #3e3e3e;
+      text-decoration: none;
+      line-height: 3.5;
+      img{
+        width: 8px;
+        height: auto;
+        margin-right: 6px;
+        margin-bottom: 2px;
+      }
+    }
   }
   .call_wrap {
     float: right;
@@ -1463,7 +1530,9 @@ header.service {
     }
   }
 }
-
+.treatment-body{
+  margin-top: 60px;
+}
 .service {
   .menu {
     margin-top: 34px;
@@ -1477,9 +1546,6 @@ header.service {
       li {
         border-bottom: 1px solid #f2f2f2;
         width: 191.3px;
-        &.current-menu-item a {
-          color: #932724;
-        }
         &:last-child {
           border: 0;
         }
@@ -1490,7 +1556,25 @@ header.service {
           line-height: 3.13;
           color: #3e3e3e;
           text-decoration: none;
-
+          transition: 0.1s;
+          letter-spacing: -0.3px;
+          &:hover{
+            padding-left: 3px;
+          }
+        }
+        &:hover{
+          border-color: #dbdbdb;
+        }
+        &.current-menu-item{
+          border-color: #dbdbdb;
+        }
+        &.current-menu-item a {
+          color: #932724;
+          // padding-left: 10px;
+        }
+        &.current-menu-item a:before{
+          content: '>';
+          padding-right: 7px;
         }
       }
     }

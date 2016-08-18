@@ -1,4 +1,16 @@
 jQuery(document).ready(function($) {
+    $('.item .button').mouseover(function(){
+        console.log('jump now');
+        $(this).siblings('img').addClass('jump-class');
+    });
+    $('.item .button').mouseleave(function(){
+        $(this).siblings('img').removeClass('jump-class');
+    })
+
+    $('#contacts').click(function(){
+        $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+        $('.primary-menu li').removeClass('.active');
+    });
     var countItems;
     var w = $(window).width();
     if (w <= 539) {
