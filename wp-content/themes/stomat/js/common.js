@@ -78,8 +78,7 @@ jQuery(document).ready(function($) {
         '//' + location.hostname + '/wp-content/themes/stomat/images/arrow_left.svg" alt=""></div>',
         nextArrow: '<div class="slick-next"><img src="' + window.location.protocol +
         '//' + location.hostname + '/wp-content/themes/stomat/images/arrow_right.svg" alt=""></div>',
-        //centerMode: false,
-        //centerPadding: '15px',
+        dots:true,
         responsive: [
             {
                 breakpoint: 540,
@@ -92,6 +91,20 @@ jQuery(document).ready(function($) {
             },
         ]
     });
+
+    $(".slider_top_mobile").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        prevArrow:'<div class="slick-prev"><img src="' + window.location.protocol + '//' + location.hostname + '/wp-content/themes/stomat/images/arrow_left.svg" alt=""></div>',
+        nextArrow: '<div class="slick-next"><img src="' + window.location.protocol + '//' + location.hostname + '/wp-content/themes/stomat/images/arrow_right.svg" alt=""></div>',
+        centerMode: true,
+        centerPadding: '22px',
+        arrows:false,
+        dots:true,
+    });
+
+    $("ul.slick-dots button").text('');
 
     $(".slider_bottom").slick({
         slidesToShow: 4,
