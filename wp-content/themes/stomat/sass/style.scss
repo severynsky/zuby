@@ -1306,7 +1306,7 @@ header.service {
     }
   }
   .register_form {
-    min-width: 716px;
+    //min-width: 716px;
     margin-bottom: 95px;
     margin-top: 30px;
     float: right;
@@ -1348,6 +1348,9 @@ header.service {
     }
     .pic {
       display: none;
+    }
+    .register_form {
+      min-width: 100%;
     }
   }
 }

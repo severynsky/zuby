@@ -16,7 +16,7 @@
                                 </div>
                                 <div class="col-xs-10 col-md-8">
                                     <div class="register_button">
-                                        <a href="#"><?php echo __('Register for a free diagnosis','stomat') ?></a>
+                                        <a href="#register"><?php echo __('Register for a free diagnosis','stomat') ?></a>
                                     </div>
                                 </div>
                             </div>
@@ -47,6 +47,7 @@
 					</div>
 					<img src="<?php echo bloginfo('template_directory') ?>/images/form_bg.png" alt="">
 				</div>
+				<a name="register" id="register"></a>
 				<?php echo do_shortcode('[contact-form-7 id="33" title="Записатись на безкоштовну діагностику"]') ?>
 			</div>
                         </div>

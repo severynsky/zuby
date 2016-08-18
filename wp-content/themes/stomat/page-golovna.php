@@ -11,7 +11,7 @@
 							<div class="about">
 								<?php AbvStomat::get_post_title_content_by_slug('pro-kliniku') ?>
 								<div class="register_button">
-									<a href="#"><?php echo __('Register for a free diagnosis','stomat') ?></a>
+									<a href="#register"><?php echo __('Register for a free diagnosis','stomat') ?></a>
 								</div>
 							</div>
 						</div>
@@ -34,7 +34,7 @@
 					</div>
 					<div id="slickCounter"></div>
 					<div class="register_button">
-						<a href="#"><?php echo __('Register for a free diagnosis','stomat') ?></a>
+						<a href="#register"><?php echo __('Register for a free diagnosis','stomat') ?></a>
 					</div>
 				</div>
 			</div>
@@ -61,7 +61,7 @@
 									</div>
 								</div>
 								<div class="register_button tablet-res">
-									<a href="#"><?php echo __('Register for a free diagnosis','stomat') ?></a>
+									<a href="#register"><?php echo __('Register for a free diagnosis','stomat') ?></a>
 								</div>
 							</div>
 						</div>
