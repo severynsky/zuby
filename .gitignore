@@ -2,3 +2,6 @@
 /*.log
 /.idea/*
 /wp-config.php
+/wp-content/themes/stomat/.sass-cache/
+/wp-content/plugins/all-in-one-wp-security-and-firewall/
+/.gitignore
