@@ -101,8 +101,6 @@
             </div>
             </div>
             <div class="white_line">
-                <div class="container">
-                    <div class="row">
                         <header class="service">
                             <div class="col-md-2 col-sm-3 col-xs-10">
                                 <div class="go-main">
@@ -123,4 +121,7 @@
                                 </div>
                             </div>
                         </header>
+                    </div>
+                <div class="container treatment-body">
+                    <div class="row">
                     </div>
