@@ -60,8 +60,14 @@ html {
       display: block;
       line-height: 43px;
       text-decoration: none;
-      &:hover {
-        cursor: url("../images/cursor_arrow.png"), auto ;
+      transition: 0.1s;
+    }
+    &:hover {
+      // cursor: url("../images/cursor_arrow.png"), auto ;
+      background-color: white;
+      border: 1px solid #932724;
+      a{
+        color: #932724;
       }
     }
   }
@@ -362,7 +368,7 @@ body {
           color: #932724;
           margin: 0 0px;
           text-decoration: none;
-          padding: 3px 0 14px;
+          padding: 7px 0 14px;
 
 /*          &.active {
             border-bottom: 2px solid #932724;
@@ -715,6 +721,15 @@ body {
       position: absolute;
       right: 13px;
       bottom: 0;
+    }
+    .slick-prev, .slick-next{
+      img{
+        opacity: 0.8;
+        transition: 0.1s;
+      }
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }
@@ -1267,7 +1282,7 @@ footer {
   box-shadow: 0 2px 10px 0 rgba(155, 154, 155, 0.28);
   margin-left: -15px;
   margin-right: -15px;
-  padding-top: 4px;
+  padding-top: 0px;
   position: fixed;
   width: 100%;
   z-index: 999;
@@ -1280,6 +1295,10 @@ header.service {
     color: #3e3e3e;
     text-decoration: none;
     line-height: 3.5;
+    img{
+      width: 15px;
+      height: auto;
+    }
   }
   .call_wrap {
     float: right;
