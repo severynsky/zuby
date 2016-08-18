@@ -134,14 +134,17 @@ html {
   //////////map/////////
 }
 body {
-    font-family: OpenSans;
+  font-family: OpenSans;
+}
+.site{
   .about_advantages_wrap {
     background-color: #fdfaf6;
     min-height: 903px;
   }
   .treatment_wrap {
     background-color: #fffffd;
-    height: 1151px;
+    //height: 1151px;
+    //padding-bottom: 71px;
   }
   .price_list_wrap {
     background-color: #fcf8f4;
@@ -547,7 +550,7 @@ body {
       max-width: 360px;
       overflow: hidden;
       padding-top: 48px;
-      height: 235px;
+      height: 260px;
       img {
         float: left;
       }
@@ -579,7 +582,7 @@ body {
 }
 
 .price_list {
-  margin-top: 63px;
+  margin-top: 108px;
   margin-bottom: 63px;
   .title {
     font-family: CormorantSemiBold;
@@ -1274,6 +1277,9 @@ footer {
 }
 
 @include respond-to(mobile320) {
+  .site .treatment_wrap {
+    padding-bottom: 0 !important;
+  }
   .top_content {
     height: 355px;
     background: none;
@@ -1449,9 +1455,7 @@ header.service {
 
 
 }
-@include respond-to(mobile320){
 
-}
 ///////////////////////////////////////////////////// services /////////////////////////////////////////
 
 .second {
@@ -1719,6 +1723,7 @@ header.service {
 }
 
 @include respond-to(mobile320){
+
   header.service {
     .go-main {
       a {
