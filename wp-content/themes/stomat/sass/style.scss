@@ -378,7 +378,9 @@ body {
     }
   }
 }
-
+.treatment-sidebar{
+  position: fixed;
+}
 .top_content {
   position:relative ;
   background: url(../images/city_house.jpg) no-repeat center;
@@ -403,7 +405,7 @@ body {
     text-align: center;
   }
   .site-description {
-    font-family: OpenSans;
+    font-family: CormorantSemiBold;
     font-size: 40px;
     font-weight: 400;
     line-height: 1.38;
@@ -807,6 +809,12 @@ body {
       color: #fafafa;
       float: right;
       margin-right: 28px;
+      transition: 0.1s;
+    }
+    input[type="submit"]:hover{
+      border: 1px solid #932724;
+      color: #932724;
+      background-color: white;
     }
     select {
       width: 320px;
@@ -1288,16 +1296,25 @@ footer {
   z-index: 999;
 }
 header.service {
-  .go-main a {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 2.78;
-    color: #3e3e3e;
-    text-decoration: none;
-    line-height: 3.5;
-    img{
-      width: 15px;
-      height: auto;
+  .go-main{
+    margin-left: 20px;
+    transition: 0.1s;
+    &:hover{
+      margin-left: 10px;
+    }
+    a {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 2.78;
+      color: #3e3e3e;
+      text-decoration: none;
+      line-height: 3.5;
+      img{
+        width: 8px;
+        height: auto;
+        margin-right: 6px;
+        margin-bottom: 2px;
+      }
     }
   }
   .call_wrap {
@@ -1529,9 +1546,6 @@ header.service {
       li {
         border-bottom: 1px solid #f2f2f2;
         width: 191.3px;
-        &.current-menu-item a {
-          color: #932724;
-        }
         &:last-child {
           border: 0;
         }
@@ -1542,7 +1556,25 @@ header.service {
           line-height: 3.13;
           color: #3e3e3e;
           text-decoration: none;
-
+          transition: 0.1s;
+          letter-spacing: -0.3px;
+          &:hover{
+            padding-left: 3px;
+          }
+        }
+        &:hover{
+          border-color: #dbdbdb;
+        }
+        &.current-menu-item{
+          border-color: #dbdbdb;
+        }
+        &.current-menu-item a {
+          color: #932724;
+          // padding-left: 10px;
+        }
+        &.current-menu-item a:before{
+          content: '>';
+          padding-right: 7px;
         }
       }
     }

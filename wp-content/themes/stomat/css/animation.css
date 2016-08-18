@@ -1,36 +1,22 @@
-.item img:hover{
-  animation-name: example;
-  -webkit-animation-name: jumps; /* Chrome, Safari, Opera */
-  animation-delay: 0.4s;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-duration: 4s;
-  background-color: red;
-}
-
-
 .jump-class{
   animation-name: example;
-  -webkit-animation-name: jumps; /* Chrome, Safari, Opera */
+  -webkit-animation-name: example; /* Chrome, Safari, Opera */
   /*animation-delay: 0.4s;*/
   animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 3;
 }
 
 @keyframes example {
-    /*from {margin-top: 0; }*/
-    /*to {margin-top: -10px; }*/
-    0% {background-color: red;opacity: 100;}
-    100% {background-color: yellow;opacity: 0;}
+    0% {margin-top: 0; }
+    50% {margin-top: -10px; }
+    100% {margin-top: 0; }
 }
 @-webkit-keyframes example {
-    /*from {margin-top: 0; }*/
-    /*to {margin-top: -10px; }*/
-    0% {background-color: red; opacity: 100;}
-    100% {background-color: yellow;opacity: 0;}
+    0% {margin-top: 0; }
+    50% {margin-top: -10px; }
+    100% {margin-top: 0; }
 }
 

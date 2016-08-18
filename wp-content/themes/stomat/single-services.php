@@ -1,7 +1,7 @@
 <?php get_header('second') ?>
                 <div class="service">
                     <div class="row">
-                        <div class="col-xs-3">
+                        <div class="treatment-sidebar">
                             <div class="menu">
                                 <?php wp_nav_menu( array('menu' => 'Меню послуги' )); ?>
                                 <div class="button-menu" id="tablet-menu-button-open">
@@ -9,7 +9,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-9">
+                        <div class="col-xs-9 col-xs-offset-3">
                             <div class="row head">
                                 <div class="col-xs-2 col-md-4">
                                     <div class="title"><?php echo $post->post_title; ?></div>
