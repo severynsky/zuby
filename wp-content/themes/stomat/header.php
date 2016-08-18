@@ -23,6 +23,7 @@
 <body>
 
 <div id="page" class="site">
+	<a name="top"></a>
 	<div class="min_call_wrap">
 		<a href="#"><img src="<?php echo bloginfo('template_directory') ?>/images/time_phone.svg" alt=""></a>
 	</div>
@@ -56,8 +57,9 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<header id="masthead" class="site-header" role="banner">
+								<a name="top"></a>
 								<div class="site-branding">
-									<a href="/" rel="home"><img src="<?php echo bloginfo('template_directory') ?>/images/logo.svg" alt=""></a>
+									<a href="#top" rel="home"><img src="<?php echo bloginfo('template_directory') ?>/images/logo.svg" alt=""></a>
 								</div>
 								<!-- .site-branding -->
 								<nav id="site-navigation" class="main-navigation" role="navigation">
