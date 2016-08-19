@@ -87,7 +87,7 @@
 							<img src="<?php echo bloginfo('template_directory') ?>/images/logo-big.svg" alt="">
 						</div>
 						<div class="site-description">
-							<?php echo bloginfo('description') ?>
+							<h2><?php echo bloginfo('description') ?></h2>
 						</div>
 					</div>
 				</div>

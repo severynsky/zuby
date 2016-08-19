@@ -151,6 +151,7 @@ html {
 body {
   font-family: OpenSans;
   overflow-x: hidden !important;
+  background-color: #fffffd;
 }
 .site{
   .about_advantages_wrap {
@@ -164,13 +165,14 @@ body {
   }
   .price_list_wrap {
     background-color: #fcf8f4;
+    position: relative;
+    z-index: 20;
   }
   .photo_gallery_wrap {
     background-color: rgba(255, 255, 253, 0.95);
     box-shadow: 0 0 28px 2px rgba(155, 155, 155, 0.4);
-  }
-  .register_form_wrap {
-    //background-color: rosybrown;
+    position: relative;
+    z-index: 10;
   }
   .address_wrap {
     background-color: #fafafa;
@@ -185,6 +187,8 @@ body {
   }
   .register_form_wrap{
     margin-bottom: 500px;
+    z-index: 21;
+    position: relative;
   }
 }
 
@@ -1049,7 +1053,7 @@ footer {
 ///////////////////////////////////////////////////// price /////////////////////////////////////////
 .white_line {
   height: 60px;
-  background-color: #fffffd;
+  background-color: #fefefe;
   box-shadow: 0 2px 10px 0 rgba(155, 154, 155, 0.28);
   margin-left: -15px;
   margin-right: -15px;
