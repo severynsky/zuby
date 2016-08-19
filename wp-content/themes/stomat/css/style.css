@@ -543,10 +543,6 @@ ul.slick-dots li.slick-active button {
 .slider_top_mobile .item img {
   width: 100%;
 }
-/* line 526, ../sass/style.scss */
-.slider_top_mobile .slick-active {
-  box-shadow: 0 0 8px 2px rgba(155, 155, 155, 0.5);
-}
 /* line 530, ../sass/style.scss */
 .slider_top_mobile img {
   border-radius: 5px;

@@ -176,8 +176,11 @@ jQuery(document).ready(function($) {
             $("html,body").css("overflow-y","auto");
             return false;
         }
-        $('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top }, 1000 );
-        //$("html,body").css("overflow-y","auto");
+        if(~$('a[name="'+this.hash.slice(1)+'"]').selector.indexOf('contacts')){
+            $('html, body').animate({ scrollTop:document.body.clientHeight},1000);
+            return false;
+        };
+        $('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top - 80 }, 1000 );
         return false;
     });
 
@@ -209,7 +212,7 @@ jQuery(document).ready(function($) {
         }
     });
     ////////////////////////menu///////////////////////////////
-6
+/*
 // Cache selectors
     var lastId,
         topMenu = $("#primary-menu"),
@@ -254,7 +257,8 @@ jQuery(document).ready(function($) {
                 .parent().removeClass("active")
                 .end().filter("[href='#"+id+"']").parent().addClass("active");
         }
-    });
+        return false;
+    });*/
 
     ///////////////////////////////////////////////////////////////
 
