@@ -2,4 +2,10 @@
 /*.log
 /.idea/*
 /wp-config.php
+<<<<<<< HEAD
 wp-content/themes/stomat/.sass-cache/*
+=======
+/wp-content/themes/stomat/.sass-cache/
+/wp-content/plugins/all-in-one-wp-security-and-firewall/
+/.gitignore
+>>>>>>> d34b074c5722c5969157b97e43419a5f484a1216
