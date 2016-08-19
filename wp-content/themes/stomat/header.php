@@ -42,7 +42,7 @@
 			<a href="<?php echo AbvStomat::get_href_phone() ?>">Подзвонити</a>
 		</div>
 	</div>
-	<div class="container-fluid">
+	<div class="container-fluid first-container-fluid">
 		<div class="header">
 			<div class="row white_line">
 				<div class="hamburger_menu">
