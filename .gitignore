@@ -2,3 +2,4 @@
 /*.log
 /.idea/*
 /wp-config.php
+wp-content/themes/stomat/.sass-cache/*

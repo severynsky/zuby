@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
 
     $( ".menu-toggle" ).click(function() {
         $('.hamburger_menu').fadeIn('slow');
-        $("html,body").css("overflow","hidden");
+        $("html,body").css("overflow-y","hidden");
     });
 
     $( ".close_button" ).click(function() {
@@ -169,15 +169,15 @@ jQuery(document).ready(function($) {
 
     $(this).on('click', 'a[href^=#]', function () {
         if ($(this).hasClass('close_button')){
-            $("html,body").css("overflow","auto");
+            $("html,body").css("overflow-y","auto");
             return false;
         }
         if ($(this).hasClass('close-button-white')){
-            $("html,body").css("overflow","auto");
+            $("html,body").css("overflow-y","auto");
             return false;
         }
         $('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top }, 1000 );
-        $("html,body").css("overflow","auto");
+        //$("html,body").css("overflow-y","auto");
         return false;
     });
 

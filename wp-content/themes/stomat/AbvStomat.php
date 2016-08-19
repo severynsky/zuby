@@ -27,6 +27,7 @@ class AbvStomat
     function __construct(){
         $this->themeDir = dirname( __FILE__ );
         $this->themeUrl = get_stylesheet_directory_uri() ;
+
     }
 
     function run(){

@@ -34,6 +34,9 @@ class AbvPostType
 
         //подключение стилей в админке
         add_action( 'admin_enqueue_scripts', [$this, 'include_css_js'] );
+        add_filter( 'post_type_link', array($this, 'custom_remove_cpt_slug'), 10, 3 );
+        add_action( 'pre_get_posts', array($this, 'custom_parse_request_tricksy') );
+
         if($this->img){
             // инит темы
             add_action('init', [$this, 'img_create_post_type']);
@@ -53,7 +56,46 @@ class AbvPostType
 
     }
 
+    /**
+     * clean url post type
+     *
+     * @param $query
+     */
+    function custom_parse_request_tricksy( $query ) {
 
+        // Only noop the main query
+        if ( ! $query->is_main_query() )
+            return;
+
+        // Only noop our very specific rewrite rule match
+        if ( 2 != count( $query->query ) || ! isset( $query->query['page'] ) ) {
+            return;
+        }
+
+        // 'name' will be set if post permalinks are just post_name, otherwise the page rule will match
+        if ( ! empty( $query->query['name'] ) ) {
+            $query->set( 'post_type', array( 'post', $this->slug, 'page' ) );
+        }
+    }
+
+    /**
+     * clean post type from url
+     *
+     * @param $post_link
+     * @param $post
+     * @param $leavename
+     * @return mixed
+     */
+    function custom_remove_cpt_slug( $post_link, $post, $leavename ) {
+
+        if ( $this->slug != $post->post_type || 'publish' != $post->post_status ) {
+            return $post_link;
+        }
+
+        $post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
+
+        return $post_link;
+    }
 
     // сохрянем галерею
     function img_save_post_data($post_id) {

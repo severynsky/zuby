@@ -145,6 +145,7 @@ html {
 }
 body {
   font-family: OpenSans;
+  overflow-x: hidden !important;
 }
 .site{
   .about_advantages_wrap {
@@ -1265,7 +1266,7 @@ header.service {
     }
   }
   .register_form {
-    //min-width: 716px;
+    min-width: 716px;
     margin-bottom: 95px;
     margin-top: 30px;
     float: right;
@@ -1309,7 +1310,47 @@ header.service {
       display: none;
     }
     .register_form {
-      min-width: 100%;
+      width: 100%;
+    }
+    .register_form {      /////////////////////
+      margin-top: -8px;
+      padding-bottom: 20px;
+      padding-top: 28px;
+      max-width: 521px;
+      min-width: 0;
+      .left {
+        width: auto;
+        float: none;
+        margin: 0;
+        .title {
+          font-family: CormorantBold;
+          font-size: 24px;
+          font-weight: 700;
+          text-align: center;
+          color: #932724;
+          margin: 0;
+        }
+        img {
+          display: none;
+        }
+      }
+      .wrap {
+        padding-left: 18px;
+        padding-right: 18px;
+        input[type="text"] {
+          width: 100%;
+          //max-width: 327px;
+        }
+        select {
+          width: 100%;
+        }
+        input[type="submit"]{
+          float: none !important;
+          margin: 0 auto !important;
+          padding: 0 !important;
+          display: block;
+        }
+      }
     }
   }
 }
@@ -1865,5 +1906,31 @@ header.service {
         line-height: 44px;
       }
     }
+  }
+  .prices {
+    .price_list {
+      margin-right: -12px;
+      .title {
+        margin-top: 100px;
+        margin-left: 21px;
+      }
+      .line {
+        margin-top: 23px;
+        margin-left: 85px;
+      }
+      .register_button {
+        margin-top: -140px;
+      }
+      .price {
+        min-width: 0;
+        margin-left: -11px;
+        .col_price {
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+          border-bottom: 1px solid rgba(155, 155, 155, 0.1);
+        }
+      }
+    }
+
   }
 }
