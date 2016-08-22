@@ -212,7 +212,7 @@ body {
     height: 45px;
     border-radius: 2px;
     background-color: #932724;
-    z-index: 40;
+    z-index: 140;
     a {
       display: block;
       padding-bottom: 10px;
@@ -1448,6 +1448,9 @@ header.service {
 }
 
 @include respond-to(tablet) {
+  .site .treatment_wrap{
+    padding-bottom: 70px;
+  }
   .treatment-sidebar{
     margin-left: 0;
   }
@@ -1494,7 +1497,7 @@ header.service {
       margin-bottom: 71px;
     }
     .tablet-res {
-      margin: 62px auto 112px;
+      // margin: 62px auto 112px;
     }
   }
   .slider_bottom {
@@ -1510,6 +1513,9 @@ header.service {
     .map  {
       margin-top: 49px;
     }
+  }
+  .register_form_wrap{
+    margin-top: -220px;
   }
   .register_form {      /////////////////////
     margin-top: -8px;
@@ -1883,6 +1889,9 @@ header.service {
   }
   .photo_gallery {
     display: none;
+  }
+  .register_form_wrap{
+    margin-top: -50px;
   }
   .address {
     .addressList {

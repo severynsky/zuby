@@ -97,12 +97,12 @@
 				<div class="address">
 					<a name="contacts" id="contacts"></a>
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-sm-6">
 							<div class="addressList">
 								<?php AbvStomat::get_post_title_content_by_slug('kontakty') ?>
 							</div>
 						</div>
-						<div class="col-md-6 hidden-xs">
+						<div class="col-sm-6 hidden-xs">
 							<div class="map" >
 								<div id="map"></div>
 							</div>
