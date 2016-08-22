@@ -47,6 +47,11 @@
   position: relative;
 }
 html {
+
+  ul {
+    list-style-type: none;
+  }
+
   a:active, a:focus { outline: none; }
 
   input, textarea {outline:none;}
@@ -2023,25 +2028,69 @@ header.service {
       border-radius: 2px;
       background-color: #ffffff;
       box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.1);
-      padding-left: 20px;
-      padding-right: 20px;
-      .col_name {
-        font-family: OpenSansBold;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 1.38;
-        color: #9d9d9d;
-        margin-bottom: 14px;
+      ul {
+        padding: 0;
+        li {
+          .col_name {
+            font-family: OpenSansBold;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.38;
+            color: #9d9d9d;
+            margin-bottom: 14px;
+            margin-left: 20px;
+          }
+          .col_price {
+            font-family: OpenSans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.38;
+            color: #9d9d9d;
+            margin-bottom: 12.5px;
+            padding-bottom: 12.5px;
+            border-bottom: 1px solid #f2f2f2;
+            margin-left: 20px;
+          }
+        }
       }
-      .col_price {
-        font-family: OpenSans;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.38;
-        color: #9d9d9d;
-        margin-bottom: 12.5px;
-        padding-bottom: 12.5px;
-        border-bottom: 1px solid #f2f2f2;
+
+    }
+  }
+  .prices .price_list {
+
+    .price {
+      min-width: 0;
+      width: 100%;
+      margin-left: 0;
+      background-color: #ffffff;
+      box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.1);
+      padding-right: 0;
+      padding-left: 0;
+      ul {
+        padding: 0;
+        li {
+          border-bottom: 1px solid #f2f2f2;
+          margin-bottom: 12.5px;
+          padding-bottom: 12.5px;
+          .col_name {
+            font-family: OpenSansBold;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.38;
+            color: #9d9d9d;
+            margin-bottom: 14px;
+            margin-left: 20px;
+          }
+          .col_price {
+            font-family: OpenSans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.38;
+            color: #9d9d9d;
+            margin-left: 20px;
+            padding-bottom: 0;
+          }
+        }
       }
     }
   }
