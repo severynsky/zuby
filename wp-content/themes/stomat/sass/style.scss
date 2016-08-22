@@ -1191,7 +1191,7 @@ header.service {
 
   .cross {
     position: absolute;
-    top: 38px;
+    top: 0;
     right: 0;
     z-index: 2;
     img {
@@ -1201,8 +1201,11 @@ header.service {
   }
   .tablet-menu-wrap {
     display: none;
+    .tablet-menu > div:nth-child(6) img{
+      margin-top: -10px
+    }
     .tablet-menu {
-      padding-top: 120px;
+      padding-top: 50px;
       background-color: rgba(255, 255, 255, 0.9);
       position: absolute;
       top: 0;
@@ -1678,14 +1681,14 @@ header.service {
     }
   }
   .site-branding img{
-    max-width: 245px;
-    margin-top: 2px;
+    max-width: 225px;
+    margin-top: 3px;
   }
   .menu-toggle {
-    margin-top: 10px !important;
+    margin-top: 6px !important;
   }
   .top_content {
-    height: 450px;
+    height: 520px;
     background-position: top;
     .logo {
       margin-top: 180px;
@@ -1936,10 +1939,10 @@ header.service {
   }
   .slider_top_mobile {
     display: block ;
-    margin: 0 auto;
+    margin: -70px auto -60px;
 
     .item:not(.slick-current){
-      opacity: 0.3;
+      opacity: 0.0;
     }
   }
   .treatment {
