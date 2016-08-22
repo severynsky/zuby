@@ -402,6 +402,16 @@ body {
 .treatment-sidebar{
   position: fixed;
   z-index: 9999;
+  margin-left: -20px;
+  transition: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0.15s;
+  opacity: 0.7;
+  margin-top: 34px;
+}
+.treatment-sidebar:hover{
+  margin-left: 0px;
+  opacity: 1;
 }
 
 .top_content {
@@ -1181,8 +1191,8 @@ header.service {
 
   .cross {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 38px;
+    right: 0;
     z-index: 2;
     img {
       width: 31px;
@@ -1198,6 +1208,7 @@ header.service {
       top: 0;
       left: 0;
       z-index: 1;
+      height: 100vh;
       a {
         text-decoration: none;
       }
@@ -1208,8 +1219,8 @@ header.service {
         margin-bottom: 20px;
         .title {
           font-family: OpenSansSemibold;
-          font-size: 18px;
-          font-weight: 600;
+          font-size: 16px;
+          font-weight: 400;
           line-height: 1.78;
           color: #3e3e3e;
         }
@@ -1257,7 +1268,6 @@ header.service {
 }
 .service {
   .menu {
-    margin-top: 34px;
     .button-menu {
       display: none;
       margin-top: 3px;
@@ -1281,15 +1291,13 @@ header.service {
           transition: 0.1s;
           letter-spacing: -0.3px;
           &:hover{
-            padding-left: 3px;
+            // padding-left: 3px;
+            color: #932724;
           }
         }
-        &:hover{
-          border-color: #dbdbdb;
-        }
-        &.current-menu-item{
-          border-color: #dbdbdb;
-        }
+        // &.current-menu-item{
+        //   border-color: #dbdbdb;
+        // }
         &.current-menu-item a {
           color: #932724;
           // padding-left: 10px;
@@ -1430,6 +1438,9 @@ header.service {
 }
 
 @include respond-to(tablet) {
+  .treatment-sidebar{
+    margin-left: 0;
+  }
   .top_content {
     .logo {
       margin-top: 162px;
@@ -1556,6 +1567,7 @@ header.service {
   }
   .white_line {
     height: 46px;
+    padding-top: 4px;
   }
   header.service {
     .go-main {
@@ -1742,6 +1754,16 @@ header.service {
           }
         }
 
+      }
+    }
+  }
+  .second{ 
+    .cross{
+      z-index: 100000;
+    }
+    .tablet-menu-wrap{
+      .tablet-menu{
+        z-index: 99999;
       }
     }
   }
