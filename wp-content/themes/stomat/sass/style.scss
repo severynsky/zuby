@@ -42,6 +42,9 @@
   }
 }
   ////////////////////////////////////////////////////////////////////
+.first-container-fluid{
+  padding: 0;
+}
 html {
   a:active, a:focus { outline: none; }
 
@@ -183,10 +186,10 @@ body {
     bottom: 0;
     width: 100%;
     z-index: -999;
-    padding-bottom: 80px;
+    // padding-bottom: 80px;
   }
   .register_form_wrap{
-    margin-bottom: 500px;
+    margin-bottom: 600px;
     z-index: 21;
     position: relative;
   }
@@ -340,6 +343,7 @@ body {
     //left: 0;
     z-index: 300;
     width: 100%;
+    margin: 0;
   }
   .site-branding {
     float: left;
@@ -420,10 +424,13 @@ body {
     //width: 642px;
   }
   .logo {
-    margin-top: 277px;
+    margin-top: 220px;
     text-align: center;
+    img{
+      width: 150px;
+    }
   }
-  .site-description {
+  .site-description h2{
     font-family: CormorantSemiBold;
     font-size: 40px;
     font-weight: 400;
@@ -458,8 +465,13 @@ ul.slick-dots {
 }
 
 .slider_top {
-  box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.5);
-  background-color: #fdfaf6;
+  // box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.5);
+  box-shadow: 0 0 21px 0px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  transition: 0.1s;
+  &:hover{
+    box-shadow: 1px 5px 31px 0px rgba(0, 0, 0, 0.2);
+  }
   ul.slick-dots {
     position: absolute;
     bottom: -50px;
@@ -729,13 +741,17 @@ ul.slick-dots {
     line-height: 1.38;
     border-radius: 2px;
     background-color: #ffffff;
-    box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.1);
+    // box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.1);
+    box-shadow: 0 0 21px 0px rgba(0, 0, 0, 0.2);
     color: #9d9d9d;
     max-width: 555px;
     padding-top: 16px;
     padding-bottom: 16px;
     margin: 0 auto;
-
+    transition: 0.1s;
+    &:hover{
+      box-shadow: 1px 5px 31px 0px rgba(0, 0, 0, 0.2);
+    }
     .col_name {
       margin-bottom: 29px;
       padding-left: 19px;
@@ -864,11 +880,15 @@ ul.slick-dots {
   max-width: 750px;
   margin: -230px auto 0;
   border-radius: 2px;
-  background-color: #fffffd;
+  background-color: #fff;
   // box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.1);
-  box-shadow: 0 0 58px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 21px 0px rgba(0, 0, 0, 0.3);
   border: solid 1px #932724;
   overflow: hidden;
+  transition: 0.1s;
+  &:hover{
+    box-shadow: 1px 5px 31px 0px rgba(0, 0, 0, 0.3);
+  }
   .wpcf7-form-control-wrap {
     position: static;
   }
@@ -935,6 +955,7 @@ ul.slick-dots {
       transition: 0.1s;
     }
     input[type="submit"]:hover{
+      transition: 0.1s;
       border: 1px solid #932724;
       color: #932724;
       background-color: white;
@@ -1415,13 +1436,13 @@ header.service {
     .logo {
       margin-top: 162px;
     }
-    .site-description {
+    .site-description h2{
       font-weight: 400;
       color: #932724;
       max-width: 880px;
       margin: 0 auto;
       text-align: center;
-      padding-bottom: 227px;
+      padding: 0 100px 227px;
       font-size: 36px;
       line-height: 1.53;
     }
@@ -1543,7 +1564,7 @@ header.service {
       a {
         line-height: 2;
         img {
-          margin-top: -5px;
+          // margin-top: -5px;
         }
       }
     }
@@ -1630,28 +1651,39 @@ header.service {
     .register_button {
       max-width: 266px;
       height: 45px;
-      margin: 0 auto;
+      margin: 30px auto !important;
       float: none;
+    }
+    .white_line{
+      padding-top: 4px;
+      .go-main{
+        padding-top: 2px;
+        a{
+          img{
+            margin-top: -1px;
+          }
+        }
+      }
     }
   }
   .site-branding img{
-    max-width: 215px;
+    max-width: 245px;
+    margin-top: 6px;
   }
   .menu-toggle {
     margin-top: 10px !important;
   }
   .top_content {
-    height: 308px;
+    height: 450px;
     background-position: top;
     .logo {
-      margin-top: 124px;
+      margin-top: 180px;
     }
-    .site-description {
-      font-size: 18px;
+    .site-description h2{
+      font-size: 24px;
       font-weight: 400;
       line-height: 1.33;
-      padding-left: 10px;
-      padding-right: 55px;
+      padding: 0 40px;
     }
   }
   .slider_top {
@@ -1663,6 +1695,9 @@ header.service {
     .item {
       margin: 0 8px;
       border-radius: 0;
+    }
+    .item:not(.slick-current){
+      opacity: 0.3;
     }
   }
   .about_advantages {
@@ -1871,6 +1906,10 @@ header.service {
   .slider_top_mobile {
     display: block ;
     margin: 0 auto;
+
+    .item:not(.slick-current){
+      opacity: 0.3;
+    }
   }
 }
 
@@ -1881,7 +1920,7 @@ header.service {
   .top_content {
     height: 355px;
     background: none;
-    .site-description {
+    .site-description h2{
       margin-top: 10px;
     }
   }
