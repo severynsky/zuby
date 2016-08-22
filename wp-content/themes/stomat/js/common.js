@@ -191,6 +191,13 @@ jQuery(document).ready(function($) {
         startPos = $(window).scrollTop();
         return false
     });
+    $( ".m_call_wrap a" ).click(function() {
+        $('.m_call_wrap').fadeOut('fast');
+        $('.max_call_wrap').fadeIn('slow');
+        startPos = $(window).scrollTop();
+        return false
+    });
+
 
     $(window).scroll(function()
     {
@@ -199,6 +206,7 @@ jQuery(document).ready(function($) {
             if (difference >100 || difference<100){
                 $('.max_call_wrap').fadeOut('slow');
                 $('.min_call_wrap').fadeIn('slow');
+                $('.m_call_wrap').fadeOut('fast');
                 startPos = false;
             }
         }
