@@ -128,7 +128,6 @@ html {
       }
     }
   }
-
   .m_call_wrap {
     display: none;
   }
@@ -1171,6 +1170,7 @@ header.service {
   .register_form {
     border: 0;
     margin-bottom: 95px;
+    margin-top: 0;
   }
 }
 
@@ -1344,6 +1344,7 @@ header.service {
     margin-bottom: 95px;
     margin-top: 30px;
     float: right;
+
   }
 }
 
@@ -1907,6 +1908,33 @@ header.service {
 
     .item:not(.slick-current){
       opacity: 0.3;
+    }
+  }
+  .treatment {
+    .price {
+      border-radius: 2px;
+      background-color: #ffffff;
+      box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.1);
+      padding-left: 20px;
+      padding-right: 20px;
+      .col_name {
+        font-family: OpenSansBold;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.38;
+        color: #9d9d9d;
+        margin-bottom: 14px;
+      }
+      .col_price {
+        font-family: OpenSans;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.38;
+        color: #9d9d9d;
+        margin-bottom: 12.5px;
+        padding-bottom: 12.5px;
+        border-bottom: 1px solid #f2f2f2;
+      }
     }
   }
 }
