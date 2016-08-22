@@ -105,6 +105,13 @@ jQuery(document).ready(function($) {
     });
 
     $("ul.slick-dots button").text('');
+    $(window).resize(function() {
+        $("ul.slick-dots button").text('');
+    });
+    $('.slider_top').on('afterChange', function(event, slick, currentSlide, nextSlide){
+        $("ul.slick-dots button").text('');
+    });
+
 
     $(".slider_bottom").slick({
         slidesToShow: 4,
@@ -128,6 +135,7 @@ jQuery(document).ready(function($) {
     });
 
     $(".register_form br").remove();
+
 
     $( ".register_form input[type='text']" ).focus(function() {
         $( this ).parents().prev( "label" ).css( {
@@ -190,22 +198,19 @@ jQuery(document).ready(function($) {
         $('.min_call_wrap').fadeOut('fast');
         $('.max_call_wrap').fadeIn('slow');
         startPos = $(window).scrollTop();
-        console.log('startPos0 '+ startPos);
         return false
     });
     $( ".m_call_wrap a" ).click(function() {
         $('.m_call_wrap').fadeOut('fast');
         $('.max_call_wrap').fadeIn('slow');
         startPos = $(window).scrollTop();
-        console.log('startPos0 '+ startPos);
         return false
     });
 
 
     $(window).scroll(function()
     {
-        console.log('startPos '+ startPos);
-        console.log('difference '.difference);
+
         if (startPos){
             var difference = startPos - $(window).scrollTop();
 
