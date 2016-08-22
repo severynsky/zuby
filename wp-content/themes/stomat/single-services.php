@@ -10,11 +10,18 @@
                             </div>
                         </div>
                         <div class="col-xs-9 col-xs-offset-3">
+                            <div class="mobile-service-head">
+                            <div class="register_button visible-xs">
+                                <a href="#register"><?php echo __('Register for a free diagnosis','stomat') ?></a>
+                            </div>
+                            <div class="title visible-xs"><?php echo $post->post_title; ?></div>
+                                
+                            </div>
                             <div class="row head">
-                                <div class="col-xs-2 col-md-4">
+                                <div class="col-xs-2 col-md-4 hidden-xs">
                                     <div class="title"><?php echo $post->post_title; ?></div>
                                 </div>
-                                <div class="col-xs-10 col-md-8">
+                                <div class="col-xs-10 col-md-8 hidden-xs">
                                     <div class="register_button">
                                         <a href="#register"><?php echo __('Register for a free diagnosis','stomat') ?></a>
                                     </div>

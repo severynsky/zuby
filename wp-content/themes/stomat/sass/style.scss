@@ -1607,8 +1607,8 @@ header.service {
       display: none;
     }
     .title {
-      margin-top: 90px;
-      margin-left: -136px;
+      // margin-top: 90px;
+      // margin-left: -136px;
     }
     .text {
       margin-left: -43px;
@@ -1663,7 +1663,7 @@ header.service {
       max-width: 266px;
       height: 45px;
       margin: 30px auto !important;
-      float: none;
+      float: none !important;
     }
     .white_line{
       padding-top: 4px;
@@ -1679,7 +1679,7 @@ header.service {
   }
   .site-branding img{
     max-width: 245px;
-    margin-top: 6px;
+    margin-top: 2px;
   }
   .menu-toggle {
     margin-top: 10px !important;
@@ -1910,13 +1910,23 @@ header.service {
     }
   }
   .service {
+    .head{
+      margin-top: 10px;
+    }
     .title {
       display: none;
     }
     .register_button {
       margin-left: -64px;
-      margin-top: -7px;
+      margin-top: -6px;
     }
+    .title{
+      margin: 0;
+    }
+  }
+  .mobile-service-head{
+    margin-left: -30px;
+    padding-top:8px;
   }
 }
 
@@ -1966,8 +1976,8 @@ header.service {
     padding-bottom: 0 !important;
   }
   .top_content {
-    height: 355px;
-    background: none;
+    // height: 355px;
+    // background: none;
     .site-description h2{
       margin-top: 10px;
     }
