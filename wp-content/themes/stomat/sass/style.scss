@@ -49,7 +49,7 @@
 html {
 
   ul {
-    list-style-type: none;
+    list-style-type: none !important;
   }
 
   a:active, a:focus { outline: none; }
@@ -761,7 +761,6 @@ ul.slick-dots {
     line-height: 1.38;
     border-radius: 2px;
     background-color: #ffffff;
-    // box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.1);
     box-shadow: 0 0 21px 0px rgba(0, 0, 0, 0.2);
     color: #9d9d9d;
     max-width: 555px;
@@ -772,30 +771,36 @@ ul.slick-dots {
     &:hover{
       box-shadow: 1px 5px 31px 0px rgba(0, 0, 0, 0.2);
     }
-    .col_name {
-      margin-bottom: 29px;
-      padding-left: 19px;
-      border-bottom: 1px solid #f2f2f2;
-      padding-bottom: 15px;
-      span {
-        color: #3e3e3e;
-      }
-    }
-    .col_price {
-      margin-left: 312px;
-      margin-top: -69px;
-      padding-bottom: 16px;
-      margin-bottom: 16px;
-      display: block;
-      span {
-        color: #3e3e3e;
+    ul {
+      padding-left: 0;
+      li {
+        .col_name {
+          margin-bottom: 29px;
+          padding-left: 19px;
+          border-bottom: 1px solid #f2f2f2;
+          padding-bottom: 15px;
+          span {
+            color: #3e3e3e;
+          }
+        }
+        .col_price {
+          margin-left: 312px;
+          margin-top: -69px;
+          padding-bottom: 16px;
+          margin-bottom: 16px;
+          display: block;
+          span {
+            color: #3e3e3e;
 
-        span.stick {
-          margin-left: -27px;
-          padding-right: 10px;
+            span.stick {
+              margin-left: -27px;
+              padding-right: 10px;
+            }
+          }
         }
       }
     }
+
     .button {
       margin-left: 314px;
     }
@@ -1168,6 +1173,7 @@ header.service {
 
 }
 .prices {
+
   .price_list {
     margin-top: 22px;
     .register_button {
@@ -1176,12 +1182,31 @@ header.service {
     }
     .price {
       min-width: 748px;
-      .col_price {
-        margin-left: 472px;
-      }
-      .col_name {
+      ul {
+        li {
+          padding-bottom: 15px;
+          margin-bottom: 15px;
+          border-bottom: 1px solid rgba(155, 155, 155, 0.1);
+          display: block;
+          .col_name {
+            margin: 0;
+            padding: 0;
+            margin-left: 30px;
+            float: left;
+            display: block;
+            overflow: hidden;
+            border: 0;
+          }
+          .col_price {
+            margin: 0;
+            padding: 0;
+            margin-left: 472px;
+            display: block;
+          }
 
+        }
       }
+
       div:last-child {
         margin-bottom: 0;
       }
@@ -2029,16 +2054,27 @@ header.service {
       background-color: #ffffff;
       box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.1);
       ul {
-        padding: 0;
+        padding-left: 0;
         li {
+          margin-bottom: 12.5px;
+          padding-bottom: 12.5px;
+          border-bottom: 1px solid #f2f2f2;
+          .head_price {
+            display: none !important;
+          }
           .col_name {
             font-family: OpenSansBold;
             font-size: 16px;
             font-weight: 700;
             line-height: 1.38;
             color: #9d9d9d;
+            margin: 0;
             margin-bottom: 14px;
             margin-left: 20px;
+            display: block;
+
+            padding: 0;
+            border: 0;
           }
           .col_price {
             font-family: OpenSans;
@@ -2046,10 +2082,12 @@ header.service {
             font-weight: 400;
             line-height: 1.38;
             color: #9d9d9d;
-            margin-bottom: 12.5px;
-            padding-bottom: 12.5px;
-            border-bottom: 1px solid #f2f2f2;
+            display: block;
+            margin: 0;
             margin-left: 20px;
+
+            padding: 0;
+            border: 0;
           }
         }
       }
@@ -2057,29 +2095,34 @@ header.service {
     }
   }
   .prices .price_list {
-
     .price {
       min-width: 0;
-      width: 100%;
-      margin-left: 0;
+      border-radius: 2px;
       background-color: #ffffff;
       box-shadow: 0 0 30px 10px rgba(155, 155, 155, 0.1);
-      padding-right: 0;
-      padding-left: 0;
       ul {
-        padding: 0;
+        padding-left: 0;
         li {
-          border-bottom: 1px solid #f2f2f2;
           margin-bottom: 12.5px;
           padding-bottom: 12.5px;
+          border-bottom: 1px solid #f2f2f2;
+          .head_price {
+            display: none !important;
+          }
           .col_name {
+            float: none;
             font-family: OpenSansBold;
             font-size: 16px;
             font-weight: 700;
             line-height: 1.38;
             color: #9d9d9d;
+            margin: 0;
             margin-bottom: 14px;
             margin-left: 20px;
+            display: block;
+            padding: 0;
+            border: 0;
+
           }
           .col_price {
             font-family: OpenSans;
@@ -2087,11 +2130,15 @@ header.service {
             font-weight: 400;
             line-height: 1.38;
             color: #9d9d9d;
+            display: block;
+            margin: 0;
             margin-left: 20px;
-            padding-bottom: 0;
+            padding: 0;
+            border: 0;
           }
         }
       }
+
     }
   }
 }
