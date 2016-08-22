@@ -44,6 +44,7 @@
   ////////////////////////////////////////////////////////////////////
 .first-container-fluid{
   padding: 0;
+  position: relative;
 }
 html {
   a:active, a:focus { outline: none; }
@@ -159,22 +160,26 @@ body {
   .about_advantages_wrap {
     background-color: #fdfaf6;
     min-height: 903px;
+    position: relative;
+    z-index: 25;
   }
   .treatment_wrap {
     background-color: #fffffd;
     //height: 1151px;
     padding-bottom: 110px;
+    position: relative;
+    z-index: 24;
   }
   .price_list_wrap {
     background-color: #fcf8f4;
     position: relative;
-    z-index: 20;
+    z-index: 56;
   }
   .photo_gallery_wrap {
     background-color: rgba(255, 255, 253, 0.95);
     box-shadow: 0 0 28px 2px rgba(155, 155, 155, 0.4);
     position: relative;
-    z-index: 10;
+    z-index: 28;
   }
   .address_wrap {
     background-color: #fafafa;
@@ -184,12 +189,12 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: -999;
+    z-index: 0;
     // padding-bottom: 80px;
   }
   .register_form_wrap{
     margin-bottom: 600px;
-    z-index: 21;
+    z-index: 64;
     position: relative;
   }
 }
@@ -421,6 +426,7 @@ body {
   background-size: cover;
   width: 100vw;
   margin: 0 auto;
+  z-index: 9;
   .grad_left {
     height: 100%;
     background-image: linear-gradient(to left, rgba(255, 255, 255, 0), #fdfaf6);
@@ -1931,6 +1937,9 @@ header.service {
     margin-left: -30px;
     padding-top:8px;
   }
+  .address .addressList .text p{
+    margin-bottom: 20px;
+  }
 }
 
 @include respond-to(mobile375){
@@ -1942,7 +1951,7 @@ header.service {
     margin: -70px auto -60px;
 
     .item:not(.slick-current){
-      opacity: 0.0;
+      opacity: 0.3;
     }
   }
   .treatment {

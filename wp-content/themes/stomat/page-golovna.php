@@ -102,7 +102,7 @@
 								<?php AbvStomat::get_post_title_content_by_slug('kontakty') ?>
 							</div>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6 hidden-xs">
 							<div class="map" >
 								<div id="map"></div>
 							</div>
