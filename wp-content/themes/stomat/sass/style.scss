@@ -55,7 +55,9 @@
   position: relative;
 }
 html {
-
+  a {
+    text-decoration: none !important;
+  }
   ul {
     list-style-type: none !important;
   }
