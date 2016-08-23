@@ -1,4 +1,14 @@
+$(window).load(function() {
+  $("body").removeClass("preload");
+});
+
+
 jQuery(document).ready(function($) {
+
+    // $('.price a').click(function(){
+    //     $('.price').addClass('element--toRight');
+    // });
+
     $('.item .button').mouseover(function(){
         console.log('jump now');
         $(this).siblings('img').addClass('jump-class');

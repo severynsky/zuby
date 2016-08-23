@@ -20,7 +20,7 @@
 <?php wp_head(); ?>
 	<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAZaRY770THMIy_Oa03SUiluEUxh4f3skw&extension=.js'></script>
 </head>
-<body>
+<body class="preload" id="main">
 
 <div id="page" class="site">
 	<a name="top"></a>
@@ -44,7 +44,7 @@
 	</div>
 	<div class="container-fluid first-container-fluid">
 		<div class="header">
-			<div class="row white_line">
+			<div class="row white_line element--showFromTop">
 				<div class="hamburger_menu">
 					<div class="line-top"></div>
 					<div class="close_button">

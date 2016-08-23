@@ -2,8 +2,10 @@
 	<div class="container-fluid">
 		<div class="row about_advantages_wrap">
 			<div class="container">
-				<?php echo do_shortcode('[abv_gallery id="22" class="slider_top"]') ?>
-				<?php echo do_shortcode('[abv_gallery id="159" class="slider_top_mobile"]') ?>
+
+				<div class="scene_element element--fadeinup"> <?php echo do_shortcode('[abv_gallery id="22" class="slider_top"]') ?></div>
+				<div class="scene_element element--fadeinup"><?php echo do_shortcode('[abv_gallery id="159" class="slider_top_mobile"]') ?></div>
+				
 				<div class="about_advantages">
 					<a name="about" id="about"></a>
 					<div class="row">

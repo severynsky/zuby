@@ -1,7 +1,7 @@
 <?php get_header('second') ?>
                 <div class="service">
                     <div class="row">
-                        <div class="treatment-sidebar">
+                        <div class="treatment-sidebar element--fadeinright">
                             <div class="menu">
                                 <?php wp_nav_menu( array('menu' => 'Меню послуги' )); ?>
                                 <div class="button-menu" id="tablet-menu-button-open">
@@ -36,7 +36,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-10">
-                                    <div class="text">
+                                    <div class="text element--fadein">
                                         <?php echo AbvFunctions::get_content_by_id($post->ID) ?>
                                     </div>
                                 </div>

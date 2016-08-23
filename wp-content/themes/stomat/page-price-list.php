@@ -10,7 +10,7 @@
                                 <div class="register_button">
                                     <a href="#register"><?php echo __('Register for a free diagnosis','stomat') ?></a>
                                 </div>
-                                <div class="price">
+                                <div class="price element--showFromBottom scene_element">
                                     <?php echo AbvStomat::show_name_price_on_main('tsiny') ?>
                                 </div>
                             </div>

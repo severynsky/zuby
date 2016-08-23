@@ -129,6 +129,7 @@ function stomat_scripts() {
 	}
 	wp_enqueue_script( 'bootstrap_stomat', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'abv_common_stomat', get_template_directory_uri() . '/js/common.js', array(), '20151215', true );
+	wp_enqueue_script( 'abv_smooth_stomat', get_template_directory_uri() . '/js/smooth.js', array(), '20151215', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'stomat_scripts' );

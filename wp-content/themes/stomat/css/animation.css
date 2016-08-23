@@ -20,3 +20,90 @@
     100% {margin-top: 0; }
 }
 
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translate3d(0%, 20%, 0);}
+  100% {opacity: 1; transform: translate3d(0%, 0, 0);}
+}
+
+@keyframes fadeInUp {
+  0% {opacity: 0.7; transform: translate3d(0%, 170px, 0);}
+  100% {opacity: 1; transform: none;}
+}
+
+@keyframes fadeInRight {
+  0% {opacity: 0; transform: translate3d(-200%, 0, 0);}
+  100% {opacity: 0.8; transform: translate3d(0, 0, 0);}
+}
+@keyframes toRight{
+  0%{
+    transform: translate3d(0%, 0%, 0) scale(1);
+  }
+  100%{
+    transform: translate3d(130%, 0%, 0) scale(1);
+  }
+}
+@keyframes onPlace{
+  0%{
+    transform: translate3d(0%, 0%, 0) scale(1);
+  }
+  100%{
+    transform: translate3d(130%, 0%, 0) scale(1);
+  }
+}
+@keyframes showFromTop{
+  0%{transform: translate3d(0,-70px ,0);}
+  100%{transform: translate3d(0,0%,0);}
+}
+@keyframes showFromBottom{
+  0%{transform: translate3d(0,100%,0);}
+  100%{transform: translate3d(0,0%,0);}
+}
+
+.scene_element {
+  animation-duration: 1.8s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+
+.element--fadein {
+  animation-name: fadeIn;
+  animation-duration: 1.8s;
+}
+
+.element--fadeinup {
+  animation-name: fadeInUp;
+  animation-delay: 0.5s;
+}
+
+.element--fadeinright {
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+  /*animation-delay: 1s;*/
+  transition-timing-function: ease-in;
+}
+
+.element--toRight {
+  animation-duration: 1s;
+  transition-timing-function: ease-in;
+  animation-name: toRight;
+}
+
+.element--onPlace {
+  animation-duration: 0.8s;
+  transition-timing-function: ease-in;
+  animation-name: onPlace;
+}
+
+.element--showFromTop{
+  animation-duration: 1.4s;
+  transition-timing-function: ease-in;
+  animation-name: showFromTop;
+}
+
+.element--showFromBottom{
+  z-index: 999;
+  position: relative;
+  animation-duration: 1.4s;
+  animation-delay: 0.4s;
+  animation-name: showFromBottom;
+}

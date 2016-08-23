@@ -7,7 +7,7 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <?php wp_head(); ?>
 </head>
-<body>
+<body class='preload'>
 <div class="container-fluid second">
     <div class="row">
         <div class="col-xs-12">
@@ -27,7 +27,7 @@
                 <?php wp_nav_menu( array('menu' => 'Меню послуги' )); ?>
             </div>
             </div>
-            <div class="white_line">
+            <div class="white_line element--showFromTop">
                         <header class="service">
                             <div class="col-md-2 col-sm-3 col-xs-10">
                                 <div class="go-main">

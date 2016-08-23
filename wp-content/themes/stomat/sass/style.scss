@@ -41,6 +41,14 @@
     }
   }
 }
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
   ////////////////////////////////////////////////////////////////////
 .first-container-fluid{
   padding: 0;
@@ -350,7 +358,7 @@ body {
     position: fixed;
     //top: 0;
     //left: 0;
-    z-index: 300;
+    z-index: 9999;
     width: 100%;
     margin: 0;
   }
@@ -411,7 +419,7 @@ body {
 .treatment-sidebar{
   position: fixed;
   //z-index: 9999;
-  margin-left: -20px;
+  // margin-left: -20px;
   transition: 0.2s;
   transition-timing-function: linear;
   transition-delay: 0.15s;
@@ -1767,6 +1775,7 @@ header.service {
     }
     .white_line{
       padding-top: 4px;
+      z-index: 9999;
       .go-main{
         padding-top: 2px;
         a{
