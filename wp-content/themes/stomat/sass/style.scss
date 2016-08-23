@@ -2152,6 +2152,136 @@ header.service {
 
     }
   }
+  .site .max_call_wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 640px;
+    border-radius: 2px;
+    background-color: rgba(147, 39, 36, 0.9);
+    z-index: 10000;
+    .close-button-white {
+      display: block;
+      position: relative;
+      top: 17px;
+      left: 36px;
+      img {
+        width: 21px;
+      }
+    }
+    .phone {
+      position: absolute;
+      top: 388px;
+      left: 30px;
+      margin-left: 19px;
+      a {
+        img {
+          width: 30px;
+        }
+        p {
+          font-size: 24px;
+        }
+      }
+    }
+    .time {
+      position: absolute;
+      top: 200px;
+      left: 30px;
+      width: 172px;
+      img {
+        width: 30px;
+      }
+      p {
+        font-size: 24px;
+      }
+    }
+    .call {
+      display: block;
+      position: absolute;
+      left: 38px;
+      bottom: 69px;
+      background-color: #fff;
+      height: 46px;
+      width: 267px;
+      //padding: 20px 40px;
+      a {
+        color: rgb(147, 39, 36);
+        text-decoration: none;
+        font-family: OpenSansSemibold;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        display: block;
+        line-height: 44px;
+      }
+    }
+  }
+  .service .max_call_wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 640px;
+    border-radius: 2px;
+    background-color: rgba(147, 39, 36, 0.9);
+    z-index: 10000;
+    .close-button-white {
+      display: block;
+      position: relative;
+      top: 17px;
+      left: 36px;
+      img {
+        width: 21px;
+      }
+    }
+    .phone {
+      position: absolute;
+      top: 388px;
+      left: 30px;
+      margin-left: 19px;
+      a {
+        img {
+          width: 30px;
+        }
+        p {
+          font-size: 24px;
+        }
+      }
+    }
+    .time {
+      position: absolute;
+      top: 200px;
+      left: 30px;
+      width: 172px;
+      img {
+        width: 30px;
+      }
+      p {
+        font-size: 24px;
+      }
+    }
+    .call {
+      display: block;
+      position: absolute;
+      left: 38px;
+      bottom: 69px;
+      background-color: #fff;
+      height: 46px;
+      width: 267px;
+      //padding: 20px 40px;
+      a {
+        color: rgb(147, 39, 36);
+        text-decoration: none;
+        font-family: OpenSansSemibold;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        display: block;
+        line-height: 44px;
+      }
+    }
+  }
 }
 
 @include respond-to(mobile320) {
@@ -2165,8 +2295,7 @@ header.service {
       margin-top: 10px;
     }
   }
-
-  header.service {
+   header.service {
     .go-main {
       a {
         line-height: 2;
