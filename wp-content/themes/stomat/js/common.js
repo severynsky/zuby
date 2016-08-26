@@ -9,6 +9,13 @@ jQuery(document).ready(function($) {
     //     $('.price').addClass('element--toRight');
     // });
 
+    var hideCurtain = function(){
+      $('.white_curtain').fadeOut(900);
+      $('#page').removeClass('no_scroll');
+    }
+    
+    setTimeout(hideCurtain, 4000);
+
     $('.item .button').mouseover(function(){
         console.log('jump now');
         $(this).siblings('img').addClass('jump-class');

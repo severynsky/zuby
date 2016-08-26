@@ -9,7 +9,7 @@
   animation-iteration-count: 3;
 }
 
-@keyframes example {
+@keyframes example{
     0% {margin-top: 0; }
     50% {margin-top: -10px; }
     100% {margin-top: 0; }
@@ -19,7 +19,11 @@
     50% {margin-top: -10px; }
     100% {margin-top: 0; }
 }
-
+@keyframes blinking{
+  0% {opacity: 0.05; }
+  50% {opacity: 1; }
+  100% {opacity: 0.05; }
+}
 @keyframes fadeIn {
   0% {opacity: 0; transform: translate3d(0%, 20%, 0);}
   100% {opacity: 1; transform: translate3d(0%, 0, 0);}
@@ -72,7 +76,8 @@
 
 .element--fadeinup {
   animation-name: fadeInUp;
-  animation-delay: 0.5s;
+  animation-delay: 4s;
+  animation-duration: 1.8s;
 }
 
 .element--fadeinright {
@@ -100,10 +105,23 @@
   animation-name: showFromTop;
 }
 
+.element--showFromTopDelay{
+  animation-duration: 1.4s;
+  animation-delay: 4s;
+  transition-timing-function: ease-in;
+  animation-name: showFromTop;
+}
+
 .element--showFromBottom{
   z-index: 999;
   position: relative;
   animation-duration: 1.4s;
   animation-delay: 0.4s;
   animation-name: showFromBottom;
+}
+.white_curtain img{
+  animation-name: blinking;
+  animation-duration: 2.8s;
+  transition-timing-function: ease-in;
+  animation-iteration-count: infinite;
 }

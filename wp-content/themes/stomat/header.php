@@ -21,8 +21,11 @@
 	<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAZaRY770THMIy_Oa03SUiluEUxh4f3skw&extension=.js'></script>
 </head>
 <body class="preload" id="main">
+<div class="white_curtain">
+	<img src="<?php echo bloginfo('template_directory') ?>/images/curtain_img.svg" alt="">
+</div>
 
-<div id="page" class="site">
+<div id="page" class="site no_scroll">
 	<a name="top"></a>
 	<div class="min_call_wrap">
 		<a href="#"><img src="<?php echo bloginfo('template_directory') ?>/images/time_phone.svg" alt=""></a>
@@ -44,7 +47,7 @@
 	</div>
 	<div class="container-fluid first-container-fluid">
 		<div class="header">
-			<div class="row white_line element--showFromTop">
+			<div class="row white_line element--showFromTopDelay">
 				<div class="hamburger_menu">
 					<div class="line-top"></div>
 					<div class="close_button">
