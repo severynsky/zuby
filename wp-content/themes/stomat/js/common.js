@@ -10,12 +10,12 @@ jQuery(document).ready(function($) {
     // });
 
     var hideCurtain = function(){
-      $('.white_curtain').fadeOut(900);
+      $('.white_curtain').fadeOut(1300);
       $('#page').removeClass('no_scroll');
     }
-    
-    setTimeout(hideCurtain, 4000);
 
+    setTimeout(hideCurtain, 4000);
+    // on click action start **********************************
     $('.item .button').mouseover(function(){
         console.log('jump now');
         $(this).siblings('img').addClass('jump-class');
@@ -23,6 +23,15 @@ jQuery(document).ready(function($) {
     $('.item .button').mouseleave(function(){
         $(this).siblings('img').removeClass('jump-class');
     })
+    $('.go-main a').click(function(){
+        $('.treatment-body').addClass('removeTreamentBlock');
+        $('.white_line').removeClass('element--showFromTop').addClass('element--fadeoutup');
+    });
+    $('.treatment-sidebar a').click(function(){
+        // $('.white_line').removeClass('element--showFromTop').addClass('element--fadeoutup');
+        // $('.treatment-text-block').addClass('element--toRight');
+    })
+    // on click action end **********************************
 
     $('#contacts').click(function(){
         $("html, body").animate({ scrollTop: $(document).height() }, 1000);

@@ -29,12 +29,12 @@
             </div>
             <div class="white_line element--showFromTop">
                         <header class="service">
-                            <div class="col-md-2 col-sm-3 col-xs-10">
+                            <div class="col-md-3 col-sm-3 col-xs-10">
                                 <div class="go-main">
                                     <a href="/"><img src="/wp-content/uploads/2016/08/arrow.png" alt=""> На головну</a>
                                 </div>
                             </div>
-                            <div class="col-md-10 col-sm-9 col-xs-2">
+                            <div class="col-md-9 col-sm-9 col-xs-2">
                                 <div class="call_wrap">
                                     <div class="phone">
                                         <a href="#"><img src="<?php echo bloginfo('template_directory') ?>/images/phone_red_03.png" alt=""><p>067 766 50 41</p></a>
