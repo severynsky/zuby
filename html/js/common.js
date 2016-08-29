@@ -1,5 +1,4 @@
 jQuery(document).ready(function($) {
-
     var countItems;
     var w = $(window).width();
     if (w <= 539) {

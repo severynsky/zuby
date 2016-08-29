@@ -2,7 +2,16 @@
 /*.log
 /.idea/*
 /wp-config.php
-/wp-content/themes/stomat/.sass-cache/
-/wp-content/plugins/all-in-one-wp-security-and-firewall/
-/.gitignore
-/wp-content/themes/stomat/css/style.css
+Будет удалено .gitignore
+Будет удалено .idea/
+Будет удалено wp-admin/meta/
+Будет удалено wp-content/advanced-cache.php
+Будет удалено wp-content/aiowps_backups/
+Будет удалено wp-content/cache/
+Будет удалено wp-content/plugins/all-in-one-wp-security-and-firewall/
+Будет удалено wp-content/plugins/cyr3lat/
+Будет удалено wp-content/plugins/tinymce-advanced/
+Будет удалено wp-content/plugins/wordpress-seo/
+Будет удалено wp-content/plugins/wp-super-cache/
+Будет удалено wp-content/upgrade/
+Будет удалено wp-content/wp-cache-config.php
