@@ -439,7 +439,7 @@ body {
 
 .treatment-sidebar{
   position: fixed;
-  //z-index: 9999;
+  z-index: 999;
   // margin-left: -20px;
   transition: 0.2s;
   transition-timing-function: linear;
@@ -538,7 +538,7 @@ ul.slick-dots {
     overflow: hidden;
   }
   .item:not(.slick-current){
-    opacity: 0.3;
+    opacity: 0.9;
   }
   .item {
     transition: 0.1s;
@@ -1287,7 +1287,7 @@ header.service {
         margin-bottom: 20px;
         .title {
           font-family: OpenSansSemibold;
-          font-size: 16px;
+          font-size: 14px;
           font-weight: 400;
           line-height: 1.78;
           color: #3e3e3e;
@@ -1807,6 +1807,10 @@ header.service {
       }
     }
   }
+  .white_curtain img{
+    margin-top: 30vh;
+    width: 250px;
+  }
   .site-branding img{
     max-width: 225px;
     margin-top: 3px;
@@ -1838,7 +1842,7 @@ header.service {
       border-radius: 0;
     }
     .item:not(.slick-current){
-      opacity: 0.3;
+      opacity: 0.9;
     }
   }
   .about_advantages {
@@ -2075,7 +2079,7 @@ header.service {
     margin: -70px auto -60px;
 
     .item:not(.slick-current){
-      opacity: 0.3;
+      opacity: 0.9;
     }
   }
   .treatment {
@@ -2176,7 +2180,7 @@ header.service {
     top: 0;
     right: 0;
     width: 100%;
-    height: 640px;
+    height: 100vh;
     border-radius: 2px;
     background-color: rgba(147, 39, 36, 0.9);
     z-index: 10000;
@@ -2241,7 +2245,7 @@ header.service {
     top: 0;
     right: 0;
     width: 100%;
-    height: 640px;
+    height: 100vh;
     border-radius: 2px;
     background-color: rgba(147, 39, 36, 0.9);
     z-index: 10000;
@@ -2256,7 +2260,7 @@ header.service {
     }
     .phone {
       position: absolute;
-      top: 388px;
+      top: 340px;
       left: 30px;
       margin-left: 19px;
       a {
@@ -2337,7 +2341,7 @@ header.service {
     top: 0;
     right: 0;
     width: 100%;
-    height: 640px;
+    height: 100vh;
     border-radius: 2px;
     background-color: rgba(147, 39, 36, 0.9);
     z-index: 10000;
@@ -2352,7 +2356,7 @@ header.service {
     }
     .phone {
       position: absolute;
-      top: 388px;
+      top: 340px;
       left: 30px;
       margin-left: 19px;
       a {
@@ -2366,7 +2370,7 @@ header.service {
     }
     .time {
       position: absolute;
-      top: 200px;
+      top: 140px;
       left: 30px;
       width: 172px;
       img {
@@ -2402,7 +2406,7 @@ header.service {
     top: 0;
     right: 0;
     width: 100%;
-    height: 640px;
+    height: 100vh;
     border-radius: 2px;
     background-color: rgba(147, 39, 36, 0.9);
     z-index: 10000;
@@ -2417,7 +2421,7 @@ header.service {
     }
     .phone {
       position: absolute;
-      top: 388px;
+      top: 340px;
       left: 30px;
       margin-left: 19px;
       a {

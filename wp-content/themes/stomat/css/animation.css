@@ -20,9 +20,9 @@
     100% {margin-top: 0; }
 }
 @keyframes blinking{
-  0% {opacity: 0.05; }
+  0% {opacity: 0.5; }
   50% {opacity: 1; }
-  100% {opacity: 0.05; }
+  100% {opacity: 0.5; }
 }
 @keyframes fadeIn {
   0% {opacity: 0; transform: translate3d(0%, 20%, 0);}
@@ -106,6 +106,7 @@
   animation-duration: 1s;
   transition-timing-function: ease-in;
   animation-name: toRight;
+  animation-fill-mode:forwards;
 }
 
 .element--onPlace {
@@ -143,5 +144,5 @@
 .removeTreamentBlock{
   animation-duration: 0.5s;
   animation-name: removeTreamentBlock;
-
+  animation-fill-mode:forwards;
 }
