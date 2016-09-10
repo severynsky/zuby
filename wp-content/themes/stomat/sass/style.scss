@@ -31,7 +31,7 @@
     }
   }
   @if $media == mobile375 {
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 376px) {
       @content;
     }
   }
@@ -2180,7 +2180,7 @@ header.service {
     top: 0;
     right: 0;
     width: 100%;
-    height: 100vh;
+    height: 640px;
     border-radius: 2px;
     background-color: rgba(147, 39, 36, 0.9);
     z-index: 10000;
@@ -2245,7 +2245,7 @@ header.service {
     top: 0;
     right: 0;
     width: 100%;
-    height: 100vh;
+    height: 640px;
     border-radius: 2px;
     background-color: rgba(147, 39, 36, 0.9);
     z-index: 10000;
@@ -2260,7 +2260,7 @@ header.service {
     }
     .phone {
       position: absolute;
-      top: 340px;
+      top: 388px;
       left: 30px;
       margin-left: 19px;
       a {
@@ -2341,7 +2341,7 @@ header.service {
     top: 0;
     right: 0;
     width: 100%;
-    height: 100vh;
+    height: 640px;
     border-radius: 2px;
     background-color: rgba(147, 39, 36, 0.9);
     z-index: 10000;
@@ -2356,7 +2356,7 @@ header.service {
     }
     .phone {
       position: absolute;
-      top: 340px;
+      top: 388px;
       left: 30px;
       margin-left: 19px;
       a {
@@ -2370,7 +2370,7 @@ header.service {
     }
     .time {
       position: absolute;
-      top: 140px;
+      top: 200px;
       left: 30px;
       width: 172px;
       img {
@@ -2406,7 +2406,7 @@ header.service {
     top: 0;
     right: 0;
     width: 100%;
-    height: 100vh;
+    height: 640px;
     border-radius: 2px;
     background-color: rgba(147, 39, 36, 0.9);
     z-index: 10000;
@@ -2421,7 +2421,7 @@ header.service {
     }
     .phone {
       position: absolute;
-      top: 340px;
+      top: 388px;
       left: 30px;
       margin-left: 19px;
       a {
