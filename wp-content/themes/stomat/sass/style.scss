@@ -988,7 +988,7 @@ ul.slick-dots {
     input[type="text"] {
       border: 0;
       border-bottom: 1px solid #f2f2f2;
-      width: 327px;
+      // width: 327px;
       background-color: transparent;
       font-size: 14px;
       padding-bottom: 10px;
@@ -2492,4 +2492,11 @@ header.service {
     }
 
   }
+}
+div.wpcf7-response-output{
+  margin: 4em 1em 1em;
+}
+div.wpcf7-validation-errors{
+  border: 1px solid #932724;
+  border-radius: 2px;
 }

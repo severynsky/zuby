@@ -1050,7 +1050,6 @@ ul.slick-dots li.slick-active button {
 .register_form .wrap input[type="text"] {
   border: 0;
   border-bottom: 1px solid #f2f2f2;
-  width: 327px;
   background-color: transparent;
   font-size: 14px;
   padding-bottom: 10px;
@@ -2706,4 +2705,14 @@ header.service .call_wrap .time p {
     margin-bottom: 10px;
     border-bottom: 1px solid rgba(155, 155, 155, 0.1);
   }
+}
+/* line 2496, ../sass/style.scss */
+div.wpcf7-response-output {
+  margin: 4em 1em 1em;
+}
+
+/* line 2499, ../sass/style.scss */
+div.wpcf7-validation-errors {
+  border: 1px solid #932724;
+  border-radius: 2px;
 }
