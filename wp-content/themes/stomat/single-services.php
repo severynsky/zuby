@@ -9,7 +9,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-9 col-xs-offset-3 treatment-text-block">
+                        <div class="col-xs-9 col-xs-offset-2 treatment-text-block">
                             <div class="mobile-service-head">
                             <div class="register_button visible-xs">
                                 <a href="#register"><?php echo __('Register for a free diagnosis','stomat') ?></a>

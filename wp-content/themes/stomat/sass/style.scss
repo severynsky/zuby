@@ -1474,6 +1474,7 @@ header.service {
     margin-bottom: 95px;
     margin-top: 30px;
     float: right;
+    margin-right: 80px;
 
   }
 }
@@ -1817,6 +1818,9 @@ header.service {
   }
   .menu-toggle {
     margin-top: 6px !important;
+  }
+  .service .register_form{
+    margin-right: 0;
   }
   .top_content {
     height: 520px;
